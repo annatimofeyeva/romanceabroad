@@ -11,6 +11,12 @@ public class Locators {
     //Blog page
     public static final By BLOG_TITLE = By.xpath("//h1");
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
+    //Gifts page
+    public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
+    public static final By LIST_OF_BESTSELLERS = By.xpath("//div[@class='g-users-gallery__item col-xs-4 col-md-3 col-lg-2 bestseller']");
+    public static final By TEXT_FIELD_GIFTS_SEARCH = By.cssSelector("#search_product");
+    public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("#search_friend");
+    public static final By BUTTON_MAIN_NAV_BAR = By.cssSelector(".fa.fa-bars.fa-lg.item");
     //Search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By AGE_DROP_DOWN = By.cssSelector("#age_max");
