@@ -7,13 +7,12 @@ import java.util.List;
 
 public class GiftsTests extends BaseUI {
     private String currentUrlGifts;
-    private String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
 
     @Test
     public void testGiftsTab() {
         driver.findElement(Locators.LINK_GIFTS).click();
         currentUrlGifts = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlGifts, expectedUrlGifts);
+        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
     }
 
     @Test
@@ -23,7 +22,7 @@ public class GiftsTests extends BaseUI {
         List bestsellers =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LIST_OF_BESTSELLERS));
         //System.out.println(bestsellers.size());
-        Assert.assertEquals(currentUrlGifts, expectedUrlGifts);
+        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
         Assert.assertTrue(bestsellers.size() > 0);
     }
 

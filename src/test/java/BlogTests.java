@@ -4,8 +4,6 @@ import org.testng.annotations.Test;
 
 public class BlogTests extends BaseUI {
     private String currentUrlBlog;
-    private String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
-    private String expectedBlogPageTitle = "Blog";
 
     @Test
     public void testBlogTab() {
@@ -14,7 +12,7 @@ public class BlogTests extends BaseUI {
         String blogTitle =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BLOG_TITLE))
                         .getText();
-        Assert.assertEquals(currentUrlBlog, expectedUrlBlog);
-        Assert.assertEquals(expectedBlogPageTitle, blogTitle);
+        Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
+        Assert.assertEquals(Data.expectedBlogPageTitle, blogTitle);
     }
 }

@@ -32,9 +32,9 @@ public class Locators {
     public static final By ERROR_POP_UP = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     //Registration(Main) page
     public static final By BUTTON_JOIN_FOR_FREE = By.xpath("//button[@id='show-registration-block']");
+    public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
-    public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_USER_NAME = By.xpath("//input[@id='nickname']");
     public static final By TEXT_FIELD_USER_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//input[@name='region_name']");

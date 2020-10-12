@@ -5,13 +5,12 @@ import org.testng.annotations.Test;
 
 public class SearchTests extends BaseUI {
     private String currentUrlSearch;
-    private String expectedUrlSearch = "https://romanceabroad.com/users/search";
 
     @Test
     public void testSearch() {
         driver.findElement(Locators.LINK_SEARCH).click();
         currentUrlSearch = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlSearch, expectedUrlSearch);
+        Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
     }
 
     @Test

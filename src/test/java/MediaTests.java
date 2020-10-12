@@ -5,13 +5,12 @@ import org.testng.annotations.Test;
 
 public class MediaTests extends BaseUI {
     private String currentUrlPhotos;
-    private String expectedUrlPhotos = "https://romanceabroad.com/media/index";
 
     @Test
     public void testPhotosTab() {
         driver.findElement(Locators.LINK_PHOTOS).click();
         currentUrlPhotos = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlPhotos, expectedUrlPhotos);
+        Assert.assertEquals(currentUrlPhotos, Data.expectedUrlPhotos);
     }
 
     @Test

@@ -6,9 +6,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class LogInTests extends BaseUI {
-    private String expectedLoginErrorPopUpText = "Login or password are incorrect, please try again";
-    private String expectedBackgroundColor = "rgb(235, 204, 209)";
-
     @Test
     public void testLogInInvalidCredentials() {
         wait.until(ExpectedConditions.presenceOfElementLocated(Locators.LINK_SIGH_IN)).click();
@@ -19,9 +16,9 @@ public class LogInTests extends BaseUI {
         driver.findElement(Locators.BUTTON_SIGN_IN).click();
         WebElement error_popUp = wait.until(ExpectedConditions.presenceOfElementLocated(Locators.ERROR_POP_UP));
         String currentBackgroundColor = error_popUp.getCssValue("border-color");
-        Assert.assertEquals(currentBackgroundColor, expectedBackgroundColor);
+        Assert.assertEquals(currentBackgroundColor, Data.expectedBackgroundColor);
         String errorPopUpText = error_popUp.getText();
-        Assert.assertEquals(errorPopUpText, expectedLoginErrorPopUpText);
+        Assert.assertEquals(errorPopUpText, Data.expectedLoginErrorPopUpText);
         List<WebElement> errorPopUp =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.ERROR_POP_UP));
         Assert.assertEquals(errorPopUp.size(), 1);
