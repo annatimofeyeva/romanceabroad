@@ -8,6 +8,9 @@ public class Locators {
     //TOUR_TO_UKRAINE page
     public static final By LINK_TOUR = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'][text()='TOUR TO UKRAINE']");
     public static final By HEADER_TOURS_TO_UKRAIN = By.xpath("//div[@class='search-header']/h1");
+    //Blog page
+    public static final By BLOG_TITLE = By.xpath("//h1");
+    public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
     //Search page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By AGE_DROP_DOWN = By.cssSelector("#age_max");
