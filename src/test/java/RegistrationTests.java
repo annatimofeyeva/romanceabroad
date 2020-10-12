@@ -20,20 +20,20 @@ public class RegistrationTests extends BaseUI {
         driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
         WebElement emailField =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_EMAIL));
-        emailField.sendKeys("newTest@test.com");
+        emailField.sendKeys(Data.registrationEmail);
         WebElement passwordField =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_PASSWORD));
-        passwordField.sendKeys("12345678");
+        passwordField.sendKeys(Data.registrationPassword);
         driver.findElement(Locators.BUTTON_NEXT).click();
         WebElement userName =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_NAME));
-        userName.sendKeys("John Watson");
+        userName.sendKeys(Data.UserName);
         WebElement userPhone =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_PHONE));
-        userPhone.sendKeys("111-11-11");
+        userPhone.sendKeys(Data.UserPhone);
         WebElement userLocation =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_LOCATION));
-        userLocation.sendKeys("Seattle");
+        userLocation.sendKeys(Data.UserLocation);
         WebElement checkBoxConfirmation =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.CHECK_BOX_CONFIRMATION));
         checkBoxConfirmation.click();

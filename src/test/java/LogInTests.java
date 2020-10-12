@@ -13,9 +13,9 @@ public class LogInTests extends BaseUI {
     public void testLogInInvalidCredentials() {
         wait.until(ExpectedConditions.presenceOfElementLocated(Locators.LINK_SIGH_IN)).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(Locators.EMAIL_TEXT_FIELD))
-                .sendKeys("test@test.com");
+                .sendKeys(Data.Email);
         driver.findElement(Locators.PASSWORD_TEXT_FIELD)
-                .sendKeys("123456");
+                .sendKeys(Data.Password);
         driver.findElement(Locators.BUTTON_SIGN_IN).click();
         WebElement error_popUp = wait.until(ExpectedConditions.presenceOfElementLocated(Locators.ERROR_POP_UP));
         String currentBackgroundColor = error_popUp.getCssValue("border-color");

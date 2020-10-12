@@ -32,7 +32,7 @@ public class GiftsTests extends BaseUI {
         driver.findElement(Locators.LINK_GIFTS).click();
         WebElement giftSearchField =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.TEXT_FIELD_GIFTS_SEARCH));
-        giftSearchField.sendKeys("Flower busket");
+        giftSearchField.sendKeys(Data.GiftName);
         WebElement giftSearchButton = driver.findElement(Locators.BUTTON_GIFTS_SEARCH);
         giftSearchButton.click();
     }
