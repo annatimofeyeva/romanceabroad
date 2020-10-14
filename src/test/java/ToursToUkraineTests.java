@@ -10,7 +10,7 @@ public class ToursToUkraineTests extends BaseUI {
         driver.findElement(Locators.LINK_TOUR).click();
         currentUrlTours = driver.getCurrentUrl();
         String searchToursToUkraineHeader =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.HEADER_TOURS_TO_UKRAIN))
+                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.HEADER_TOURS_TO_UKRAINE))
                         .getText();
         Assert.assertEquals(Data.expectedToursToUkraineTitle, searchToursToUkraineHeader);
         Assert.assertEquals(currentUrlTours, Data.expectedUrlTours);

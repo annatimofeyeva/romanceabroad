@@ -21,22 +21,12 @@ public class RegistrationTests extends BaseUI {
         WebElement emailField =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_EMAIL));
         emailField.sendKeys(Data.registrationEmail);
-        WebElement passwordField =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_PASSWORD));
-        passwordField.sendKeys(Data.registrationPassword);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registrationPassword);
         driver.findElement(Locators.BUTTON_NEXT).click();
-        WebElement userName =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_NAME));
-        userName.sendKeys(Data.UserName);
-        WebElement userPhone =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_PHONE));
-        userPhone.sendKeys(Data.UserPhone);
-        WebElement userLocation =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_USER_LOCATION));
-        userLocation.sendKeys(Data.UserLocation);
-        WebElement checkBoxConfirmation =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.CHECK_BOX_CONFIRMATION));
-        checkBoxConfirmation.click();
+        driver.findElement(Locators.TEXT_FIELD_USER_NAME).click();
+        driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(Data.UserPhone);
+        driver.findElement(Locators.TEXT_FIELD_USER_LOCATION).sendKeys(Data.UserLocation);
+        driver.findElement(Locators.CHECK_BOX_CONFIRMATION).click();
     }
 //
 //    @Test
