@@ -34,6 +34,30 @@ public class SearchTests extends BaseUI {
 
     }
 
+    @Test
+    public void testDropDownListSortByAgeMin() {
+        driver.findElement(Locators.LINK_SEARCH).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN);
+        getDropDownListByValue(dropDownListSortBy, "23");
+    }
+
+    @Test
+    public void testDropDownListSortByAgeMax() {
+        driver.findElement(Locators.LINK_SEARCH).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX);
+        getDropDownListByValue(dropDownListSortBy, "50");
+    }
+
     public void getDropDownListByIndex(WebElement element, int index) {
         Select select = new Select(element);
         select.selectByIndex(index);

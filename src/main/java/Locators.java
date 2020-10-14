@@ -5,7 +5,8 @@ public class Locators {
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
     //Search
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
-    public static final By AGE_DROP_DOWN = By.cssSelector("#age_max");
+    public static final By DROP_DOWN_LIST_SORT_BY_AGE_MIN = By.xpath("//select[@name='age_min']");
+    public static final By DROP_DOWN_LIST_SORT_BY_AGE_MAX = By.xpath("//select[@name='age_max']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     //Media
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
