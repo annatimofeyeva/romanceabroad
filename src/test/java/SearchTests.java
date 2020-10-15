@@ -3,20 +3,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.Locator;
 
 public class SearchTests extends BaseUI {
     private String currentUrlSearch;
 
     @Test
     public void testSearch() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+        getSearchPage(Locators.LINK_SEARCH);
+        //driver.findElement(Locators.LINK_SEARCH).click();
         currentUrlSearch = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
+        System.out.println(currentUrlSearch);
+        //Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
     }
 
     @Test
-    public void testDropDownListSortBy() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+    public void testDropDownListSortByUserData() {
+        getSearchPage(Locators.LINK_SEARCH);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -28,15 +31,13 @@ public class SearchTests extends BaseUI {
         select.selectByValue("views_count"); //actual text = "Views"*/
         //getDropDownListByIndex(Locators.DROP_DOWN_LIST_SORT_BY, 3);
         //getDropDownListByText(Locators.DROP_DOWN_LIST_SORT_BY, "Name");
-
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         getDropDownListByValue(dropDownListSortBy, "views_count");
-
     }
 
     @Test
-    public void testDropDownListSortByAgeMin() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+    public void testDropDownListSortByAgesMin() {
+        getSearchPage(Locators.LINK_SEARCH);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -47,8 +48,8 @@ public class SearchTests extends BaseUI {
     }
 
     @Test
-    public void testDropDownListSortByAgeMax() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+    public void testDropDownListSortByAgesMax() {
+        getSearchPage(Locators.LINK_SEARCH);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -56,20 +57,5 @@ public class SearchTests extends BaseUI {
         }
         WebElement dropDownListSortBy = driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX);
         getDropDownListByValue(dropDownListSortBy, "50");
-    }
-
-    public void getDropDownListByIndex(WebElement element, int index) {
-        Select select = new Select(element);
-        select.selectByIndex(index);
-    }
-
-    public void getDropDownListByText(WebElement element, String text) {
-        Select select = new Select(element);
-        select.selectByVisibleText(text);
-    }
-
-    public void getDropDownListByValue(WebElement element, String value) {
-        Select select = new Select(element);
-        select.selectByValue(value);
     }
 }

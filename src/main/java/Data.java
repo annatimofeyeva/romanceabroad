@@ -1,4 +1,6 @@
 public class Data {
+    //Main URL
+    public static final String mainUrl = "https://romanceabroad.com/";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     //Search
@@ -7,6 +9,8 @@ public class Data {
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
+    public static final String selectedGiftTitle = "Chocolate and fruits";
+    public static final String bestsellerGiftTitle = "Flower basket";
     //GiftsTests/Search for specific gift
     public static final String GiftName = "Flower busket";
     //Tours_To_Ukraine

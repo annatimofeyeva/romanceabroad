@@ -1,14 +1,21 @@
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.util.concurrent.TimeUnit;
 
 public class BlogTests extends BaseUI {
-    private String currentUrlBlog;
+    String currentUrlBlog;
 
     @Test
     public void testBlogTab() {
-        driver.findElement(Locators.LINK_BLOG).click();
+        getBlogPage(Locators.LINK_BLOG);
         currentUrlBlog = driver.getCurrentUrl();
+
+//        Example of Implicit wait:
+
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        String blogTitle = driver.findElement(Locators.BLOG_TITLE).getText();
+
         String blogTitle =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BLOG_TITLE))
                         .getText();

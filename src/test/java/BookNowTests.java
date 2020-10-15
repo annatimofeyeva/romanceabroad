@@ -6,8 +6,11 @@ public class BookNowTests extends BaseUI {
 
     @Test
     public void testBookNowTab() {
-        driver.findElement(Locators.LINK_BOOK_NOW).click();
+        getBookNowPage(Locators.LINK_BOOK_NOW);
         currentUrlBookNow = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlBookNow, Data.expectedUrlTours);
+        driver.navigate().back();
+        String mainUrl = driver.getCurrentUrl();
+        Assert.assertEquals(mainUrl, Data.mainUrl);
     }
 }

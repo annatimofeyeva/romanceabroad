@@ -1,44 +1,48 @@
 import org.openqa.selenium.By;
 
 public class Locators {
-    //HOW_IT_WORK
+    //HOW_IT_WORK page
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
-    //Search
+    //Search (Pretty Women) page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MIN = By.xpath("//select[@name='age_min']");
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MAX = By.xpath("//select[@name='age_max']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
-    //Media
+    //Media (Photos) page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By BUTTON_ADD_PHOTO = By.cssSelector(".caret");
     public static final By BUTTON_SORTING_PHOTOS = By.cssSelector(".hidden-xs.fa.fa-arrow-down.pointer.plr5");
-    //Gifts
+    //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
-    public static final By LIST_OF_BESTSELLERS = By.xpath("//div[@class='g-users-gallery__item col-xs-4 col-md-3 col-lg-2 bestseller']");
     public static final By TEXT_FIELD_GIFTS_SEARCH = By.cssSelector("#search_product");
-    public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("#search_friend");
-    public static final By BUTTON_MAIN_NAV_BAR = By.cssSelector(".fa.fa-bars.fa-lg.item");
-    //TOUR_TO_UKRAINE
+    public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("button#search_friend");
+    public static final By SELECTED_GIFT = By.cssSelector("div.title-block.pt5");
+    public static final By LINK_TO_BESTSELLER_PURCHASE = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
+    public static final By BESTSELLER_TITLE  = By.tagName("h1");
+    //TOUR_TO_UKRAINE page
     public static final By LINK_TOUR = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'][text()='TOUR TO UKRAINE']");
     public static final By HEADER_TOURS_TO_UKRAINE = By.xpath("//div[@class='search-header']/h1");
-    //Blog
+    //Blog page
     public static final By BLOG_TITLE = By.xpath("//h1");
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
-    //SIGN_IN
+    //SIGN_IN page
     public static final By LINK_SIGH_IN = By.cssSelector("#ajax_login_link");
     public static final By EMAIL_TEXT_FIELD = By.xpath(" //input[@name='email']");
     public static final By PASSWORD_TEXT_FIELD = By.xpath(" //input[@name='password']");
     public static final By BUTTON_SIGN_IN = By.xpath("//button[@name='logbtn']");
     public static final By ERROR_POP_UP = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
-    //BOOK_NOW
+    //BOOK_NOW page
     public static final By LINK_BOOK_NOW = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
-    //Registration(Main)
+    //Registration (Main) page
     public static final By BUTTON_JOIN_FOR_FREE = By.xpath("//button[@id='show-registration-block']");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
-    public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");
+    public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
     public static final By TEXT_FIELD_USER_NAME = By.xpath("//input[@id='nickname']");
     public static final By TEXT_FIELD_USER_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//input[@name='region_name']");
     public static final By CHECK_BOX_CONFIRMATION = By.xpath("//input[@name='data[confirmation]']");
+    //IFRAMES_LOCATORS
+    public static final By IFRAME_YOUTUBE_VIDEO = By.xpath("//iframe[contains(@src, 'https://www.youtube.com/embed/RRECuJzm3IY?start=85')]");
+    public static final By BUTTON_PLAY_YOUTUBE = By.xpath("//button[@aria-label='Play']");
 }

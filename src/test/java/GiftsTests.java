@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -10,37 +11,32 @@ public class GiftsTests extends BaseUI {
 
     @Test
     public void testGiftsTab() {
-        driver.findElement(Locators.LINK_GIFTS).click();
+        getGiftsPage(Locators.LINK_GIFTS);
         currentUrlGifts = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
     }
 
     @Test
-    public void testGiftsTabBestsellersSelected() {
-        driver.findElement(Locators.LINK_GIFTS).click();
-        currentUrlGifts = driver.getCurrentUrl();
-        List bestsellers =
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LIST_OF_BESTSELLERS));
-        //System.out.println(bestsellers.size());
-        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
-        Assert.assertTrue(bestsellers.size() > 0);
+    public void testGiftsSearch() {
+        getGiftsPage(Locators.LINK_GIFTS);
+        WebElement search_textField =
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
+        search_textField.sendKeys("Chocolate and fruits");
+        driver.findElement(Locators.BUTTON_GIFTS_SEARCH).click();
+        String selectedGiftTitle =
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.SELECTED_GIFT)).getText();
+        //System.out.println(selectedGiftTitle);
+        Assert.assertEquals(selectedGiftTitle, Data.selectedGiftTitle);
     }
 
     @Test
-    public void testSearchForExactGift() {
-        driver.findElement(Locators.LINK_GIFTS).click();
-        WebElement giftSearchField =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.TEXT_FIELD_GIFTS_SEARCH));
-        giftSearchField.sendKeys(Data.GiftName);
-        WebElement giftSearchButton = driver.findElement(Locators.BUTTON_GIFTS_SEARCH);
-        giftSearchButton.click();
-    }
-
-    @Test
-    public void testSearchForGiftsAndClickMainNavBar() {
-        driver.findElement(Locators.LINK_GIFTS).click();
-        WebElement mainNavBarButton =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BUTTON_MAIN_NAV_BAR));
-        mainNavBarButton.click();
+    public void testBestsellerPurchase() {
+        getGiftsPage(Locators.LINK_GIFTS);
+        WebElement bestseller =
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_TO_BESTSELLER_PURCHASE));
+        bestseller.click();
+        String bestSellerTitle =
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.BESTSELLER_TITLE)).getText();
+        Assert.assertEquals(bestSellerTitle, Data.bestsellerGiftTitle);
     }
 }

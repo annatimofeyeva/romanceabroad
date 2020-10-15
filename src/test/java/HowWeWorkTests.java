@@ -6,7 +6,7 @@ public class HowWeWorkTests extends BaseUI {
 
     @Test
     public void testHowWeWorkTab() {
-        driver.findElement(Locators.LINK_HOW_WORK).click();
+        getHowWeWorkPage(Locators.LINK_HOW_WORK);
         currentUrlHowWeWork = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlHowWeWork, Data.expectedUrlHowWeWork);
     }

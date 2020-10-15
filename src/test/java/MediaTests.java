@@ -8,14 +8,14 @@ public class MediaTests extends BaseUI {
 
     @Test
     public void testPhotosTab() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
+        getMediaPage(Locators.LINK_PHOTOS);
         currentUrlPhotos = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlPhotos, Data.expectedUrlPhotos);
     }
 
     @Test
     public void testPhotosSorting() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
+        getMediaPage(Locators.LINK_PHOTOS);
         WebElement sortingPhotoButton =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BUTTON_SORTING_PHOTOS));
         sortingPhotoButton.click();
@@ -23,7 +23,7 @@ public class MediaTests extends BaseUI {
 
     @Test
     public void testAddPhotoButton() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
+        getMediaPage(Locators.LINK_PHOTOS);
         WebElement addPhotoButton = wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BUTTON_ADD_PHOTO));
         addPhotoButton.click();
     }

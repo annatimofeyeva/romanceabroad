@@ -7,7 +7,7 @@ public class ToursToUkraineTests extends BaseUI {
 
     @Test
     public void testToutToUkraineTab() {
-        driver.findElement(Locators.LINK_TOUR).click();
+        getTourToUkrainePage(Locators.LINK_TOUR);
         currentUrlTours = driver.getCurrentUrl();
         String searchToursToUkraineHeader =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.HEADER_TOURS_TO_UKRAINE))
