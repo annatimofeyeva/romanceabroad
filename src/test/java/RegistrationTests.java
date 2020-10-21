@@ -2,6 +2,7 @@
 //import org.openqa.selenium.JavascriptExecutor;
 //import org.testng.Assert;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,7 +26,13 @@ public class RegistrationTests extends BaseUI {
         emailField.sendKeys(Data.registrationEmail);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registrationPassword);
         driver.findElement(Locators.BUTTON_NEXT).click();
-        driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(Data.UserName);
+        driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(generateUniqueUserName(Data.UserName, 10));
+        driver.findElement(Locators.DROP_DOWN_DATE_FIELD).click();
+        driver.findElement(Locators.DROP_DOWN_DATE_SELECTED).click();
+        driver.findElement(Locators.DROP_DOWN_MONTH_FIELD).click();
+        driver.findElement(Locators.DROP_DOWN_MONTH_SELECTED).click();
+        driver.findElement(Locators.DROP_DOWN_YEAR_FIELD).click();
+        driver.findElement(Locators.DROP_DOWN_YEAR_SELECTED).click();
         driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(Data.UserPhone);
         driver.findElement(Locators.TEXT_FIELD_USER_LOCATION).sendKeys(Data.UserLocation);
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
@@ -38,8 +45,8 @@ public class RegistrationTests extends BaseUI {
     public void testYouTubeVideo() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,550)", "");
-        WebElement required_frame = driver.findElement(Locators.IFRAME_YOUTUBE_VIDEO);
-        driver.switchTo().frame(required_frame);
+        WebElement youTubeFrame = driver.findElement(Locators.IFRAME_YOUTUBE_VIDEO);
+        driver.switchTo().frame(youTubeFrame);
         WebElement playButton = driver.findElement(Locators.BUTTON_PLAY_YOUTUBE);
         playButton.click();
     }
@@ -60,12 +67,5 @@ public class RegistrationTests extends BaseUI {
 //        JavascriptExecutor js = ((JavascriptExecutor) driver);
 //        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 //        facebookButton.click();
-//    }
-//
-//    @Test
-//    public void testYouTubeRedirectionButton() {
-//        JavascriptExecutor js = ((JavascriptExecutor) driver);
-//        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-//        driver.findElements(BUTTON_YouTube_REDIRACTION).get(indexValueForYouTubeVideoElement).click();
 //    }
 }

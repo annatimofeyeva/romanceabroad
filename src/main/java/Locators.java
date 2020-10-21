@@ -39,6 +39,12 @@ public class Locators {
     public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
     public static final By TEXT_FIELD_USER_NAME = By.xpath("//input[@id='nickname']");
+    public static final By DROP_DOWN_DATE_FIELD = By.cssSelector("#daySelect");
+    public static final By DROP_DOWN_DATE_SELECTED = By.xpath("//li[@data-handler='selectDay']//a[text()='3']");
+    public static final By DROP_DOWN_MONTH_FIELD = By.cssSelector("#monthSelect");
+    public static final By DROP_DOWN_MONTH_SELECTED = By.xpath("//li[@data-handler='selectMonth']//a[text()='Feb']");
+    public static final By DROP_DOWN_YEAR_FIELD = By.cssSelector("#yearSelect");
+    public static final By DROP_DOWN_YEAR_SELECTED = By.xpath("//div[@id='yearSelect']//a[text()='2002']");
     public static final By TEXT_FIELD_USER_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//input[@name='region_name']");
     public static final By CHECK_BOX_CONFIRMATION = By.xpath("//input[@name='data[confirmation]']");

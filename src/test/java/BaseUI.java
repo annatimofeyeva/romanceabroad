@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -72,5 +73,7 @@ public class BaseUI {
         driver.findElement(locator).click();
     }
 
-
+    public String generateUniqueUserName(String name, int length) {
+        return name + RandomStringUtils.random(length, "172984757");
+    }
 }
