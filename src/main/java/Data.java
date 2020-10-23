@@ -1,6 +1,8 @@
 public class Data {
     //Main URL
     public static final String mainUrl = "https://romanceabroad.com/";
+    //Main Page
+    public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     //Search
@@ -31,6 +33,4 @@ public class Data {
     public static final String UserName = "John Watson";
     public static final String UserPhone = "425-223-65-78";
     public static final String UserLocation = "Seattle, WA";
-
-
 }

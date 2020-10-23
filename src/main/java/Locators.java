@@ -33,8 +33,11 @@ public class Locators {
     public static final By ERROR_POP_UP = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     //BOOK_NOW page
     public static final By LINK_BOOK_NOW = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
-    //Registration (Main) page
+    //Main page
+    public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[text()='REQUEST TOUR INFO']");
     public static final By BUTTON_JOIN_FOR_FREE = By.xpath("//button[@id='show-registration-block']");
+    public static final By BUTTON_FACEBOOK_REDIRECTION = By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']");
+    //Registration
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
