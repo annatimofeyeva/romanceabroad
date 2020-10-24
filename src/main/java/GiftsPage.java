@@ -9,7 +9,7 @@ public class GiftsPage extends  BaseActions{
         super(driver, wait);
     }
 
-    public void GiftsSearch() {
+    public void giftsSearch() {
         driver.findElement(Locators.LINK_GIFTS).click();
         WebElement search_textField =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
@@ -17,11 +17,10 @@ public class GiftsPage extends  BaseActions{
         driver.findElement(Locators.BUTTON_GIFTS_SEARCH).click();
         String selectedGiftTitle =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.SELECTED_GIFT)).getText();
-        //System.out.println(selectedGiftTitle);
         Assert.assertEquals(selectedGiftTitle, Data.selectedGiftTitle);
     }
 
-    public void BestsellerPurchase() {
+    public void bestsellerPurchase() {
         driver.findElement(Locators.LINK_GIFTS).click();
         WebElement bestseller =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_TO_BESTSELLER_PURCHASE));

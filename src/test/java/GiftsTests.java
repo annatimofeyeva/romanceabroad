@@ -4,11 +4,11 @@ public class GiftsTests extends BaseUI {
 
     @Test
     public void testGiftsSearch() {
-        giftsPage.GiftsSearch();
+        giftsPage.giftsSearch();
     }
 
     @Test
     public void testBestsellerPurchase() {
-        giftsPage.BestsellerPurchase();
+        giftsPage.bestsellerPurchase();
     }
 }

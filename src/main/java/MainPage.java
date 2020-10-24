@@ -31,7 +31,7 @@ public class MainPage extends BaseActions {
     }
 
     public void clickGiftsTab() {
-        driver.findElement(Locators.LINK_GIFTS);
+        driver.findElement(Locators.LINK_GIFTS).click();
         String currentUrlGifts = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
     }
@@ -121,10 +121,10 @@ public class MainPage extends BaseActions {
     public void clickFacebookRedirectionButton() {
         JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_FACEBOOK_REDIRECTION))
-                .click();
-//        String facebookIntegrationURL = driver.getCurrentUrl();
-//        System.out.println(facebookIntegrationURL);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_FACEBOOK_REDIRECTION));
+                element.click();
+        String facebookIntegrationURL = driver.getCurrentUrl();
+        System.out.println(facebookIntegrationURL);
 //        Assert.assertEquals(Data.expectedUrlFacebookIntegration, facebookIntegrationURL);
     }
 }

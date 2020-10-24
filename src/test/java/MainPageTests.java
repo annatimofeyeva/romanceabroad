@@ -18,9 +18,7 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testGiftsTab() {
-        mainPage.clickGiftsTab();
-    }
+    public void testGiftsTab() {mainPage.clickGiftsTab(); }
 
     @Test
     public void testTourToUkraineTab() {
@@ -33,9 +31,7 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testSighInTab() {
-        mainPage.clickSignInTab();
-    }
+    public void testSighInTab() {mainPage.clickSignInTab(); }
 
     @Test
     public void testBookNowTab() {
@@ -43,9 +39,7 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testRegistration() {
-        mainPage.clickJoinButton();
-    }
+    public void testRegistration() {mainPage.clickJoinButton(); }
 
     @Test
     public void testYouTubeVideoPlaying() {
