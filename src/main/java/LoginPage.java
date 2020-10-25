@@ -11,7 +11,7 @@ public class LoginPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void LoginInvalidCredentials() {
+    public void loginInvalidCredentials() {
         driver.findElement(Locators.LINK_SIGH_IN).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(Locators.EMAIL_TEXT_FIELD))
                 .sendKeys(Data.Email);

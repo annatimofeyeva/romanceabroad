@@ -4,11 +4,11 @@ public class MediaTests extends BaseUI {
 
     @Test
     public void testPhotosSorting() {
-        mediaPage.PhotosSorting();
+        mediaPage.photosSorting();
     }
 
     @Test
     public void testAddPhotoButton() {
-        mediaPage.AddPhotoButton();
+        mediaPage.addPhotoButton();
     }
 }

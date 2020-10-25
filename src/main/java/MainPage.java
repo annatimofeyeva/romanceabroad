@@ -125,7 +125,7 @@ public class MainPage extends BaseActions {
                 element.click();
         String facebookIntegrationURL = driver.getCurrentUrl();
         System.out.println(facebookIntegrationURL);
-//        Assert.assertEquals(Data.expectedUrlFacebookIntegration, facebookIntegrationURL);
+//      Assert.assertEquals(Data.expectedUrlFacebookIntegration, facebookIntegrationURL);
     }
 }
 

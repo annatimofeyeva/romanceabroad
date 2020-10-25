@@ -8,7 +8,7 @@ public class SearchPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void DropDownListSortByUserData() {
+    public void dropDownListSortByUserData() {
         driver.findElement(Locators.LINK_SEARCH).click();
         /*Select select = new Select(driver.findElement(By.xpath("//div[@class='form-inline']//select")));
         select.selectByVisibleText("Name");
@@ -21,14 +21,14 @@ public class SearchPage extends BaseActions {
         getDropDownListByValue(dropDownListSortByUserData, "views_count");
     }
 
-    public void DropDownListSortByAgesMin() {
+    public void dropDownListSortByAgesMin() {
         driver.findElement(Locators.LINK_SEARCH).click();
         WebElement dropDownListSortByAgeMin =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN));
         getDropDownListByValue(dropDownListSortByAgeMin, "24");
     }
 
-    public void DropDownListSortByAgesMax() {
+    public void dropDownListSortByAgesMax() {
         driver.findElement(Locators.LINK_SEARCH).click();
         WebElement dropDownListSortByAgeMin =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX));

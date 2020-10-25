@@ -18,7 +18,7 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testGiftsTab() {mainPage.clickGiftsTab(); }
+    public void testGiftsTab() {mainPage.clickGiftsTab();}
 
     @Test
     public void testTourToUkraineTab() {
@@ -52,7 +52,5 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testFacebookIntegrationButton() {
-        mainPage.clickFacebookRedirectionButton();
-    }
+    public void testFacebookIntegrationButton() {mainPage.clickFacebookRedirectionButton(); }
 }
