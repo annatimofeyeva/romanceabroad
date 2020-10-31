@@ -7,5 +7,7 @@ public class RegistrationTests extends BaseUI {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration();
         mainPage.completeSecondPartOfRegistration();
+
+        // Add Assertion for checkbox
     }
 }

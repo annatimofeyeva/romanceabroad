@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MainPageTests extends BaseUI {
@@ -10,6 +11,13 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testSearchTab() {
         mainPage.clickSearchTab();
+        String currentUrlSearch = driver.getCurrentUrl();
+        System.out.println(currentUrlSearch);
+        //Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
+
+        // in case of soft assertion - if smth is wrong = Error message provided, but TC moves to a next step;
+        softAssert.assertEquals(Data.expectedUrlSearch, currentUrlSearch, "Url is wrong");
+        softAssert.assertAll();
     }
 
     @Test

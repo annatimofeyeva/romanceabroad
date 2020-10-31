@@ -50,9 +50,6 @@ public class MainPage extends BaseActions {
 
     public void clickSearchTab() {
         driver.findElement(Locators.LINK_SEARCH).click();
-        String currentUrlSearch = driver.getCurrentUrl();
-        System.out.println(currentUrlSearch);
-        Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
     }
 
     public void clickBlogTab() {

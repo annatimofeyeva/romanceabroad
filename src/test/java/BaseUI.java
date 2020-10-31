@@ -1,8 +1,15 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
+
+import java.lang.reflect.Method;
 
 public class BaseUI {
     protected WebDriver driver;
@@ -13,11 +20,45 @@ public class BaseUI {
     MediaPage mediaPage;
     GiftsPage giftsPage;
     LoginPage loginPage;
+    SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
+    @Parameters("browser")
+    public void setUp(@Optional("chrome") String browser, Method method) {
+
+        // Check if parameter passed from TestNG is 'firefox'
+        if (browser.equalsIgnoreCase("firefox")) {
+            // Set path to geckodriver
+            System.setProperty("webdriver.gecko.driver", "geckodriver");
+            // Create firefox instance
+            driver = new FirefoxDriver();
+        }
+//        // Check if parameter passed as 'IE'
+//        else if (browser.equalsIgnoreCase("ei")) {
+//            // Set path to geckodriver
+//            System.setProperty("webdriver.chrome.driver", "chromedriver");
+//            driver = new ChromeDriver();
+//            driver.get("chrome://settings/clearBrowserData");
+//        }
+        // Check if parameter passed as 'chrome'
+        else if (browser.equalsIgnoreCase("chrome")) {
+            // Set path to geckodriver
+            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            driver = new ChromeDriver();
+            driver.get("chrome://settings/clearBrowserData");
+        }
+        // Check if parameter passed as 'opera'
+        else if (browser.equalsIgnoreCase("opera")) {
+            // Set path to operadriver
+            System.setProperty("webdriver.opera.driver", "operadriver");
+            driver = new OperaDriver();
+            driver.manage().deleteAllCookies();
+        } else {
+            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            driver = new ChromeDriver();
+            driver.get("chrome://settings/clearBrowserData");
+        }
+
         wait = (new WebDriverWait(driver, 20));
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);

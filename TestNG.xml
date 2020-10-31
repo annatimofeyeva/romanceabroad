@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Suite" parallel="none" >
+    <test name="Chrome Cases">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="RegistrationTests"></class>
+        </classes>
+    </test>
+    <test name="FireFox Cases">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="RegistrationTests"></class>
+        </classes>
+    </test>
+    <test name="Opera Cases">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="RegistrationTests"></class>
+        </classes>
+    </test>
+    <test name="IE Cases">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="RegistrationTests"></class>
+        </classes>
+    </test>
+</suite>
