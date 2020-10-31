@@ -19,10 +19,10 @@
             <class name="RegistrationTests"></class>
         </classes>
     </test>
-    <test name="IE Cases">
-        <parameter name="browser" value="ie"/>
-        <classes>
-            <class name="RegistrationTests"></class>
-        </classes>
-    </test>
+<!--    <test name="IE Cases">-->
+<!--        <parameter name="browser" value="ie"/>-->
+<!--        <classes>-->
+<!--            <class name="RegistrationTests"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

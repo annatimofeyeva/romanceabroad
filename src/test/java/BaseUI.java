@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -35,10 +36,10 @@ public class BaseUI {
         }
 //        // Check if parameter passed as 'IE'
 //        else if (browser.equalsIgnoreCase("ei")) {
-//            // Set path to geckodriver
-//            System.setProperty("webdriver.chrome.driver", "chromedriver");
-//            driver = new ChromeDriver();
-//            driver.get("chrome://settings/clearBrowserData");
+//            // Set path to EIdriver
+//            System.setProperty("webdriver.ie.driver", "IEDriverServer");
+//            driver = new InternetExplorerDriver();
+//            driver.manage().deleteAllCookies();
 //        }
         // Check if parameter passed as 'chrome'
         else if (browser.equalsIgnoreCase("chrome")) {
@@ -49,7 +50,7 @@ public class BaseUI {
         }
         // Check if parameter passed as 'opera'
         else if (browser.equalsIgnoreCase("opera")) {
-            // Set path to operadriver
+            // Set path to operadriverOld
             System.setProperty("webdriver.opera.driver", "operadriver");
             driver = new OperaDriver();
             driver.manage().deleteAllCookies();
