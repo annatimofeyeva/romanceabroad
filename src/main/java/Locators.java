@@ -12,6 +12,7 @@ public class Locators {
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By BUTTON_ADD_PHOTO = By.cssSelector(".caret");
     public static final By BUTTON_SORTING_PHOTOS = By.cssSelector(".hidden-xs.fa.fa-arrow-down.pointer.plr5");
+    public static final By BUTTON_ADD_PHOTOS = By.cssSelector("//button[@data-media='add_photo']");
     //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
     public static final By TEXT_FIELD_GIFTS_SEARCH = By.cssSelector("#search_product");

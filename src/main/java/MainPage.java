@@ -3,7 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class MainPage extends BaseActions {
     // Constructor
@@ -13,39 +12,22 @@ public class MainPage extends BaseActions {
 
     public void clickBookNowTab() {
         driver.findElement(Locators.LINK_BOOK_NOW).click();
-        String currentUrlBookNow = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlBookNow, Data.expectedUrlTours);
-        driver.navigate().back();
-        String mainUrl = driver.getCurrentUrl();
-        Assert.assertEquals(mainUrl, Data.mainUrl);
     }
 
     public void clickTourToUkraineTab() {
         driver.findElement(Locators.LINK_TOUR).click();
-        String currentUrlTours = driver.getCurrentUrl();
-        String searchToursToUkraineHeader =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.HEADER_TOURS_TO_UKRAINE))
-                        .getText();
-        Assert.assertEquals(Data.expectedToursToUkraineTitle, searchToursToUkraineHeader);
-        Assert.assertEquals(currentUrlTours, Data.expectedUrlTours);
     }
 
     public void clickGiftsTab() {
         driver.findElement(Locators.LINK_GIFTS).click();
-        String currentUrlGifts = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
     }
 
     public void clickMediaTab() {
         driver.findElement(Locators.LINK_PHOTOS).click();
-        String currentUrlPhotos = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlPhotos, Data.expectedUrlPhotos);
     }
 
     public void clickHowWeWorkTab() {
         driver.findElement(Locators.LINK_HOW_WORK).click();
-        String currentUrlHowWeWork = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlHowWeWork, Data.expectedUrlHowWeWork);
     }
 
     public void clickSearchTab() {
@@ -54,15 +36,6 @@ public class MainPage extends BaseActions {
 
     public void clickBlogTab() {
         driver.findElement(Locators.LINK_BLOG).click();
-        String currentUrlBlog = driver.getCurrentUrl();
-//        Example of Implicit wait:
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        String blogTitle = driver.findElement(Locators.BLOG_TITLE).getText();
-        String blogTitle =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BLOG_TITLE))
-                        .getText();
-        Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
-        Assert.assertEquals(Data.expectedBlogPageTitle, blogTitle);
     }
 
     public void clickSignInTab() {
@@ -119,10 +92,7 @@ public class MainPage extends BaseActions {
         JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_FACEBOOK_REDIRECTION));
-                element.click();
-        String facebookIntegrationURL = driver.getCurrentUrl();
-        System.out.println(facebookIntegrationURL);
-//      Assert.assertEquals(Data.expectedUrlFacebookIntegration, facebookIntegrationURL);
+        element.click();
     }
 }
 

@@ -34,7 +34,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>TestNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <reportsDirectory>.test-output/${timestamp}</reportsDirectory>
+                    <reportsDirectory>./test-output/${timestamp}</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
