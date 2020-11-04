@@ -40,12 +40,11 @@ public class MainPage extends BaseActions {
 
     public void clickSignInTab() {
         driver.findElement(Locators.LINK_SIGH_IN).click();
-        //Assertion
     }
 
     public void clickJoinButton() {
         driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
-        //Assertion
+
     }
 
     public void completeFirstPartOfRegistration() {

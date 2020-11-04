@@ -26,5 +26,7 @@ public class GiftsTests extends BaseUI {
         String bestSellerTitle =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.BESTSELLER_TITLE)).getText();
         Assert.assertEquals(bestSellerTitle, Data.bestsellerGiftTitle);
+        softAssert.assertEquals(bestSellerTitle, Data.bestsellerGiftTitle, "Title of selected bestseller is wrong");
+        softAssert.assertAll();
     }
 }
