@@ -1,7 +1,10 @@
-import org.openqa.selenium.By;
+import javafx.scene.paint.PhongMaterial;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Collections;
 import java.util.List;
 
 public class HowWeWorkTests extends BaseUI {
@@ -14,5 +17,12 @@ public class HowWeWorkTests extends BaseUI {
         } else {
             System.out.println("We have missed some titles");
         }
+        Assert.assertEquals(titles.size(), 22);
+    }
+
+    @Test
+    public void testClickContentPageLinksAreClickable() {
+        mainPage.clickHowWeWorkTab();
+        howWeWorkPage.clickContentPageLinks();
     }
 }
