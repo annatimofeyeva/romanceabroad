@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Data {
     //Main URL
     public static final String mainUrl = "https://romanceabroad.com/";
@@ -5,6 +9,7 @@ public class Data {
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
+    public static final List<String> expectedFooterTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
     //Search
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
     //Media

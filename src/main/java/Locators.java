@@ -56,4 +56,6 @@ public class Locators {
     //IFRAMES_LOCATORS
     public static final By IFRAME_YOUTUBE_VIDEO = By.xpath("//iframe[contains(@src, 'https://www.youtube.com/embed/RRECuJzm3IY?start=85')]");
     public static final By BUTTON_PLAY_YOUTUBE = By.xpath("//button[@aria-label='Play']");
+    //FOOTER
+    public static final By LINKS_TITLES_FOOTER = By.xpath("//div[@class='footer-menu-list-group-item-text']");
 }

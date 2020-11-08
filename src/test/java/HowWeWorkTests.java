@@ -1,10 +1,5 @@
-import javafx.scene.paint.PhongMaterial;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.Collections;
 import java.util.List;
 
 public class HowWeWorkTests extends BaseUI {
@@ -24,5 +19,18 @@ public class HowWeWorkTests extends BaseUI {
     public void testClickContentPageLinksAreClickable() {
         mainPage.clickHowWeWorkTab();
         howWeWorkPage.clickContentPageLinks();
+    }
+
+    @Test
+    public void testClickContentPageLink() {
+        mainPage.clickHowWeWorkTab();
+        howWeWorkPage.clickValueOfList(Locators.LINK_CONTENT_PAGE_TITLES, "Terms of use");
+    }
+
+    @Test
+    public void testCheckFooterLinkTitles() {
+        mainPage.clickHowWeWorkTab();
+        Data.expectedFooterTitles.forEach(System.out::println);
+        Assert.assertEquals(howWeWorkPage.getFooterLinkTitles(), Data.expectedFooterTitles);
     }
 }

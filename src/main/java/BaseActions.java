@@ -1,10 +1,13 @@
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 // Parent class for all "main" classes
 public class BaseActions {
@@ -40,4 +43,30 @@ public class BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
+
+    public void clickValueOfList(By locator, String text) {
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i < elements.size(); i++) {
+            WebElement elementOfList = elements.get(i);
+            String value = elementOfList.getText();
+            if (value.contains(text)) {
+                wait.until(ExpectedConditions.elementToBeClickable(elementOfList));
+                elementOfList.click();
+            }
+        }
+    }
+
+
+    public void ajaxClick(By by, int index) {
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        ajaxClick(driver.findElements(by).get(index));
+    }
+
+
+    public void scrollToBottomOfPage() {
+        ((JavascriptExecutor)
+                driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+
 }

@@ -1,16 +1,12 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.net.HttpURLConnection;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class HowWeWorkPage extends BaseActions {
-    String url = "";
-    HttpURLConnection huc = null;
-    int respCode = 200;
     public HowWeWorkPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -37,12 +33,24 @@ public class HowWeWorkPage extends BaseActions {
         for (int i = 0; i < list.size(); i++) {
             String title = list.get(i).getText();
             System.out.println(title);
-            WebElement link = list.get(i);
-            ajaxClick(link);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-            }
+//            wait.until(ExpectedConditions.elementToBeClickable(list.get(i))).click();
+            //org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
         }
     }
+
+    public List<String> getFooterLinkTitles() {
+        List<String> footerTitles = new ArrayList<>();
+        List<WebElement> helpFooterLinks =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+        for (WebElement element : helpFooterLinks) {
+            footerTitles.add(element.getText());
+        }
+        System.out.println(footerTitles);
+        for (int i = 0; i < footerTitles.size(); i++) {
+            System.out.println("Title of Footers link: " + footerTitles.get(i));
+        }
+        return footerTitles;
+    }
 }
+
+
