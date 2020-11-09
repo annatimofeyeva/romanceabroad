@@ -12,7 +12,7 @@ public class HowWeWorkTests extends BaseUI {
     }
 
     @Test
-    public void testGetContentPagesNumber() {
+    public void testGetContentPagesNumber(){
         mainPage.clickHowWeWorkTab();
         Assert.assertEquals(howWeWorkPage.getContentPagesNumber(), Data.expectedNumberOfContentPages);
     }
@@ -24,9 +24,8 @@ public class HowWeWorkTests extends BaseUI {
     }
 
     @Test
-    public void testClickContentPageLink() {
+    public void testClickSelectedContentPageLinksAreClickable() {
         mainPage.clickHowWeWorkTab();
-        howWeWorkPage.clickValueOfList(Locators.LINK_CONTENT_PAGE_TITLES, "Terms of use");
+        howWeWorkPage.clickSelectedContentPageLinks();
     }
-
 }
