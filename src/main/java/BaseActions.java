@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-// Parent class for all "main" classes
 public class BaseActions {
     protected WebDriver driver;
     protected WebDriverWait wait;

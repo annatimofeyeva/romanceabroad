@@ -27,4 +27,16 @@ public class HowWeWorkTests extends BaseUI {
         mainPage.clickHowWeWorkTab();
         howWeWorkPage.clickSelectedContentPageLinks();
     }
+
+    @Test
+    public void testClickOnFooterLink() {
+        mainPage.clickHowWeWorkTab();
+        howWeWorkPage.clickOnFooterLink();
+    }
+
+    @Test
+    public void testClickOnAllFooterLink() {
+        mainPage.clickHowWeWorkTab();
+        howWeWorkPage.clickOnAllFooterLinks();
+    }
 }

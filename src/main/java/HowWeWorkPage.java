@@ -62,17 +62,28 @@ public class HowWeWorkPage extends BaseActions {
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
         for (int i = 0; i < list.size(); i++) {
-            String title = list.get(i).getText();
-            if (title.contains(Data.contetnPageLink)) {
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
-                wait.until(ExpectedConditions.elementToBeClickable(list.get(i)));
-                list.get(i).click();
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            WebElement element = list.get(i);
+            String title = element.getText();
+            if (title.contains(Data.contetnPageLinkText)) {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                element.click();
             }
+        }
+    }
+
+    public void clickOnFooterLink() {
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+        ajaxClick(list.get(1));
+    }
+
+    // тест не проходит
+    // org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+    public void clickOnAllFooterLinks() {
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+        for (WebElement element : list) {
+            element.click();
         }
     }
 }

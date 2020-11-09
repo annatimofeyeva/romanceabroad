@@ -10,7 +10,7 @@ public class Data {
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final int expectedNumberOfContentPages = 22;
-    public static final String contetnPageLink = "Kharkov dating agency";
+    public static final String contetnPageLinkText = "Kharkov dating agency";
     public static final List<String> expectedContentPageTitles= Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
             "Shipping terms", "Travel to Ukraine", "Blog", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
             "Beautiful urkainian girls", "Real Ukrainian brides", "Eastern European women", "Marriage agency in Ukraine", "Kiev dating site", "Find Ukrainian girlfriend",
