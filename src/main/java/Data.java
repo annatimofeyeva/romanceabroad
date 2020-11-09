@@ -9,6 +9,10 @@ public class Data {
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
+    public static final int expectedNumberOfContentPages = 22;
+    public static final String contetnPageLink = "Kharkov dating agency";
+    public static final List<String> expectedContentPageTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
+    //Footer
     public static final List<String> expectedFooterTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
     //Search
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";

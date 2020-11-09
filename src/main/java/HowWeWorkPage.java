@@ -27,15 +27,18 @@ public class HowWeWorkPage extends BaseActions {
         return titles;
     }
 
-    public void clickContentPageLinks() {
+    public int getContentPagesNumber() {
+        int size = 0;
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
-        for (int i = 0; i < list.size(); i++) {
-            String title = list.get(i).getText();
-            System.out.println(title);
-//            wait.until(ExpectedConditions.elementToBeClickable(list.get(i))).click();
-            //org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+        size = list.size();
+        if (list.size() == 22) {
+            System.out.println("Titles number: " + list.size() + " ." + "We have all titles for all content pages.");
+
+        } else {
+            System.out.println("We have missed some titles");
         }
+        return size;
     }
 
     public List<String> getFooterLinkTitles() {
@@ -51,6 +54,29 @@ public class HowWeWorkPage extends BaseActions {
         }
         return footerTitles;
     }
+
+   /*  "глазами" тест проходит, но потом падает:
+     org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+    https://stackoverflow.com/questions/18225997/stale-element-reference-element-is-not-attached-to-the-page-document*/
+
+    public void clickSelectedContentPageLinks() {
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
+        for (int i = 0; i < list.size(); i++) {
+            String title = list.get(i).getText();
+            if (title.contains(Data.contetnPageLink)) {
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
+                wait.until(ExpectedConditions.elementToBeClickable(list.get(i)));
+                list.get(i).click();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
+
 
 

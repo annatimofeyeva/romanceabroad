@@ -1,24 +1,26 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.util.List;
 
 public class HowWeWorkTests extends BaseUI {
+
     @Test
     public void testGetContentPagesTitles() {
         mainPage.clickHowWeWorkTab();
-        List<String> titles = howWeWorkPage.getContentPagesTitles();
-        if (titles.size() == 22) {
-            System.out.println("Titles number: " + titles.size() + " ." + " We have all titles for all content pages.");
-        } else {
-            System.out.println("We have missed some titles");
-        }
-        Assert.assertEquals(titles.size(), 22);
+        howWeWorkPage.getContentPagesTitles();
+        Data.expectedContentPageTitles.forEach(System.out::println);
+        //Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
     }
 
     @Test
-    public void testClickContentPageLinksAreClickable() {
+    public void testGetContentPagesNumber() {
         mainPage.clickHowWeWorkTab();
-        howWeWorkPage.clickContentPageLinks();
+        Assert.assertEquals(howWeWorkPage.getContentPagesNumber(), Data.expectedNumberOfContentPages);
+    }
+
+    @Test
+    public void testCheckFooterLinkTitles() {
+        mainPage.clickHowWeWorkTab();
+        Assert.assertEquals(howWeWorkPage.getFooterLinkTitles(), Data.expectedFooterTitles);
     }
 
     @Test
@@ -27,10 +29,4 @@ public class HowWeWorkTests extends BaseUI {
         howWeWorkPage.clickValueOfList(Locators.LINK_CONTENT_PAGE_TITLES, "Terms of use");
     }
 
-    @Test
-    public void testCheckFooterLinkTitles() {
-        mainPage.clickHowWeWorkTab();
-        Data.expectedFooterTitles.forEach(System.out::println);
-        Assert.assertEquals(howWeWorkPage.getFooterLinkTitles(), Data.expectedFooterTitles);
-    }
 }

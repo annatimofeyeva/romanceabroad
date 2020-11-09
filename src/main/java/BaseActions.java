@@ -63,10 +63,4 @@ public class BaseActions {
         ajaxClick(driver.findElements(by).get(index));
     }
 
-
-    public void scrollToBottomOfPage() {
-        ((JavascriptExecutor)
-                driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-    }
-
 }
