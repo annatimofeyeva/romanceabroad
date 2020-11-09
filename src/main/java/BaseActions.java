@@ -55,12 +55,4 @@ public class BaseActions {
             }
         }
     }
-
-
-    public void ajaxClick(By by, int index) {
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-        wait.until(ExpectedConditions.elementToBeClickable(by));
-        ajaxClick(driver.findElements(by).get(index));
-    }
-
 }

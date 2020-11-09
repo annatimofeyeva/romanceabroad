@@ -15,7 +15,6 @@ public class HowWeWorkPage extends BaseActions {
         List<String> titles = new ArrayList<>();
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
-        System.out.println("List size: " + list.size());
         if (list.size() != 0) {
             for (WebElement element : list) {
                 titles.add(element.getText());

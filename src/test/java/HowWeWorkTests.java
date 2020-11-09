@@ -6,13 +6,12 @@ public class HowWeWorkTests extends BaseUI {
     @Test
     public void testGetContentPagesTitles() {
         mainPage.clickHowWeWorkTab();
-        howWeWorkPage.getContentPagesTitles();
-        Data.expectedContentPageTitles.forEach(System.out::println);
-        //Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
+        //Data.expectedContentPageTitles.forEach(System.out::println);
+        Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
     }
 
     @Test
-    public void testGetContentPagesNumber(){
+    public void testGetContentPagesNumber() {
         mainPage.clickHowWeWorkTab();
         Assert.assertEquals(howWeWorkPage.getContentPagesNumber(), Data.expectedNumberOfContentPages);
     }

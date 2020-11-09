@@ -11,7 +11,11 @@ public class Data {
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final int expectedNumberOfContentPages = 22;
     public static final String contetnPageLink = "Kharkov dating agency";
-    public static final List<String> expectedContentPageTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
+    public static final List<String> expectedContentPageTitles= Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
+            "Shipping terms", "Travel to Ukraine", "Blog", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
+            "Beautiful urkainian girls", "Real Ukrainian brides", "Eastern European women", "Marriage agency in Ukraine", "Kiev dating site", "Find Ukrainian girlfriend",
+            "Slavic women for marriage", "How to marry Ukrainian lady", "Free Ukrainian dating site", "9 Factors to Keep in Mind When Dating a Ukrainian Woman",
+            "Is There a Difference Between Dating or Courting a Ukrainian Woman?"});
     //Footer
     public static final List<String> expectedFooterTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
     //Search
