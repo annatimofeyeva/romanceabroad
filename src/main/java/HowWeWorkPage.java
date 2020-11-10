@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -94,22 +93,21 @@ public class HowWeWorkPage extends BaseActions {
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
             ajaxClick(list.get(i));
             footerLinksUrls.add(driver.getCurrentUrl());
-            System.out.println(footerLinksUrls);
+            //System.out.println(footerLinksUrls);
         }
         return footerLinksUrls;
     }
 
-    public List<String> clickOnContentPagesTitles() {
-        List<String> contentLinksUrls = new ArrayList<>();
+    public void clickOnContentPagesTitles() {
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
         for (int i = 0; i < list.size(); i++) {
-            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='inside account_menu']")));
-            ajaxClick(list.get(i));
+            // resolving  StaleElementReferenceException:
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
+          list.get(i).click();
         }
-        return contentLinksUrls;
     }
-}// end of class
+}
 
 
 
