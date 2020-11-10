@@ -2,6 +2,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HowWeWorkTests extends BaseUI {
+    @Test
+    public void testClickOnFooterLink() {
+        mainPage.clickHowWeWorkTab();
+        Assert.assertEquals(howWeWorkPage.getSelectedFooterLink(), Data.expectedSelectedFooterUrl);
+    }
+
+    @Test
+    public void testClickOnSelectedContentPageLink() {
+        mainPage.clickHowWeWorkTab();
+        Assert.assertEquals(howWeWorkPage.getSelectedContentPageLinkUrl(), Data.expectedContentLinkUrl);
+    }
 
     @Test
     public void testGetContentPagesTitles() {
@@ -11,32 +22,26 @@ public class HowWeWorkTests extends BaseUI {
     }
 
     @Test
-    public void testGetContentPagesNumber() {
+    public void testGetContentPageNumber() {
         mainPage.clickHowWeWorkTab();
-        Assert.assertEquals(howWeWorkPage.getContentPagesNumber(), Data.expectedNumberOfContentPages);
+        Assert.assertEquals(howWeWorkPage.getNumberOfContentPages(), Data.expectedNumberOfContentPages);
     }
 
     @Test
-    public void testCheckFooterLinkTitles() {
+    public void testGetFooterLinkTitles() {
         mainPage.clickHowWeWorkTab();
         Assert.assertEquals(howWeWorkPage.getFooterLinkTitles(), Data.expectedFooterTitles);
     }
 
     @Test
-    public void testClickSelectedContentPageLinksAreClickable() {
-        mainPage.clickHowWeWorkTab();
-        howWeWorkPage.clickSelectedContentPageLinks();
-    }
-
-    @Test
-    public void testClickOnFooterLink() {
-        mainPage.clickHowWeWorkTab();
-        howWeWorkPage.clickOnFooterLink();
-    }
-
-    @Test
     public void testClickOnAllFooterLink() {
         mainPage.clickHowWeWorkTab();
-        howWeWorkPage.clickOnAllFooterLinks();
+        Assert.assertEquals(howWeWorkPage.checkAllFooterLinks(), Data.expectedFooterLinksUrls);
+    }
+
+    @Test
+    public void testClickOnContentPagesTitles() {
+        mainPage.clickHowWeWorkTab();
+        howWeWorkPage.clickOnContentPagesTitles();
     }
 }

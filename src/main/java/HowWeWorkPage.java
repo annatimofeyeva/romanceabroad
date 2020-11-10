@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +10,36 @@ import java.util.List;
 public class HowWeWorkPage extends BaseActions {
     public HowWeWorkPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
+    }
+
+    public String getSelectedContentPageLinkUrl() {
+        String url = "";
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
+        for (int i = 0; i < list.size(); i++) {
+            WebElement element = list.get(i);
+            String title = element.getText();
+            if (title.contains(Data.contetnPageLinkText)) {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                list =
+                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES_AFTER_PAGE_RELOAD));
+                element.click();
+                url = driver.getCurrentUrl();
+                //System.out.println(url);
+            }
+        }
+        return url;
+    }
+
+    public String getSelectedFooterLink() {
+        String urlSelectedFooterLink = "";
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+        WebElement link = list.get(Data.FOOTER_LINKS_INDEX);
+        ajaxClick(link);
+        urlSelectedFooterLink = driver.getCurrentUrl();
+        //System.out.println(urlSelectedFooterLink);
+        return urlSelectedFooterLink;
     }
 
     public List<String> getContentPagesTitles() {
@@ -26,16 +57,16 @@ public class HowWeWorkPage extends BaseActions {
         return titles;
     }
 
-    public int getContentPagesNumber() {
+    public int getNumberOfContentPages() {
         int size = 0;
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
         size = list.size();
         if (list.size() == 22) {
-            System.out.println("Titles number: " + list.size() + " ." + "We have all titles for all content pages.");
+            System.out.println("Pages number: " + list.size() + " ." + "We have all content pages.");
 
         } else {
-            System.out.println("We have missed some titles");
+            System.out.println("We have missed some pages");
         }
         return size;
     }
@@ -54,39 +85,32 @@ public class HowWeWorkPage extends BaseActions {
         return footerTitles;
     }
 
-   /*  "глазами" тест проходит, но потом падает:
-     org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-    https://stackoverflow.com/questions/18225997/stale-element-reference-element-is-not-attached-to-the-page-document*/
+    public List<String> checkAllFooterLinks() {
+        List<String> footerLinksUrls = new ArrayList<>();
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+        // i < list.size() -1   because last array element is not displaying on the footer. it's <span>...<iframe> ..text()="Mobile"
+        for (int i = 0; i < list.size() - 1; i++) {
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
+            ajaxClick(list.get(i));
+            footerLinksUrls.add(driver.getCurrentUrl());
+            System.out.println(footerLinksUrls);
+        }
+        return footerLinksUrls;
+    }
 
-    public void clickSelectedContentPageLinks() {
+    public List<String> clickOnContentPagesTitles() {
+        List<String> contentLinksUrls = new ArrayList<>();
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
         for (int i = 0; i < list.size(); i++) {
-            WebElement element = list.get(i);
-            String title = element.getText();
-            if (title.contains(Data.contetnPageLinkText)) {
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-                element.click();
-            }
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='inside account_menu']")));
+            ajaxClick(list.get(i));
         }
+        return contentLinksUrls;
     }
+}// end of class
 
-    public void clickOnFooterLink() {
-        List<WebElement> list =
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
-        ajaxClick(list.get(1));
-    }
-
-    // тест не проходит
-    // org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-    public void clickOnAllFooterLinks() {
-        List<WebElement> list =
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
-        for (WebElement element : list) {
-            element.click();
-        }
-    }
-}
 
 
 

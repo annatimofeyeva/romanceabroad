@@ -9,6 +9,7 @@ public class Data {
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
+    public static final String expectedContentLinkUrl = "https://romanceabroad.com/content/view/kharkov-dating-agency";
     public static final int expectedNumberOfContentPages = 22;
     public static final String contetnPageLinkText = "Kharkov dating agency";
     public static final List<String> expectedContentPageTitles= Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
@@ -18,6 +19,11 @@ public class Data {
             "Is There a Difference Between Dating or Courting a Ukrainian Woman?"});
     //Footer
     public static final List<String> expectedFooterTitles= Arrays.asList(new String[]{"Contact us", "Sitemap", "How it works", "News", "Privacy", "Terms of use", ""});
+    public static final List<String> expectedFooterLinksUrls= Arrays.asList(new String[]{"https://romanceabroad.com/tickets/", "https://romanceabroad.com/site_map/",
+            "https://romanceabroad.com/content/view/how-it-works", "https://romanceabroad.com/news/",
+            "https://romanceabroad.com/content/view/privacy-and-security", "https://romanceabroad.com/content/view/legal-terms"});
+    public static final int FOOTER_LINKS_INDEX = 1;
+    public static final String expectedSelectedFooterUrl = "https://romanceabroad.com/site_map/";
     //Search
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
     //Media
