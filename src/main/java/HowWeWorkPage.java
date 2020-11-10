@@ -102,9 +102,10 @@ public class HowWeWorkPage extends BaseActions {
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
         for (int i = 0; i < list.size(); i++) {
-            // resolving  StaleElementReferenceException:
+           /* resolving  StaleElementReferenceException;
+            OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_CONTENT_PAGE_TITLES));
-          list.get(i).click();
+            list.get(i).click();
         }
     }
 }
