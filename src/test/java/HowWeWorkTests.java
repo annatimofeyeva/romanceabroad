@@ -17,7 +17,6 @@ public class HowWeWorkTests extends BaseUI {
     @Test
     public void testGetContentPagesTitles() {
         mainPage.clickHowWeWorkTab();
-        //Data.expectedContentPageTitles.forEach(System.out::println);
         Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
     }
 
