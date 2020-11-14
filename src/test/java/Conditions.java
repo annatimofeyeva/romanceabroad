@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.builder.ToStringExclude;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -153,6 +154,45 @@ public class Conditions extends BaseUI {
             links.get(i).click();
             driver.get(Data.mainUrl);
             links = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+        }
+    }
+
+    @Test
+    public void test7() {
+        List<Integer> crunchifyList1 = new ArrayList<>(Arrays.asList(5, 10, 15));
+        System.out.println("What inside the list:" + crunchifyList1);
+        crunchifyList1.add(20);
+        System.out.println(crunchifyList1.size());
+        for (int i = 0; i < crunchifyList1.size(); i++) {
+            int element = crunchifyList1.get(i);
+            System.out.println(element);
+        }
+    }
+
+    @Test
+    public void test8() {
+        String phrase = "Melon is inside list";
+        List<String> crunchifyList1 = new ArrayList<>(Arrays.asList("apple", "kiwi", phrase));
+        for (int i = 0; i < crunchifyList1.size(); i++) {
+            String element = crunchifyList1.get(i);
+            System.out.println(i + " iteration");
+            if (element.contains("apple")) {
+                System.out.println("Apple");
+                //break;
+            }
+            if (element.contains("i")) {
+                System.out.println("III");
+            }
+
+            if (element.contains("Me")) {
+                System.out.println(phrase);
+                continue;
+            }
+            if (element.contains("orange")) {
+                System.out.println("Orange");
+            } else {
+                System.out.println("Invalid loop");
+            }
         }
     }
 }
