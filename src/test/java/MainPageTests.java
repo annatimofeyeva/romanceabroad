@@ -1,8 +1,18 @@
+import org.omg.PortableInterceptor.LOCATION_FORWARD;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class MainPageTests extends BaseUI {
+
+    @Test
+    public void testBookNowTab() {
+        Assert.assertEquals(mainPage.clickBookNowTab(), Data.expectedUrlTours);
+    }
 
     @Test
     public void testHowWeWorkTab() {
@@ -68,13 +78,6 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testBookNowTab() {
-        mainPage.clickBookNowTab();
-        String currentUrlBookNow = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrlBookNow, Data.expectedUrlTours);
-    }
-
-    @Test
     public void testRegistration() {
         mainPage.clickJoinButton();
     }
@@ -93,4 +96,50 @@ public class MainPageTests extends BaseUI {
     public void testFacebookIntegrationButton() {
         mainPage.clickFacebookRedirectionButton();
     }
-}
+
+    @Test
+    public void testClickNavigationTabs() {
+
+
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='navbar-nav']//li")));
+        for (int i = 0; i < list.size(); i++) {
+           /* resolving  StaleElementReferenceException;
+            OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='navbar-nav']//li")));
+            String info = list.get(i).getText();
+            list.get(i).click();
+
+            if (info.equals("HOME")) {
+                System.out.println(driver.getCurrentUrl());
+                Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
+
+            }
+            // +
+            if (info.contains("WORK")) {
+                System.out.println(driver.getCurrentUrl());
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.PAGE_TITLE));
+                String actualTitle = driver.findElement(Locators.PAGE_TITLE).getText();
+                Assert.assertEquals(Data.expectedTitleHowItWoks, actualTitle);
+            }
+
+            driver.get(Data.mainUrl);
+            list = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+
+        }
+
+//            if (info.equals("PRETTY WOMEN")) {
+//
+//                System.out.println(driver.getCurrentUrl());
+//                List<WebElement> gallery = driver.findElements(By.xpath("//div[@class='row g-users-gallery']"));
+//                System.out.println(gallery.get(0));
+//                boolean firstImage = gallery.get(0).isDisplayed();
+//                if (firstImage) {
+//                    Assert.assertEquals(Data.expectedUrlSearch, driver.getCurrentUrl());
+//                }else{
+//                    Assert.assertFalse(Boolean.parseBoolean("No images displayed"));
+//                }
+//
+//                }
+    }
+}// end of class

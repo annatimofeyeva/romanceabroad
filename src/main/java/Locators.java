@@ -40,6 +40,7 @@ public class Locators {
     public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[text()='REQUEST TOUR INFO']");
     public static final By BUTTON_JOIN_FOR_FREE = By.xpath("//button[@id='show-registration-block']");
     public static final By BUTTON_FACEBOOK_REDIRECTION = By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']");
+    public static final By PAGE_TITLE = By.xpath("//h1");
     //Registration
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");

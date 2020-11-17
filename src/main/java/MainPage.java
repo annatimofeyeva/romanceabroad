@@ -4,15 +4,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.util.List;
 
 public class MainPage extends BaseActions {
+    WebDriverWait wait;
     // Constructor
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
-    public void clickBookNowTab() {
+    public String clickBookNowTab() {
+        String URL = "";
         driver.findElement(Locators.LINK_BOOK_NOW).click();
+        URL = driver.getCurrentUrl();
+        System.out.println(URL);
+        return URL;
     }
 
     public void clickTourToUkraineTab() {
@@ -45,7 +53,6 @@ public class MainPage extends BaseActions {
 
     public void clickJoinButton() {
         driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
-
     }
 
     public void completeFirstPartOfRegistration() {
@@ -94,6 +101,6 @@ public class MainPage extends BaseActions {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_FACEBOOK_REDIRECTION));
         element.click();
     }
-}
+} //end od class
 
 

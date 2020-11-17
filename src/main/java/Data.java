@@ -1,12 +1,15 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Data {
+    //Home
+    public static final String expectedUrlHome = "https://romanceabroad.com/#";
     //Main URL
     public static final String mainUrl = "https://romanceabroad.com/";
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
+    public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
+    public static final String expectedTitleSearch = "Single Ukrainian women online ";
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final String expectedContentLinkUrl = "https://romanceabroad.com/content/view/kharkov-dating-agency";
