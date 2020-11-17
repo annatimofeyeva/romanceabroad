@@ -2,6 +2,7 @@ import org.omg.PortableInterceptor.LOCATION_FORWARD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -100,7 +101,6 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testClickNavigationTabs() {
 
-
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='navbar-nav']//li")));
         for (int i = 0; i < list.size(); i++) {
@@ -123,23 +123,25 @@ public class MainPageTests extends BaseUI {
                 Assert.assertEquals(Data.expectedTitleHowItWoks, actualTitle);
             }
 
+            if (info.equals("PRETTY WOMEN")) {
+                System.out.println(driver.getCurrentUrl());
+                WebElement firstImage =
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Tanua']")));
+                //firstImage.click();
+                System.out.println(firstImage);
+                boolean firstPhoto = firstImage.isDisplayed();
+                if (firstPhoto) {
+                    Assert.assertEquals(Data.expectedUrlSearch, driver.getCurrentUrl());
+                } else {
+                    Assert.fail("Photos are not displayed");
+            }
+
+
             driver.get(Data.mainUrl);
             list = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
 
         }
 
-//            if (info.equals("PRETTY WOMEN")) {
-//
-//                System.out.println(driver.getCurrentUrl());
-//                List<WebElement> gallery = driver.findElements(By.xpath("//div[@class='row g-users-gallery']"));
-//                System.out.println(gallery.get(0));
-//                boolean firstImage = gallery.get(0).isDisplayed();
-//                if (firstImage) {
-//                    Assert.assertEquals(Data.expectedUrlSearch, driver.getCurrentUrl());
-//                }else{
-//                    Assert.assertFalse(Boolean.parseBoolean("No images displayed"));
-//                }
-//
-//                }
     }
-}// end of class
+
+} // end of class
