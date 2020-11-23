@@ -106,8 +106,6 @@ public class MainPageTests extends BaseUI {
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
             list.get(i).click();
-
-
             if (info.equals("HOME")) {
                 System.out.println(driver.getCurrentUrl());
                 Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
@@ -168,6 +166,18 @@ public class MainPageTests extends BaseUI {
                     Assert.assertEquals(Data.expectedToursToUkraineTitle, titleText);
                 }
             }
+            if (info.equals("BLOG")) {
+                System.out.println("Blog");
+                List<WebElement> blogList =
+                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//h1//following::ul//li")));
+                System.out.println(blogList.size());
+                int size = blogList.size();
+                if (size == 24) {
+                    Assert.assertEquals(Data.expectedUrlBlog, driver.getCurrentUrl());
+                } else {
+                    Assert.fail("Some dating agencyes are missing in the list");
+                }
+            }
             if (info.equals("SIGN IN")) {
                 if (driver.findElement(By.xpath("//h1")).isDisplayed()) {
                     System.out.println("Login form is displays");
@@ -175,8 +185,6 @@ public class MainPageTests extends BaseUI {
                     Assert.fail("Login for is not displayed");
                 }
             }
-
-
             driver.get(Data.mainUrl);
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
         }
