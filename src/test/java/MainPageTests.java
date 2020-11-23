@@ -154,8 +154,20 @@ public class MainPageTests extends BaseUI {
                     String title = bestsellers.getText();
                     System.out.println(title);
                     Assert.assertEquals(Data.bestsellerTitle, title);
+                } else {
+                    Assert.fail("No bestsellers displays");
                 }
-
+            }
+            if (info.equals("TOUR TO UKRAINE")) {
+                WebElement payPalButton =
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn btn-primary btn-block']")));
+                System.out.println(payPalButton.getText());
+                WebElement title =
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1")));
+                String titleText = title.getText();
+                if (payPalButton.isDisplayed() && title.isDisplayed()) {
+                    Assert.assertEquals(Data.expectedToursToUkraineTitle, titleText);
+                }
             }
 
 
