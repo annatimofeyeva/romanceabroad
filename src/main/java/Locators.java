@@ -1,22 +1,27 @@
 import org.openqa.selenium.By;
 
 public class Locators {
+    //Main Page
+    public static final By LINK_ALL_TOP_BAR_TABS = By.xpath("//div[@class='collapse navbar-collapse']//ul//li");
     //HOW_IT_WORK page
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
     public static final By LINK_CONTENT_PAGE_TITLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
     public static final By LINK_CONTENT_PAGE_TITLES_AFTER_PAGE_RELOAD = By.xpath("//div[@class='inside account_menu']");
     //Search (Pretty Women) page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
+    public static final By LINK_SEARCH_FIRST_IMAGE_TITLE = By.xpath("//*[@title='Tanua']");
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MIN = By.xpath("//select[@name='age_min']");
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MAX = By.xpath("//select[@name='age_max']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
     //Media (Photos) page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
+    public static final By LINK_PHOTOS_ALL = By.xpath("//ul[@class='b-tabs']//li");
     public static final By BUTTON_ADD_PHOTO = By.cssSelector(".caret");
     public static final By BUTTON_SORTING_PHOTOS = By.cssSelector(".hidden-xs.fa.fa-arrow-down.pointer.plr5");
     public static final By BUTTON_ADD_PHOTOS = By.cssSelector("//button[@data-media='add_photo']");
     //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
+    public static final By LINK_BESTSELLERS = By.xpath("//div[@data-title='Bestsellers']");
     public static final By TEXT_FIELD_GIFTS_SEARCH = By.cssSelector("#search_product");
     public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("button#search_friend");
     public static final By SELECTED_GIFT = By.cssSelector("div.title-block.pt5");
@@ -25,15 +30,19 @@ public class Locators {
     //TOUR_TO_UKRAINE page
     public static final By LINK_TOUR = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'][text()='TOUR TO UKRAINE']");
     public static final By HEADER_TOURS_TO_UKRAINE = By.xpath("//div[@class='search-header']/h1");
+    public static final By BUTTON_PAY_PAL = By.xpath("//a[@class='btn btn-primary btn-block']");
+    public static final By TOURS_TO_UKRAINE_TITLE = By.xpath("//h1");
     //Blog page
     public static final By BLOG_TITLE = By.xpath("//h1");
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
+    public static final By LINK_ALL = By.xpath("//h1//following::ul//li");
     //SIGN_IN page
     public static final By LINK_SIGH_IN = By.cssSelector("#ajax_login_link");
     public static final By EMAIL_TEXT_FIELD = By.xpath(" //input[@name='email']");
     public static final By PASSWORD_TEXT_FIELD = By.xpath(" //input[@name='password']");
     public static final By BUTTON_SIGN_IN = By.xpath("//button[@name='logbtn']");
     public static final By ERROR_POP_UP = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
+    public static final By SIGH_IN_TITLE = By.xpath("//h1");
     //BOOK_NOW page
     public static final By LINK_BOOK_NOW = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
     //Main page

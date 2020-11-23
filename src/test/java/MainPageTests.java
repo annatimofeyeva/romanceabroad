@@ -99,12 +99,12 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testClickNavigationTabs() {
         List<WebElement> list =
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         for (int i = 0; i < list.size(); i++) {
             String info = list.get(i).getText();
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
-            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
             list.get(i).click();
             if (info.equals("HOME")) {
                 System.out.println(driver.getCurrentUrl());
@@ -120,7 +120,7 @@ public class MainPageTests extends BaseUI {
             if (info.equals("PRETTY WOMEN")) {
                 System.out.println(driver.getCurrentUrl());
                 WebElement firstImage =
-                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Tanua']")));
+                        wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_SEARCH_FIRST_IMAGE_TITLE));
                 //firstImage.click();
                 System.out.println(firstImage);
                 boolean firstPhoto = firstImage.isDisplayed();
@@ -133,7 +133,7 @@ public class MainPageTests extends BaseUI {
             if (info.equals("PHOTOS")) {
                 System.out.println(driver.getCurrentUrl());
                 List<WebElement> links =
-                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='b-tabs']//li")));
+                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_PHOTOS_ALL));
                 int linksSize = links.size();
                 System.out.println(links.size());
                 if (linksSize == 4) {
@@ -146,7 +146,7 @@ public class MainPageTests extends BaseUI {
             }
             if (info.equals("GIFTS")) {
                 WebElement bestsellers =
-                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-title='Bestsellers']")));
+                        wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_BESTSELLERS));
                 if (bestsellers.isDisplayed()) {
                     String title = bestsellers.getText();
                     System.out.println(title);
@@ -157,10 +157,10 @@ public class MainPageTests extends BaseUI {
             }
             if (info.equals("TOUR TO UKRAINE")) {
                 WebElement payPalButton =
-                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn btn-primary btn-block']")));
+                        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_PAY_PAL));
                 System.out.println(payPalButton.getText());
                 WebElement title =
-                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1")));
+                        wait.until(ExpectedConditions.elementToBeClickable(Locators.TOURS_TO_UKRAINE_TITLE));
                 String titleText = title.getText();
                 if (payPalButton.isDisplayed() && title.isDisplayed()) {
                     Assert.assertEquals(Data.expectedToursToUkraineTitle, titleText);
@@ -169,7 +169,7 @@ public class MainPageTests extends BaseUI {
             if (info.equals("BLOG")) {
                 System.out.println("Blog");
                 List<WebElement> blogList =
-                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//h1//following::ul//li")));
+                        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL));
                 System.out.println(blogList.size());
                 int size = blogList.size();
                 if (size == 24) {
@@ -179,7 +179,7 @@ public class MainPageTests extends BaseUI {
                 }
             }
             if (info.equals("SIGN IN")) {
-                if (driver.findElement(By.xpath("//h1")).isDisplayed()) {
+                if (driver.findElement(Locators.SIGH_IN_TITLE).isDisplayed()) {
                     System.out.println("Login form is displays");
                 } else {
                     Assert.fail("Login for is not displayed");
