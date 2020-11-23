@@ -98,7 +98,6 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testClickNavigationTabs() {
-
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
         for (int i = 0; i < list.size(); i++) {
@@ -167,6 +166,13 @@ public class MainPageTests extends BaseUI {
                 String titleText = title.getText();
                 if (payPalButton.isDisplayed() && title.isDisplayed()) {
                     Assert.assertEquals(Data.expectedToursToUkraineTitle, titleText);
+                }
+            }
+            if (info.equals("SIGN IN")) {
+                if (driver.findElement(By.xpath("//h1")).isDisplayed()) {
+                    System.out.println("Login form is displays");
+                } else {
+                    Assert.fail("Login for is not displayed");
                 }
             }
 
