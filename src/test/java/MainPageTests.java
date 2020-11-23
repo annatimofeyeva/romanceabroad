@@ -102,30 +102,33 @@ public class MainPageTests extends BaseUI {
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
         for (int i = 0; i < list.size(); i++) {
+            String info = list.get(i).getText();
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
             list.get(i).click();
+
+
+            if (info.equals("HOME")) {
+                System.out.println(driver.getCurrentUrl());
+                Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
+            }
+            if (info.contains("WORK")) {
+                System.out.println(driver.getCurrentUrl());
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.PAGE_TITLE));
+                String actualTitle = driver.findElement(Locators.PAGE_TITLE).getText();
+                Assert.assertEquals(Data.expectedTitleHowItWoks, actualTitle);
+            }
+
+
+
+
+
+
             driver.get(Data.mainUrl);
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //        List<WebElement> list =
@@ -174,9 +177,6 @@ public class MainPageTests extends BaseUI {
 //            }
 //        }
     }
-
-
-
 
 
 //        List<WebElement> list =
@@ -236,7 +236,7 @@ public class MainPageTests extends BaseUI {
 //            }
 //
 //        }
-   //}
+    //}
 }
 
 
