@@ -119,6 +119,20 @@ public class MainPageTests extends BaseUI {
                 String actualTitle = driver.findElement(Locators.PAGE_TITLE).getText();
                 Assert.assertEquals(Data.expectedTitleHowItWoks, actualTitle);
             }
+
+            if (info.equals("PRETTY WOMEN")) {
+                System.out.println(driver.getCurrentUrl());
+                WebElement firstImage =
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Tanua']")));
+                //firstImage.click();
+                System.out.println(firstImage);
+                boolean firstPhoto = firstImage.isDisplayed();
+                if (firstPhoto) {
+                    Assert.assertEquals(Data.expectedUrlSearch, driver.getCurrentUrl());
+                } else {
+                    Assert.fail("Photos are not displayed");
+                }
+            }
             if (info.equals("PHOTOS")) {
                 System.out.println(driver.getCurrentUrl());
                 List<WebElement> links =
@@ -138,69 +152,8 @@ public class MainPageTests extends BaseUI {
 
             driver.get(Data.mainUrl);
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
-
         }
     }
-
-
-//        List<WebElement> list =
-//                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='navbar-nav']//li")));
-//        for (int i = 0; i < list.size(); i++) {
-//           /* resolving  StaleElementReferenceException;
-//            OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
-//            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='navbarResponsive']//ul//li")));
-//            //mainPage.ajaxClick(list.get(i));
-//           list.get(i).click();
-//           String info =  list.get(i).getText();
-//
-//            if (info.equals("HOME")) {
-//                System.out.println(driver.getCurrentUrl());
-//                Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
-//
-//            }
-//
-//            if (info.contains("WORK")) {
-//                Assert.assertEquals(Data.expectedUrlHowWeWork,driver.getCurrentUrl());
-//            }
-//
-//            if (info.equals("PRETTY WOMEN")) {
-//                System.out.println(driver.getCurrentUrl());
-//                WebElement firstImage =
-//                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Tanua']")));
-//                //firstImage.click();
-//                System.out.println(firstImage);
-//                boolean firstPhoto = firstImage.isDisplayed();
-//                if (firstPhoto) {
-//                    Assert.assertEquals(Data.expectedUrlSearch, driver.getCurrentUrl());
-//                } else {
-//                    Assert.fail("Photos are not displayed");
-//                }
-//
-//
-//                if (info.equals("PHOTOS")) {
-//                    System.out.println(driver.getCurrentUrl());
-//                    List<WebElement> links =
-//                            wait.until(ExpectedConditions.visibilityOfAllElements((List<WebElement>) By.xpath("//ul[@class='b-tabs']")));
-//                    int linksSize = links.size();
-//                    if (linksSize == 4) {
-//                        System.out.println("All links are displayed");
-//                    } else {
-//                        Assert.fail("Not all links displayed in top page navBar");
-//                    }
-//                    System.out.println(driver.getCurrentUrl());
-//                    Assert.assertEquals(Data.expectedUrlPhotos, driver.getCurrentUrl());
-//                    try {
-//                        Thread.sleep(2000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-////                    }
-//                driver.navigate().back();
-//                list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='navbar-nav']//li")));
-//
-//            }
-//
-//        }
-    //}
 }
 
 
