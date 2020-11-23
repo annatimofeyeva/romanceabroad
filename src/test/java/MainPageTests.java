@@ -142,11 +142,20 @@ public class MainPageTests extends BaseUI {
                 if (linksSize == 4) {
                     System.out.println("All links are displayed");
                 } else {
-                    softAssert.assertEquals(linksSize, 4, "Not all links displayed in top page navBar");
-                    //Assert.fail("Not all links displayed in top page navBar");
+                    Assert.fail("Not all links displayed in top page navBar");
                 }
                 System.out.println(driver.getCurrentUrl());
                 Assert.assertEquals(Data.expectedUrlPhotos, driver.getCurrentUrl());
+            }
+            if (info.equals("GIFTS")) {
+                WebElement bestsellers =
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-title='Bestsellers']")));
+                if (bestsellers.isDisplayed()) {
+                    String title = bestsellers.getText();
+                    System.out.println(title);
+                    Assert.assertEquals(Data.bestsellerTitle, title);
+                }
+
             }
 
 
