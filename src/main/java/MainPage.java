@@ -95,7 +95,7 @@ public class MainPage extends BaseActions {
     public void clickFacebookRedirectionButton() {
         JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_FACEBOOK_REDIRECTION));
+        WebElement element = driver.findElement(Locators.BUTTON_FACEBOOK_REDIRECTION);
         element.click();
     }
 } //end od class
