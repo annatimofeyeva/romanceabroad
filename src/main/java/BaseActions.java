@@ -38,6 +38,21 @@ public class BaseActions {
         select.selectByVisibleText(text);
     }
 
+    public void getDropDownListByValue(By locator, String value) {
+        Select select = new Select(wait.until(ExpectedConditions.elementToBeClickable(locator)));
+        select.selectByValue(value);
+    }
+
+    public void getDropDownListByIndex(By locator, int index) {
+        Select select = new Select (wait.until(ExpectedConditions.elementToBeClickable(locator)));
+        select.selectByIndex(index);
+    }
+
+    public void getDropDownListByText(By locator, String text) {
+        Select select = new Select (wait.until(ExpectedConditions.elementToBeClickable(locator)));
+        select.selectByVisibleText(text);
+    }
+
     public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
