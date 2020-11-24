@@ -53,9 +53,7 @@ public class MainPage extends BaseActions {
     }
 
     public void completeFirstPartOfRegistration() {
-        WebElement emailField =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_EMAIL));
-        emailField.sendKeys(Data.registrationEmail);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.registrationEmail);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registrationPassword);
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
