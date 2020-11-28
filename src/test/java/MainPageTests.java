@@ -98,10 +98,12 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testClickNavigationTabs() {
+        String actualTitle;
+        String info;
         List<WebElement> list =
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         for (int i = 0; i < list.size(); i++) {
-            String info = list.get(i).getText();
+            info = list.get(i).getText();
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
@@ -113,7 +115,7 @@ public class MainPageTests extends BaseUI {
             if (info.contains("WORK")) {
                 System.out.println(driver.getCurrentUrl());
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.PAGE_TITLE));
-                String actualTitle = driver.findElement(Locators.PAGE_TITLE).getText();
+                actualTitle = driver.findElement(Locators.PAGE_TITLE).getText();
                 Assert.assertEquals(Data.expectedTitleHowItWoks, actualTitle);
             }
 
@@ -148,9 +150,9 @@ public class MainPageTests extends BaseUI {
                 WebElement bestsellers =
                         wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_BESTSELLERS));
                 if (bestsellers.isDisplayed()) {
-                    String title = bestsellers.getText();
-                    System.out.println(title);
-                    Assert.assertEquals(Data.bestsellerTitle, title);
+                    actualTitle = bestsellers.getText();
+                    System.out.println(actualTitle);
+                    Assert.assertEquals(Data.expectedbestsellerTitle, actualTitle);
                 } else {
                     Assert.fail("No bestsellers displays");
                 }
@@ -161,9 +163,9 @@ public class MainPageTests extends BaseUI {
                 System.out.println(payPalButton.getText());
                 WebElement title =
                         wait.until(ExpectedConditions.elementToBeClickable(Locators.TOURS_TO_UKRAINE_TITLE));
-                String titleText = title.getText();
+                actualTitle = title.getText();
                 if (payPalButton.isDisplayed() && title.isDisplayed()) {
-                    Assert.assertEquals(Data.expectedToursToUkraineTitle, titleText);
+                    Assert.assertEquals(Data.expectedToursToUkraineTitle, actualTitle);
                 }
             }
             if (info.equals("BLOG")) {
