@@ -51,6 +51,7 @@ public class Locators {
     public static final By BUTTON_FACEBOOK_REDIRECTION = By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']");
     public static final By PAGE_TITLE = By.xpath("//h1");
     public static final By NAVBAR_LINKS = By.xpath("//ul[@class='navbar-nav']//li");
+    public static final By LINK_JOIN_US = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
     //Registration
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");

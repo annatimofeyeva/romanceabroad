@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -192,6 +193,17 @@ public class MainPageTests extends BaseUI {
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         }
     }
+
+    @Test
+    public void testAjaxClickUsingLocator() {
+        mainPage.ajaxClick(driver.findElement(Locators.LINK_JOIN_US));
+    }
+
+    @Test
+    public void testAjaxClickOnMainPageTopTabUsingIndex() {
+        mainPage.ajaxClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
+    }
+
 }
 
 

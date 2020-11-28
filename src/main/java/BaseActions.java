@@ -56,14 +56,21 @@ public class BaseActions {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        //((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
     // for Angular apps - advanced level of clicks
     public void ajaxClick(By by) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        //wait.until(ExpectedConditions.presenceOfElementLocated(by));
         wait.until(ExpectedConditions.elementToBeClickable(by));
         ajaxClick(driver.findElement(by));
     }
+
+    // for Angular apps - advanced level of clicks
+    public void ajaxClick(By by, int index) {
+        //wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        ajaxClick(driver.findElements(by).get(index));
+    }
+
 
     public void clickValueOfList(By locator, String text) {
         List<WebElement> elements = driver.findElements(locator);
