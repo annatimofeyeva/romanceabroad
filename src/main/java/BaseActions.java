@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.HttpURLConnection;
 import java.util.List;
 
 public class BaseActions {
@@ -52,11 +51,18 @@ public class BaseActions {
         Select select = new Select (wait.until(ExpectedConditions.elementToBeClickable(locator)));
         select.selectByVisibleText(text);
     }
-
+    // for Angular apps - advanced level of clicks
     public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+        element.click();
+        //((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+    }
+    // for Angular apps - advanced level of clicks
+    public void ajaxClick(By by) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        ajaxClick(driver.findElement(by));
     }
 
     public void clickValueOfList(By locator, String text) {

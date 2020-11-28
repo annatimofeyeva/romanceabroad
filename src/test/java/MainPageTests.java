@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -107,7 +106,9 @@ public class MainPageTests extends BaseUI {
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
-            list.get(i).click();
+            //list.get(i).click();
+            mainPage.ajaxClick(list.get(i));
+
             if (info.equals("HOME")) {
                 System.out.println(driver.getCurrentUrl());
                 Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
@@ -188,7 +189,7 @@ public class MainPageTests extends BaseUI {
                 }
             }
             driver.get(Data.mainUrl);
-            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='collapse navbar-collapse']//ul//li")));
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         }
     }
 }
