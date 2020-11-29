@@ -13,6 +13,7 @@ public class Locators {
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MIN = By.xpath("//select[@name='age_min']");
     public static final By DROP_DOWN_LIST_SORT_BY_AGE_MAX = By.xpath("//select[@name='age_max']");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By BUTTON_SEARCH = By.xpath("//input[@name='main_search_button']");
     //Media (Photos) page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By LINK_PHOTOS_ALL = By.xpath("//ul[@class='b-tabs']//li");

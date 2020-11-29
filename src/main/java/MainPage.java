@@ -1,7 +1,6 @@
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage extends BaseActions {
@@ -96,6 +95,6 @@ public class MainPage extends BaseActions {
         WebElement element = driver.findElement(Locators.BUTTON_FACEBOOK_REDIRECTION);
         element.click();
     }
-} //end od class
+}
 
 

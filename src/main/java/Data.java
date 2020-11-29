@@ -29,6 +29,7 @@ public class Data {
     public static final String expectedSelectedFooterUrl = "https://romanceabroad.com/site_map/";
     //Search
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
+    public static final String expectedSearchResultSize = "71";
     //Media
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
     //Gifts

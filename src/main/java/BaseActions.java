@@ -53,21 +53,19 @@ public class BaseActions {
         select.selectByVisibleText(text);
     }
 
-    // for Angular apps - advanced level of clicks
+    // for Angular apps - advanced level of clicks (for Chrome)
     public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
-    // for Angular apps - advanced level of clicks (for Chrome)
     public void ajaxClick(By by) {
         //wait.until(ExpectedConditions.presenceOfElementLocated(by));
         wait.until(ExpectedConditions.elementToBeClickable(by));
         ajaxClick(driver.findElement(by));
     }
 
-    // for Angular apps - advanced level of clicks
     public void ajaxClick(By by, int index) {
         //wait.until(ExpectedConditions.presenceOfElementLocated(by));
         wait.until(ExpectedConditions.elementToBeClickable(by));
@@ -133,7 +131,12 @@ public class BaseActions {
 
 
     public void ajaxScrollUp() {
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -250)",  " ");
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -250)", " ");
+    }
+
+    public void getNavigateToLinkPage(By locator) {
+        WebElement element = driver.findElement(locator);
+        element.click();
     }
 
     public void clickValueOfList(By locator, String text) {
