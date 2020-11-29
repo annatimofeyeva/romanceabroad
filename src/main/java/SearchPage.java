@@ -26,7 +26,7 @@ public class SearchPage extends BaseActions {
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX, "40");
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN, "20");
         getNavigateToLinkPage(Locators.BUTTON_SEARCH);
-        String resultSize = driver.findElement(By.xpath("//div[@class='lh30']")).getText();
+        String resultSize = driver.findElement(Locators.SEARCH_RESULT).getText();
         System.out.println(resultSize);
         return resultSize;
     }

@@ -12,7 +12,7 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchWomen() {
         mainPage.clickSearchTab();
-        Assert.assertEquals("People found: 71", searchPage.searchWomenResults());
+        Assert.assertEquals(Data.expectedSearchResultSize, searchPage.searchWomenResults());
     }
 }
 
