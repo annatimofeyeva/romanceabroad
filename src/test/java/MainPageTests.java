@@ -202,8 +202,9 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testAjaxClickOnMainPageTopTabUsingIndex() {
         mainPage.ajaxClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
+        //mainPage.performedClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
+        //mainPage.scrollToBottomOfPage();
     }
-
 }
 
 

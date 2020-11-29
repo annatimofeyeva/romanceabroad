@@ -52,6 +52,7 @@ public class Locators {
     public static final By PAGE_TITLE = By.xpath("//h1");
     public static final By NAVBAR_LINKS = By.xpath("//ul[@class='navbar-nav']//li");
     public static final By LINK_JOIN_US = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
+    public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");
     //Registration
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_EMAIL = By.xpath("//input[@id='email']");
