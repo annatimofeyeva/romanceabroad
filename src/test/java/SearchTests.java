@@ -4,15 +4,15 @@ import org.testng.annotations.Test;
 public class SearchTests extends BaseUI {
 
     @Test
-    public void testDropDownListSortByUserData() {
+    public void testSearchWomenByName() {
         mainPage.clickSearchTab();
-        searchPage.getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY, "views_count");
+        Assert.assertEquals(Data.expectedTextSelectedInDropDown, searchPage.searchWomenByName());
     }
 
     @Test
-    public void testSearchWomen() {
+    public void testSearchWomenByAgesResult() {
         mainPage.clickSearchTab();
-        Assert.assertEquals(Data.expectedSearchResultSize, searchPage.searchWomenResults());
+        Assert.assertEquals(Data.expectedSearchResultSize, searchPage.searchWomenByAgesResult());
     }
 }
 
