@@ -37,10 +37,10 @@ public class Data {
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedGiftTitle = "Chocolate and fruits";
-    public static final String bestsellerGiftTitle = "Flower basket";
+    public static final String expectedBestsellerGiftTitle = "Flower basket";
     public static final String expectedbestsellerTitle = "Bestsellers";
-    //GiftsTests/Search for specific gift
     public static final String GiftName = "Flower busket";
+    public static final String expectedPayPalButtonText = "Pay with PayPal";
     //Tours_To_Ukraine
     public static final String expectedToursToUkraineTitle = "TOURS TO UKRAINE";
     //Blog

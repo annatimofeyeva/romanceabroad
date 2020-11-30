@@ -20,11 +20,25 @@ public class GiftsPage extends BaseActions {
         return selectedGiftTitle;
     }
 
-    public String bestsellerPurchase() {
+    public String bestsellerSelection() {
         getNavigateToLinkPage(Locators.LINK_GIFTS);
         ajaxClick(Locators.LINK_TO_BESTSELLER_PURCHASE);
         String bestSellerTitle =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.BESTSELLER_TITLE)).getText();
         return bestSellerTitle;
+    }
+
+    public String bestsellerPurchase() {
+        getNavigateToLinkPage(Locators.LINK_GIFTS);
+        ajaxClick(Locators.LINK_TO_BESTSELLER_PURCHASE);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_PAY_PAL));
+        WebElement payPalButton = driver.findElement(Locators.BUTTON_PAY_PAL);
+        if (payPalButton.isEnabled()) {
+            System.out.println("It's possible to make payment with PayPal");
+        } else {
+            System.out.println("Some issues with PauPal payment");
+        }
+        String payPalButtonText = payPalButton.getText().trim();
+        return payPalButtonText;
     }
 }
