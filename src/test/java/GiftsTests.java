@@ -6,15 +6,9 @@ import org.testng.annotations.Test;
 public class GiftsTests extends BaseUI {
 
     @Test
-    public void testGiftsSearch() {
-        giftsPage.giftsSearch();
-        WebElement search_textField =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
-        search_textField.sendKeys("Chocolate and fruits");
-        driver.findElement(Locators.BUTTON_GIFTS_SEARCH).click();
-        String selectedGiftTitle =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.SELECTED_GIFT)).getText();
-        Assert.assertEquals(selectedGiftTitle, Data.selectedGiftTitle);
+    public void testGiftSearch() {
+     String actualGiftTitle = giftsPage.giftSearch();
+     Assert.assertEquals(actualGiftTitle, Data.expectedGiftTitle);
     }
 
     @Test

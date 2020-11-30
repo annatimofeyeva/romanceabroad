@@ -135,6 +135,7 @@ public class BaseActions {
     }
 
     public void getNavigateToLinkPage(By locator) {
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
         WebElement element = driver.findElement(locator);
         element.click();
     }

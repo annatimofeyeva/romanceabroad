@@ -36,7 +36,7 @@ public class Data {
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
-    public static final String selectedGiftTitle = "Chocolate and fruits";
+    public static final String expectedGiftTitle = "Chocolate and fruits";
     public static final String bestsellerGiftTitle = "Flower basket";
     public static final String expectedbestsellerTitle = "Bestsellers";
     //GiftsTests/Search for specific gift
