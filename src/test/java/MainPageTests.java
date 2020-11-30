@@ -22,7 +22,7 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testSearchTab() {
-        mainPage.clickSearchTab();
+
         String currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         //Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
@@ -33,7 +33,7 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testMediaTab() {
-        mainPage.clickMediaTab();
+
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_ADD_PHOTO));
         String currentUrlPhotos = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlPhotos, Data.expectedUrlPhotos);
@@ -41,39 +41,19 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testGiftsTab() {
-        mainPage.clickGiftsTab();
+
         String currentUrlGifts = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
     }
 
     @Test
     public void testTourToUkraineTab() {
-        mainPage.clickTourToUkraineTab();
         String currentUrlTours = driver.getCurrentUrl();
         String searchToursToUkraineHeader =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.HEADER_TOURS_TO_UKRAINE))
                         .getText();
         Assert.assertEquals(Data.expectedToursToUkraineTitle, searchToursToUkraineHeader);
         Assert.assertEquals(currentUrlTours, Data.expectedUrlTours);
-    }
-
-    @Test
-    public void testBlogTab() {
-        mainPage.clickBlogTab();
-        String currentUrlBlog = driver.getCurrentUrl();
-//        Example of Implicit wait:
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        String blogTitle = driver.findElement(Locators.BLOG_TITLE).getText();
-        String blogTitle =
-                wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BLOG_TITLE))
-                        .getText();
-        Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
-        Assert.assertEquals(Data.expectedBlogPageTitle, blogTitle);
-    }
-
-    @Test
-    public void testSighInTab() {
-        mainPage.clickSignInTab();
     }
 
     @Test

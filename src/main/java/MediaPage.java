@@ -9,14 +9,14 @@ public class MediaPage extends BaseActions{
     }
 
     public void photosSorting() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
+        getNavigateToLinkPage(Locators.LINK_PHOTOS);
         WebElement sortingPhotoButton =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BUTTON_SORTING_PHOTOS));
         sortingPhotoButton.click();
     }
 
     public void addPhotoButton() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
+        getNavigateToLinkPage(Locators.LINK_PHOTOS);
         WebElement addPhotoButton =
                 wait.until(ExpectedConditions.presenceOfElementLocated(Locators.BUTTON_ADD_PHOTO));
         addPhotoButton.click();

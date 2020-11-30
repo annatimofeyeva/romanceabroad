@@ -45,4 +45,3 @@ public class HowWeWorkTests extends BaseUI {
         howWeWorkPage.clickOnContentPagesTitles();
     }
 }
-

@@ -19,32 +19,8 @@ public class MainPage extends BaseActions {
         return URL;
     }
 
-    public void clickTourToUkraineTab() {
-        driver.findElement(Locators.LINK_TOUR).click();
-    }
-
-    public void clickGiftsTab() {
-        driver.findElement(Locators.LINK_GIFTS).click();
-    }
-
-    public void clickMediaTab() {
-        driver.findElement(Locators.LINK_PHOTOS).click();
-    }
-
     public void clickHowWeWorkTab() {
         driver.findElement(Locators.LINK_HOW_WORK).click();
-    }
-
-    public void clickSearchTab() {
-        driver.findElement(Locators.LINK_SEARCH).click();
-    }
-
-    public void clickBlogTab() {
-        driver.findElement(Locators.LINK_BLOG).click();
-    }
-
-    public void clickSignInTab() {
-        driver.findElement(Locators.LINK_SIGH_IN).click();
     }
 
     public void clickJoinButton() {

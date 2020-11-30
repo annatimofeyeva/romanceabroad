@@ -10,6 +10,7 @@ public class SearchPage extends BaseActions {
     }
 
     public String searchWomenByName() {
+        getNavigateToLinkPage(Locators.LINK_SEARCH);
         wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
         Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY));
         select.selectByValue("name");
@@ -22,6 +23,7 @@ public class SearchPage extends BaseActions {
     }
 
     public String searchWomenByAgesResult() {
+        getNavigateToLinkPage(Locators.LINK_SEARCH);
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX, "40");
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN, "20");
         getNavigateToLinkPage(Locators.BUTTON_SEARCH);
