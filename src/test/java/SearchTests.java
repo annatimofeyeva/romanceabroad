@@ -6,13 +6,15 @@ public class SearchTests extends BaseUI {
     @Test
     public void testSearchWomenByName() {
         mainPage.clickSearchTab();
-        Assert.assertEquals(Data.expectedTextSelectedInDropDown, searchPage.searchWomenByName());
+        String actualTextSelectedINDropDown = searchPage.searchWomenByName();
+        Assert.assertEquals(Data.expectedTextSelectedInDropDown, actualTextSelectedINDropDown);
     }
 
     @Test
     public void testSearchWomenByAgesResult() {
         mainPage.clickSearchTab();
-        Assert.assertEquals(Data.expectedSearchResultSize, searchPage.searchWomenByAgesResult());
+        String actualNumberOfSearchResults = searchPage.searchWomenByAgesResult();
+        Assert.assertEquals(Data.expectedSearchResultSize, actualNumberOfSearchResults);
     }
 }
 
