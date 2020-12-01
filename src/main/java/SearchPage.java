@@ -8,13 +8,13 @@ public class SearchPage extends BaseActions {
     }
 
     public String searchWomenByName() {
-        getNavigateToLinkPage(Locators.LINK_SEARCH);
+        getNavigate(Locators.LINK_SEARCH);
         String selectedTextInDropDown = getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
         return selectedTextInDropDown;
     }
 
     public String searchWomenByAgesResult() {
-        getNavigateToLinkPage(Locators.LINK_SEARCH);
+        getNavigate(Locators.LINK_SEARCH);
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX, "40");
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN, "20");
         driver.findElement(Locators.BUTTON_SEARCH).click();

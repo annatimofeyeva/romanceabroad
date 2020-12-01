@@ -10,7 +10,7 @@ public class GiftsPage extends BaseActions {
     }
 
     public String giftSearch() {
-        getNavigateToLinkPage(Locators.LINK_GIFTS);
+        getNavigate(Locators.LINK_GIFTS);
         wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
         driver.findElement(Locators.TEXT_FIELD_GIFTS_SEARCH)
                 .sendKeys("Chocolate and fruits");
@@ -21,7 +21,7 @@ public class GiftsPage extends BaseActions {
     }
 
     public String bestsellerSelection() {
-        getNavigateToLinkPage(Locators.LINK_GIFTS);
+        getNavigate(Locators.LINK_GIFTS);
         ajaxClick(Locators.LINK_TO_BESTSELLER_PURCHASE);
         String bestSellerTitle =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.BESTSELLER_TITLE)).getText();
@@ -29,7 +29,7 @@ public class GiftsPage extends BaseActions {
     }
 
     public String bestsellerPurchase() {
-        getNavigateToLinkPage(Locators.LINK_GIFTS);
+        getNavigate(Locators.LINK_GIFTS);
         ajaxClick(Locators.LINK_TO_BESTSELLER_PURCHASE);
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_PAY_PAL));
         WebElement payPalButton = driver.findElement(Locators.BUTTON_PAY_PAL);

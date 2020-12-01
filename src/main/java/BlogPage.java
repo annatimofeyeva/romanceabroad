@@ -9,7 +9,7 @@ public class BlogPage extends BaseActions {
     }
 
     public String verifyBlogLinkUrl() {
-        getNavigateToLinkPage(Locators.LINK_BLOG);
+        getNavigate(Locators.LINK_BLOG);
         currentUrlBlog = driver.getCurrentUrl();
         return currentUrlBlog;
     }

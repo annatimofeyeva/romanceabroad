@@ -50,7 +50,7 @@ public class Data {
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
-    public static final String expectedLoginErrorPopUpText = "Login or password are incorrect, please try again";
+    public static final String expectedErrorMessageText = "Login or password are incorrect, please try again";
     public static final String expectedBackgroundColor = "rgb(235, 204, 209)";
     //Book_Now
     public static final String expectedUrlTours = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";

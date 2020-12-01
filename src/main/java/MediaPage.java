@@ -7,7 +7,7 @@ public class MediaPage extends BaseActions {
     }
 
     public String sortingPhotosByViewsCount() {
-        getNavigateToLinkPage(Locators.LINK_PHOTOS);
+        getNavigate(Locators.LINK_PHOTOS);
         String actualSortingValueText = getTextFromDropDownSelectedValue(Locators.LINK_DROP_DOWN, "views");
         return actualSortingValueText;
     }

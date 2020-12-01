@@ -113,7 +113,6 @@ public class BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-
     public void ajaxScroll(By by) {
         ajaxScroll(driver.findElement(by));
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
@@ -124,17 +123,15 @@ public class BaseActions {
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-
     public void scrollToBottomOfPage() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
-
 
     public void ajaxScrollUp() {
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -250)", " ");
     }
 
-    public void getNavigateToLinkPage(By locator) {
+    public void getNavigate(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         WebElement element = driver.findElement(locator);
         element.click();
@@ -142,7 +139,7 @@ public class BaseActions {
 
     public String getTextFromDropDownSelectedValue(By locator, String value) {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
-        Select select = new Select( wait.until(ExpectedConditions.elementToBeClickable(locator)));
+        Select select = new Select(wait.until(ExpectedConditions.elementToBeClickable(locator)));
         select.selectByValue(value);
         /*Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY)));
         select.selectByIndex(3);
@@ -150,10 +147,6 @@ public class BaseActions {
         String selectedTextInDropDown = select.getFirstSelectedOption().getText().trim();
         return selectedTextInDropDown;
     }
-
-
-
-
 
     public void clickValueOfList(By locator, String text) {
         List<WebElement> elements = driver.findElements(locator);
