@@ -148,7 +148,6 @@ public class BaseActions {
         select.selectByIndex(3);
         select.selectByValue("views_count"); //actual text = "Views"*/
         String selectedTextInDropDown = select.getFirstSelectedOption().getText().trim();
-        System.out.println(selectedTextInDropDown);
         return selectedTextInDropDown;
     }
 
