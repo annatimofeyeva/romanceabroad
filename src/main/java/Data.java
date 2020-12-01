@@ -10,6 +10,11 @@ public class Data {
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
     public static final String expectedTitleSearch = "Single Ukrainian women online ";
+    public static final List<String> expectedallAllTopBarLinks = Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
+            "Shipping terms", "Travel to Ukraine", "Blog", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
+            "Beautiful urkainian girls", "Real Ukrainian brides", "Eastern European women", "Marriage agency in Ukraine", "Kiev dating site", "Find Ukrainian girlfriend",
+            "Slavic women for marriage", "How to marry Ukrainian lady", "Free Ukrainian dating site", "9 Factors to Keep in Mind When Dating a Ukrainian Woman",
+            "Is There a Difference Between Dating or Courting a Ukrainian Woman?"});
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final String expectedContentLinkUrl = "https://romanceabroad.com/content/view/kharkov-dating-agency";

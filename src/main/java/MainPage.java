@@ -11,20 +11,12 @@ public class MainPage extends BaseActions {
         super(driver, wait);
     }
 
-    public String clickBookNowTab() {
-        String URL = "";
-        driver.findElement(Locators.LINK_BOOK_NOW).click();
-        URL = driver.getCurrentUrl();
-        System.out.println(URL);
-        return URL;
+    public void clickJoinButton() {
+        driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
     }
 
     public void clickHowWeWorkTab() {
         driver.findElement(Locators.LINK_HOW_WORK).click();
-    }
-
-    public void clickJoinButton() {
-        driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
     }
 
     public void completeFirstPartOfRegistration() {
