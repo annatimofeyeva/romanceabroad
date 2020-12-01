@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -66,8 +65,8 @@ public class MainPage extends BaseActions {
     }
 
     public String clickTopBarTab() {
-        String actualURL= clickValueOfList(Locators.LINK_ALL_TOP_BAR_TABS, "PRETTY WOMEN");
-                return actualURL;
+        String actualURL = clickValueOfList(Locators.LINK_ALL_TOP_BAR_TABS, "PRETTY WOMEN");
+        return actualURL;
     }
 }
 

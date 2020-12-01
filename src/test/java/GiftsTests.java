@@ -5,14 +5,14 @@ public class GiftsTests extends BaseUI {
 
     @Test
     public void testGiftSearch() {
-     String actualGiftTitle = giftsPage.giftSearch();
-     Assert.assertEquals(actualGiftTitle, Data.expectedGiftTitle);
+        String actualGiftTitle = giftsPage.giftSearch();
+        Assert.assertEquals(actualGiftTitle, Data.expectedGiftTitle);
     }
 
     @Test
     public void testBestsellerSelection() {
-      String actualBestSellerTitle = giftsPage.bestsellerSelection();
-      Assert.assertEquals(actualBestSellerTitle, Data.expectedBestsellerGiftTitle);
+        String actualBestSellerTitle = giftsPage.bestsellerSelection();
+        Assert.assertEquals(actualBestSellerTitle, Data.expectedBestsellerGiftTitle);
     }
 
     @Test

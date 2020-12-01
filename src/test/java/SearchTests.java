@@ -11,8 +11,8 @@ public class SearchTests extends BaseUI {
 
     @Test
     public void testSearchWomenByAges() {
-        String actualNumberOfWomens = searchPage.searchWomenByAges();
-        Assert.assertEquals(Data.expectedSearchResultSize, actualNumberOfWomens);
+        String actualNumberOfWomen = searchPage.searchWomenByAges();
+        Assert.assertEquals(Data.expectedSearchResultSize, actualNumberOfWomen);
     }
 }
 
