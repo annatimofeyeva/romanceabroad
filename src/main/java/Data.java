@@ -34,6 +34,7 @@ public class Data {
 
     //Media
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
+    public static final String expectedSortingValueText = "Views count";
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedGiftTitle = "Chocolate and fruits";

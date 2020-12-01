@@ -140,6 +140,22 @@ public class BaseActions {
         element.click();
     }
 
+    public String getTextFromDropDownSelectedValue(By locator, String value) {
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        Select select = new Select( wait.until(ExpectedConditions.elementToBeClickable(locator)));
+        select.selectByValue(value);
+        /*Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY)));
+        select.selectByIndex(3);
+        select.selectByValue("views_count"); //actual text = "Views"*/
+        String selectedTextInDropDown = select.getFirstSelectedOption().getText().trim();
+        System.out.println(selectedTextInDropDown);
+        return selectedTextInDropDown;
+    }
+
+
+
+
+
     public void clickValueOfList(By locator, String text) {
         List<WebElement> elements = driver.findElements(locator);
         for (int i = 0; i < elements.size(); i++) {
