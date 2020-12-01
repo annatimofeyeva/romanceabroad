@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class MainPageTests extends BaseUI {
+
     @Test
     public void testClickNavigationTabs() {
         String actualTitle;
@@ -101,6 +102,12 @@ public class MainPageTests extends BaseUI {
             driver.get(Data.mainUrl);
             list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         }
+    }
+
+    @Test
+    public void testClickTopBarTab() {
+        String actualSelectedTabUrl = mainPage.clickTopBarTab();
+        Assert.assertEquals(actualSelectedTabUrl, Data.expectedUrlSearch);
     }
 
     @Test

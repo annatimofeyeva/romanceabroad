@@ -148,15 +148,23 @@ public class BaseActions {
         return selectedTextInDropDown;
     }
 
-    public void clickValueOfList(By locator, String text) {
-        List<WebElement> elements = driver.findElements(locator);
-        for (int i = 0; i < elements.size(); i++) {
-            WebElement elementOfList = elements.get(i);
-            String value = elementOfList.getText();
-            if (value.contains(text)) {
-                wait.until(ExpectedConditions.elementToBeClickable(elementOfList));
-                elementOfList.click();
+    public String clickValueOfList(By locator, String text) {
+        String info = "";
+        String actualUrl = "";
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+        for (int i = 0; i < list.size(); i++) {
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+            info = list.get(i).getText();
+            if (info.equals(text)) {
+                ajaxClick(list.get(i));
+                actualUrl = driver.getCurrentUrl();
+                System.out.println(actualUrl);
+                driver.navigate().back();
             }
         }
+        return actualUrl;
     }
 }
+
+
