@@ -13,13 +13,13 @@ public class SearchPage extends BaseActions {
         return selectedTextInDropDown;
     }
 
-    public String searchWomenByAgesResult() {
+    public String searchWomenByAges() {
         getNavigate(Locators.LINK_SEARCH);
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX, "40");
         getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN, "20");
         driver.findElement(Locators.BUTTON_SEARCH).click();
-        String resultSize = driver.findElement(Locators.SEARCH_RESULT).getText();
-        System.out.println(resultSize);
-        return resultSize;
+        String numberOfWomens = driver.findElement(Locators.SEARCH_RESULT).getText();
+        System.out.println(numberOfWomens);
+        return numberOfWomens;
     }
 }

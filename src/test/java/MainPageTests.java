@@ -2,6 +2,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.List;
 
 public class MainPageTests extends BaseUI {
