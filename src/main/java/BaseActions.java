@@ -80,7 +80,6 @@ public class BaseActions {
         actions.click().build().perform();
     }
 
-    // Click by mouse using index - advanced level of clicks (mostly works for IE)
     public void performedClick(By locator, int index) {
         WebElement element = driver.findElements(locator).get(index);
         Actions actions = new Actions(driver);
@@ -88,7 +87,6 @@ public class BaseActions {
         actions.click().build().perform();
     }
 
-    // Click by mouse using WebElement - advanced level of clicks (mostly works for IE)
     public void performedClick(WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
@@ -141,9 +139,6 @@ public class BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         Select select = new Select(wait.until(ExpectedConditions.elementToBeClickable(locator)));
         select.selectByValue(value);
-        /*Select select = new Select(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY)));
-        select.selectByIndex(3);
-        select.selectByValue("views_count"); //actual text = "Views"*/
         String selectedTextInDropDown = select.getFirstSelectedOption().getText().trim();
         return selectedTextInDropDown;
     }
