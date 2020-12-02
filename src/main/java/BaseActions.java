@@ -199,13 +199,13 @@ public class BaseActions {
 
     public void checkLinksOnWebPage(String xpathValue, String attribute) {
         List<WebElement> links = driver.findElements(By.xpath(xpathValue));
-        System.out.println("I start taking attribute values on page:");
+        System.out.println("I start taking attribute values:");
         for (int i = 0; i < links.size(); i++) {
             WebElement element = links.get(i);
             String url = element.getAttribute(attribute);
             verifyLinkActive(url);
         }
-        System.out.println("Total links size: " + links.size());
+        System.out.println("Total size: " + links.size());
     }
 
     //Method for link verification
