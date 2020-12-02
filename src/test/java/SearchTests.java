@@ -29,7 +29,7 @@ public class SearchTests extends BaseUI {
     public void testGetSizeDropDownList() {
         int actualSize = searchPage.getSizeDropDownList();
         System.out.println("Size of DropDown list: " + actualSize);
-        Assert.assertEquals(actualSize, 4);
+        Assert.assertEquals(actualSize, Data.expectedSizeOfDropDown);
     }
 }
 

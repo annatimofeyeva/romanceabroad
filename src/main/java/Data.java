@@ -36,6 +36,7 @@ public class Data {
     public static final String expectedUrlSearch = "https://romanceabroad.com/users/search";
     public static final String expectedSearchResultSize = "People found: 71";
     public static final String expectedTextSelectedInDropDown ="Name";
+    public static final int expectedSizeOfDropDown = 4;
 
     //Media
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
