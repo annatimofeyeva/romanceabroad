@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class BaseActions {
     protected WebDriver driver;
@@ -180,6 +181,18 @@ public class BaseActions {
             }
         }
         return actualUrl;
+    }
+
+    //Method for random choice from DropDown list
+    public void selectItemDropDownRandomOption(By locator, String dropDownName) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Select select = new Select(driver.findElement(locator));
+            select.selectByIndex((int) (Math.random() * (select.getOptions().size() - 1)) + 1);
+            System.out.println(dropDownName + " : " + select.getFirstSelectedOption().getText());
+        } catch (NoSuchElementException e) {
+        }
     }
 }
 

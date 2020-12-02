@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchPage extends BaseActions {
@@ -20,5 +21,11 @@ public class SearchPage extends BaseActions {
         String numberOfWomens = driver.findElement(Locators.SEARCH_RESULT).getText();
         System.out.println(numberOfWomens);
         return numberOfWomens;
+    }
+
+    public void randomSearchFromDropDown() {
+        getNavigate(Locators.LINK_SEARCH);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
+        selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY, "SearchByValue");
     }
 }

@@ -14,6 +14,11 @@ public class SearchTests extends BaseUI {
         String actualNumberOfWomen = searchPage.searchWomenByAges();
         Assert.assertEquals(Data.expectedSearchResultSize, actualNumberOfWomen);
     }
+
+    @Test
+    public void testRandomSearchFromDropDown() {
+        searchPage.randomSearchFromDropDown();
+    }
 }
 
 
