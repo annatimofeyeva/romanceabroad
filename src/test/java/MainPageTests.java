@@ -128,6 +128,11 @@ public class MainPageTests extends BaseUI {
     public void testAjaxSendKeys() {
         mainPage.ajaxSendKeys();
     }
+
+    @Test
+    public void testCheckAllLinks() {
+        mainPage.checkAllLinks();
+    }
 }
 
 

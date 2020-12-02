@@ -79,6 +79,9 @@ public class MainPage extends BaseActions {
         WebElement element = driver.findElement(Locators.TEXT_FIELD_EMAIL);
         ajaxSendKeys(element, "test@test.com");
     }
+    public void checkAllLinks() {
+        checkLinksOnWebPage("//a", "href");
+    }
 }
 
 
