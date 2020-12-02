@@ -19,6 +19,11 @@ public class SearchTests extends BaseUI {
     public void testRandomSearchFromDropDown() {
         searchPage.randomSearchFromDropDown();
     }
+
+    @Test
+    public void testRandomSearchFromDropDownSecond() {
+        searchPage.randomSearchFromDropDownSecond();
+    }
 }
 
 

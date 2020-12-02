@@ -28,4 +28,12 @@ public class SearchPage extends BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
         selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY, "SearchByValue");
     }
+
+    public void randomSearchFromDropDownSecond() {
+        getNavigate(Locators.LINK_SEARCH);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
+        for (int i = 0; i < 10; i++) {
+            selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY, "SearchByValue");
+        }
+    }
 }
