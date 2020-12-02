@@ -24,6 +24,13 @@ public class SearchTests extends BaseUI {
     public void testRandomSearchFromDropDownSecond() {
         searchPage.randomSearchFromDropDownSecond();
     }
+
+    @Test
+    public void testGetSizeDropDownList() {
+        int actualSize = searchPage.getSizeDropDownList();
+        System.out.println("Size of DropDown list: " + actualSize);
+        Assert.assertEquals(actualSize, 4);
+    }
 }
 
 

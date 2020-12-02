@@ -225,6 +225,19 @@ public class BaseActions {
             e.printStackTrace();
         }
     }
+
+    public int getSizeDropDownList(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Select select = new Select(driver.findElement(locator));
+            return select.getOptions().size();
+
+        } catch (NoSuchElementException e) {
+            System.out.println("getSizeDropDownList error");
+        }
+        return 0;
+    }
 }
 
 

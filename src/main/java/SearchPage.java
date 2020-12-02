@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,5 +36,11 @@ public class SearchPage extends BaseActions {
         for (int i = 0; i < 10; i++) {
             selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY, "SearchByValue");
         }
+    }
+
+    public int getSizeDropDownList() {
+        getNavigate(Locators.LINK_SEARCH);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
+        return getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
     }
 }
