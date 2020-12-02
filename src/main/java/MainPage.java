@@ -1,7 +1,11 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.imageio.stream.ImageInputStream;
 
 public class MainPage extends BaseActions {
     WebDriverWait wait;
@@ -67,6 +71,13 @@ public class MainPage extends BaseActions {
     public String clickTopBarTab() {
         String actualURL = clickValueOfList(Locators.LINK_ALL_TOP_BAR_TABS, "PRETTY WOMEN");
         return actualURL;
+    }
+
+    public void ajaxSendKeys(){
+        getNavigate(Locators.BUTTON_JOIN_FOR_FREE);
+        javaImplicitWaitSec(3);
+        WebElement element = driver.findElement(Locators.TEXT_FIELD_EMAIL);
+        ajaxSendKeys(element, "test@test.com");
     }
 }
 

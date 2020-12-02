@@ -19,6 +19,22 @@ public class BaseActions {
         this.wait = wait;
     }
 
+    public void javaImplicitWait(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void javaImplicitWaitSec(int sec) {
+        try {
+            Thread.sleep(sec * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public String generateUniqueUserName(String name, int length) {
         return name + RandomStringUtils.random(length, "172984757");
     }
@@ -99,6 +115,11 @@ public class BaseActions {
             ajaxClick(currentCheckbox);
         }
     }
+
+    public void ajaxSendKeys(WebElement element, String text) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute( 'value', ' " + text + " ')", element);
+    }
+
 
     public void clickUnselectedCheckbox(WebElement currentCheckbox) {
         if (!currentCheckbox.isSelected()) {

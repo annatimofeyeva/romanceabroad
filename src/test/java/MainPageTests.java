@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.builder.ToStringExclude;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -121,6 +122,11 @@ public class MainPageTests extends BaseUI {
         mainPage.ajaxClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
         //mainPage.performedClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
         //mainPage.scrollToBottomOfPage();
+    }
+
+    @Test
+    public void testAjaxSendKeys() {
+        mainPage.ajaxSendKeys();
     }
 }
 
