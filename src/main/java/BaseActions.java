@@ -197,15 +197,15 @@ public class BaseActions {
         return actualUrl;
     }
 
-    public void checkLinksOnWebPage(String typeElement, String attribute) {
-        List<WebElement> links = driver.findElements(By.xpath(typeElement));
+    public void checkLinksOnWebPage(String xpathValue, String attribute) {
+        List<WebElement> links = driver.findElements(By.xpath(xpathValue));
         System.out.println("I start taking attribute values on page:");
         for (int i = 0; i < links.size(); i++) {
             WebElement element = links.get(i);
             String url = element.getAttribute(attribute);
             verifyLinkActive(url);
-            System.out.println("Total links are: " + links.size());
         }
+        System.out.println("Total links size: " + links.size());
     }
 
     //Method for link verification

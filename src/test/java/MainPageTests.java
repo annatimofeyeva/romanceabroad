@@ -130,8 +130,8 @@ public class MainPageTests extends BaseUI {
     }
 
     @Test
-    public void testCheckAllLinks() {
-        mainPage.checkAllLinks();
+    public void testCheckAllLinksAndImages() {
+        mainPage.checkAllLinksAndImages();
     }
 
     @Test

@@ -80,8 +80,9 @@ public class MainPage extends BaseActions {
         ajaxSendKeys(element, "test@test.com");
     }
 
-    public void checkAllLinks() {
+    public void checkAllLinksAndImages() {
         checkLinksOnWebPage("//a", "href");
+        checkLinksOnWebPage("//img", "src");
     }
 
     public void verifyLinkBlogActive() {
