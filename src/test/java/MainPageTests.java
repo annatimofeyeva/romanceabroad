@@ -133,6 +133,11 @@ public class MainPageTests extends BaseUI {
     public void testCheckAllLinks() {
         mainPage.checkAllLinks();
     }
+
+    @Test
+    public void testVerifyLinkBlogActive() {
+        mainPage.verifyLinkBlogActive();
+    }
 }
 
 

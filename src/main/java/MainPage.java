@@ -73,15 +73,21 @@ public class MainPage extends BaseActions {
         return actualURL;
     }
 
-    public void ajaxSendKeys(){
+    public void ajaxSendKeys() {
         getNavigate(Locators.BUTTON_JOIN_FOR_FREE);
         javaImplicitWaitSec(3);
         WebElement element = driver.findElement(Locators.TEXT_FIELD_EMAIL);
         ajaxSendKeys(element, "test@test.com");
     }
+
     public void checkAllLinks() {
         checkLinksOnWebPage("//a", "href");
     }
+
+    public void verifyLinkBlogActive() {
+        verifyLinkActive(Data.expectedUrlBlog);
+    }
+
 }
 
 

@@ -199,13 +199,12 @@ public class BaseActions {
 
     public void checkLinksOnWebPage(String typeElement, String attribute) {
         List<WebElement> links = driver.findElements(By.xpath(typeElement));
-        System.out.println("I start taking attributes on page");
+        System.out.println("I start taking attribute values on page:");
         for (int i = 0; i < links.size(); i++) {
-            System.out.println(links.size());
-            WebElement ele = links.get(i);
-            String url = ele.getAttribute(attribute);
+            WebElement element = links.get(i);
+            String url = element.getAttribute(attribute);
             verifyLinkActive(url);
-            System.out.println("Total links are" + links.size());
+            System.out.println("Total links are: " + links.size());
         }
     }
 
