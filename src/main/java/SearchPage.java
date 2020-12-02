@@ -31,11 +31,12 @@ public class SearchPage extends BaseActions {
     }
 
     public void randomSearchFromDropDownSecond() {
-        getNavigate(Locators.LINK_SEARCH);
-        int dropDownListSize = getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
+        getNavigate(Locators.LINK_SEARCH);       ;
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN));
+        int dropDownListSize = getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN);
+        System.out.println("DropDownList size: " + dropDownListSize);
         for (int i = 0; i < dropDownListSize; i++) {
-            selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY, "SearchByValue");
+            selectItemDropDownRandomOption(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN, "SearchByValue");
         }
     }
 
