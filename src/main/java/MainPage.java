@@ -1,11 +1,10 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.imageio.stream.ImageInputStream;
+import java.util.List;
+
 
 public class MainPage extends BaseActions {
     WebDriverWait wait;
@@ -13,6 +12,15 @@ public class MainPage extends BaseActions {
     // Constructor
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
+    }
+
+    public void smokeMainPage() {
+        List<WebElement> mainTabs = driver.findElements(Locators.NAVBAR_LINKS);
+        for (int i = 0; i < mainTabs.size(); i++) {
+            mainTabs.get(i).click();
+            driver.get(Data.mainUrl);
+            mainTabs = driver.findElements(Locators.NAVBAR_LINKS);
+        }
     }
 
     public void clickJoinButton() {
