@@ -23,7 +23,7 @@ public class BaseUI {
     HowWeWorkPage howWeWorkPage;
     SoftAssert softAssert = new SoftAssert();
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
     @Parameters("browser")
     public void setUp(@Optional("chrome") String browser, Method method) {
 

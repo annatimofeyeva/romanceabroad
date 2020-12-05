@@ -1,19 +1,34 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Test Suite" parallel="none" >
-    <test name="Chrome Cases">
+    <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="chrome"></include>
+                <include name="admin"></include>
+                <include name="user"></include>
+            </run>
+        </groups>
         <classes>
-            <class name="RegistrationTests"></class>
+            <class name="SearchTests">
+            <methods>
+                <include name ="testSearchWomenByNameTestCase11()"></include>
+                <include name ="testSearchWomenByAgesTestCase12()"></include>
+                <include name ="testSearchWomenByNameTestCase11()"></include>
+                <exclude name ="testGetSizeDropDownListTestCase14()"></exclude>
+
+            </methods>
+            </class>
         </classes>
     </test>
-    <test name="FireFox Cases">
+    <test name="FireFoxTestCases">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="RegistrationTests"></class>
         </classes>
     </test>
-    <test name="Opera Cases">
+    <test name="OperaTestCases">
         <parameter name="browser" value="opera"/>
         <classes>
             <class name="RegistrationTests"></class>
