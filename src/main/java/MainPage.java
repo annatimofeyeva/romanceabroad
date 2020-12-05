@@ -1,6 +1,7 @@
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -32,6 +33,8 @@ public class MainPage extends BaseActions {
     }
 
     public void completeFirstPartOfRegistration() {
+        // For Opera browser need to add implicit wait
+        javaImplicitWaitSec(3);
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.registrationEmail);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registrationPassword);
         driver.findElement(Locators.BUTTON_NEXT).click();

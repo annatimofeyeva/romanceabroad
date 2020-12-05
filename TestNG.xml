@@ -13,10 +13,10 @@
         <classes>
             <class name="SearchTests">
             <methods>
-                <include name ="testSearchWomenByNameTestCase11()"></include>
-                <include name ="testSearchWomenByAgesTestCase12()"></include>
-                <include name ="testSearchWomenByNameTestCase11()"></include>
-                <exclude name ="testGetSizeDropDownListTestCase14()"></exclude>
+                <include name =".*Case11"></include>
+                <include name =".*Case12"></include>
+                <include name =".*TestCase11"></include>
+                <exclude name =".*14()"></exclude>
 
             </methods>
             </class>
