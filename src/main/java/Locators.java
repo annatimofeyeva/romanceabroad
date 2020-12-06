@@ -95,8 +95,8 @@ public class Locators {
     public static final By LINKS_FOOTER_LANGUAGES = By.xpath("//ul[@class='footer-languages']//li");
     public static final By LINK_WEST_WEB_ART = By.xpath("//div[@class='wwa']//a[@rel='nofollow']");
     public static final By LINK_PRESENTS = By.xpath("//a/following-sibling::a");
-    public static final By ADVANCED_SEARCH6 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH7 = By.xpath("//div[@class='lh30']");
+    public static final By SORTING_ARROW = By.xpath("//a/preceding-sibling::i");
+    public static final By CURRENT_PAGE_NAME = By.xpath("//a/following-sibling::span");
     public static final By ADVANCED_SEARCH8 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH9 = By.xpath("//div[@class='lh30']");
 }

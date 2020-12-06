@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
 import java.util.List;
 
 
@@ -167,9 +168,14 @@ public class MainPage extends BaseActions {
         ajaxClick(presents);
         driver.get(Data.expectedUrlSearch);
 
+        WebElement sortingArrow = driver.findElement(Locators.SORTING_ARROW);
+        sortingArrow.click();
+
+        driver.get(Data.expectedUrlSearch);
+        WebElement pageName = driver.findElement(Locators.CURRENT_PAGE_NAME);
+        System.out.println(pageName.getText());
 
 
-        //a/following-sibling::a
 
 
     }
