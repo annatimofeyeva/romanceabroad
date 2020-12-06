@@ -142,6 +142,11 @@ public class MainPageTests extends BaseUI {
     public void testVerifyLinkBlogActive() {
         mainPage.verifyLinkBlogActive();
     }
+    // test for advanced locators
+    @Test
+    public void testAdvancedLocators() {
+        mainPage.advancedLocators();
+    }
 }
 
 

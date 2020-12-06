@@ -29,7 +29,7 @@ public class Locators {
     public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("button#search_friend");
     public static final By SELECTED_GIFT = By.cssSelector("div.title-block.pt5");
     public static final By LINK_TO_BESTSELLER_PURCHASE = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
-    public static final By BESTSELLER_TITLE  = By.tagName("h1");
+    public static final By BESTSELLER_TITLE = By.tagName("h1");
     //TOUR_TO_UKRAINE page
     public static final By LINK_TOUR = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'][text()='TOUR TO UKRAINE']");
     public static final By HEADER_TOURS_TO_UKRAINE = By.xpath("//div[@class='search-header']/h1");
@@ -75,4 +75,30 @@ public class Locators {
     public static final By BUTTON_PLAY_YOUTUBE = By.xpath("//button[@aria-label='Play']");
     //FOOTER
     public static final By LINKS_TITLES_FOOTER = By.xpath("//div[@class='footer-menu-list-group-item-text']");
+    // 20 Advanced locators:
+    // 10 locators with different attributes:
+    public static final By LINK_TOP = By.xpath("//a[@href='https://romanceabroad.com/']");
+    public static final By HR_DIVIDED_BAR = By.xpath("//p[text()='FIND YOUR LOVE, YOUR WIFE, YOUR DREAM!']");
+    public static final By MIDDLE_PAGE_TEXT = By.xpath("//p[text()='FIND YOUR LOVE, YOUR WIFE, YOUR DREAM!']");
+    public static final By BUTTON_TOUR = By.xpath("//a[text()='REQUEST TOUR INFO']");
+    public static final By ADVANCED_SEARCH_RESULT5 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH_RESULT6 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH_RESULT7 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH_RESULT8 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH_RESULT9 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH_RESULT10 = By.xpath("//div[@class='lh30']");
+    // 10 locators with parents:
+    public static final By TOP_LOGO_IMAGE = By.xpath("//div[@class='top']//img[@src='/img/logo.jpg']");
+    public static final By IFRAME = By.xpath("//div[@class='col-lg-6 text-center']//div[@class='video']//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By ADVANCED_SEARCH2 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH3 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH4 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH5 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH6 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH7 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH8 = By.xpath("//div[@class='lh30']");
+    public static final By ADVANCED_SEARCH9 = By.xpath("//div[@class='lh30']");
 }
+
+
+

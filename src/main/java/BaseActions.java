@@ -75,8 +75,11 @@ public class BaseActions {
     // for Angular apps - advanced level of clicks (for Chrome)
     public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        element.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//        wait.until(ExpectedConditions.elementToBeClickable(element));
+//        element.click();
     }
 
     public void ajaxClick(By by) {

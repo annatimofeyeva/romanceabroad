@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -100,6 +101,37 @@ public class MainPage extends BaseActions {
         verifyLinkActive(Data.expectedUrlBlog);
     }
 
+    // checking advanced locators
+    public void advancedLocators() {
+        ajaxClick(Locators.LINK_TOP);
+        driver.get(Data.mainUrl);
+        WebElement element = driver.findElement(Locators.TOP_LOGO_IMAGE);
+        System.out.println(element);
+        if(element.isDisplayed()) {
+            System.out.println("Logo image is displayed");
+        }
+        WebElement elementBar = driver.findElement(Locators.HR_DIVIDED_BAR);
+        if(elementBar.isDisplayed()) {
+            System.out.println("Middle page divideBar is displayed");
+        }
+        WebElement middlePageText =
+                driver.findElement(Locators.MIDDLE_PAGE_TEXT);
+        System.out.println(middlePageText.getText());
+
+        WebElement tourButton =
+                driver.findElement(Locators.BUTTON_TOUR);
+        System.out.println(tourButton.getText());
+
+        WebElement iFrame =
+                driver.findElement(Locators.IFRAME);
+        System.out.println("Iframe width in px: " + iFrame.getAttribute("width"));
+
+
+
+
+
+
+    }
 }
 
 
