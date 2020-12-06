@@ -103,7 +103,6 @@ public class MainPage extends BaseActions {
 
     // checking advanced locators
     public void advancedLocators() {
-
         ajaxClick(Locators.LINK_TOP);
         driver.get(Data.mainUrl);
         WebElement topLogoImage = driver.findElement(Locators.TOP_LOGO_IMAGE);
@@ -175,9 +174,11 @@ public class MainPage extends BaseActions {
         WebElement pageName = driver.findElement(Locators.CURRENT_PAGE_NAME);
         System.out.println(pageName.getText());
 
+        WebElement pageNumber = driver.findElement(Locators.CURRENT_PAGE_NUMBER);
+        System.out.println(pageNumber.getText());
 
-
-
+        WebElement miniLogo = driver.findElement(By.xpath("//a//img[@src='/application/views/flatty/logo/mini_logo.png']"));
+        System.out.println(miniLogo);
     }
 }
 

@@ -97,7 +97,7 @@ public class Locators {
     public static final By LINK_PRESENTS = By.xpath("//a/following-sibling::a");
     public static final By SORTING_ARROW = By.xpath("//a/preceding-sibling::i");
     public static final By CURRENT_PAGE_NAME = By.xpath("//a/following-sibling::span");
-    public static final By ADVANCED_SEARCH8 = By.xpath("//div[@class='lh30']");
+    public static final By CURRENT_PAGE_NUMBER = By.xpath("//div//ins[@class='current']");
     public static final By ADVANCED_SEARCH9 = By.xpath("//div[@class='lh30']");
 }
 
