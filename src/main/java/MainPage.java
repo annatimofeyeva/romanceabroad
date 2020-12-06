@@ -2,10 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.print.attribute.standard.MediaSize;
 import java.util.List;
 
 
@@ -104,6 +102,7 @@ public class MainPage extends BaseActions {
 
     // checking advanced locators
     public void advancedLocators() {
+
         ajaxClick(Locators.LINK_TOP);
         driver.get(Data.mainUrl);
         WebElement topLogoImage = driver.findElement(Locators.TOP_LOGO_IMAGE);
@@ -118,7 +117,6 @@ public class MainPage extends BaseActions {
         WebElement middlePageText =
                 driver.findElement(Locators.MIDDLE_PAGE_TEXT);
         System.out.println(middlePageText.getText());
-
         WebElement tourButton =
                 driver.findElement(Locators.BUTTON_TOUR);
         System.out.println(tourButton.getText());
@@ -136,10 +134,9 @@ public class MainPage extends BaseActions {
                 driver.findElement(Locators.LINK_SUPPORT);
         ajaxScroll(linkSupport);
         System.out.println(linkSupport.getText());
-
-
         driver.get(Data.expectedUrlSearch);
         javaImplicitWaitSec(2);
+
         WebElement buttonLogin = driver.findElement(Locators.LINK_LOGIN);
         buttonLogin.click();
         javaImplicitWaitSec(2);
@@ -152,33 +149,15 @@ public class MainPage extends BaseActions {
         WebElement paginationTab1 = driver.findElement(Locators.LINK_PAGINATION_TAB1);
         paginationTab1.click();
 
+        WebElement languageActiveForSelection = driver.findElement(Locators.LINK_LANGUAGE_ACTIVE_FOR_SELECTION);
+        languageActiveForSelection.click();
+        System.out.println(languageActiveForSelection.getText());
 
-        WebElement languageActiveForSelection1 = driver.findElement(By.xpath("//li//a[@class='active']"));
-        languageActiveForSelection1.click();
-        System.out.println(languageActiveForSelection1.getText());
-
-        List<WebElement> languages = driver.findElements(By.xpath("//ul[@class='footer-languages']//li"));
-        for (int i = 0; i < languages.size() ; i++) {
+        List<WebElement> languages = driver.findElements(Locators.LINKS_FOOTER_LANGUAGES);
+        for (int i = 0; i < languages.size(); i++) {
             System.out.println("Available language: " + languages.get(i).getText());
         }
         System.out.println("Amount of available languages: " + languages.size());
-
-
-//        WebElement languageActiveForSelection2 = driver.findElement();
-//        languageActiveForSelection2.click();
-//        System.out.println(languageActiveForSelection2.getText());
-
-
-//        javaImplicitWaitSec(5);
-//        WebElement language2 = driver.findElement(By.xpath("//span//i[@class='fa fa-globe']"));
-//        language2.click();
-//        javaImplicitWaitSec(5);
-
-
-
-
-
-
     }
 }
 

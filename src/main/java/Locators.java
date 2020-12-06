@@ -85,13 +85,14 @@ public class Locators {
     public static final By BUTTON_LOGIN_FORM_CLOSE = By.xpath("//div[@class='load_content_close clearfix']");
     public static final By LINK_PAGINATION_TAB1 = By.xpath("//a[@data-page='2']");
     public static final By LINK_PAGINATION_TAB2 = By.xpath("//a[@href='https://romanceabroad.com/users/search/default/DESC/1']");
-    public static final By ADVANCED_SEARCH_RESULT9 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH_RESULT10 = By.xpath("//div[@class='lh30']");
+
     // 10 locators with parents:
     public static final By TOP_LOGO_IMAGE = By.xpath("//div[@class='top']//img[@src='/img/logo.jpg']");
     public static final By IFRAME = By.xpath("//div[@class='col-lg-6 text-center']//div[@class='video']//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By LINK_GET_IN_TOUCH = By.xpath("//div[@class='col-lg-5']//h2");
     public static final By LINK_SUPPORT = By.cssSelector("span>a[href='mailto:support@romanceabroad.com']");
+    public static final By LINK_LANGUAGE_ACTIVE_FOR_SELECTION = By.xpath("//li//a[@class='active']");
+    public static final By LINKS_FOOTER_LANGUAGES = By.xpath("//ul[@class='footer-languages']//li");
     public static final By ADVANCED_SEARCH4 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH5 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH6 = By.xpath("//div[@class='lh30']");
