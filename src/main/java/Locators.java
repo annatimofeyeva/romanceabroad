@@ -78,20 +78,20 @@ public class Locators {
     // 20 Advanced locators:
     // 10 locators with different attributes:
     public static final By LINK_TOP = By.xpath("//a[@href='https://romanceabroad.com/']");
-    public static final By HR_DIVIDED_BAR = By.xpath("//p[text()='FIND YOUR LOVE, YOUR WIFE, YOUR DREAM!']");
+    public static final By HR_DIVIDED_BAR = By.xpath("//hr[@class='light my-4']");
     public static final By MIDDLE_PAGE_TEXT = By.xpath("//p[text()='FIND YOUR LOVE, YOUR WIFE, YOUR DREAM!']");
     public static final By BUTTON_TOUR = By.xpath("//a[text()='REQUEST TOUR INFO']");
-    public static final By ADVANCED_SEARCH_RESULT5 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH_RESULT6 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH_RESULT7 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH_RESULT8 = By.xpath("//div[@class='lh30']");
+    public static final By LINK_LOGIN = By.xpath("//a[@id='ajax_login_link']");
+    public static final By BUTTON_LOGIN_FORM_CLOSE = By.xpath("//div[@class='load_content_close clearfix']");
+    public static final By LINK_PAGINATION_TAB1 = By.xpath("//a[@data-page='2']");
+    public static final By LINK_PAGINATION_TAB2 = By.xpath("//a[@href='https://romanceabroad.com/users/search/default/DESC/1']");
     public static final By ADVANCED_SEARCH_RESULT9 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH_RESULT10 = By.xpath("//div[@class='lh30']");
     // 10 locators with parents:
     public static final By TOP_LOGO_IMAGE = By.xpath("//div[@class='top']//img[@src='/img/logo.jpg']");
     public static final By IFRAME = By.xpath("//div[@class='col-lg-6 text-center']//div[@class='video']//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
-    public static final By ADVANCED_SEARCH2 = By.xpath("//div[@class='lh30']");
-    public static final By ADVANCED_SEARCH3 = By.xpath("//div[@class='lh30']");
+    public static final By LINK_GET_IN_TOUCH = By.xpath("//div[@class='col-lg-5']//h2");
+    public static final By LINK_SUPPORT = By.cssSelector("span>a[href='mailto:support@romanceabroad.com']");
     public static final By ADVANCED_SEARCH4 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH5 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH6 = By.xpath("//div[@class='lh30']");

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.print.attribute.standard.MediaSize;
 import java.util.List;
 
 
@@ -105,13 +106,13 @@ public class MainPage extends BaseActions {
     public void advancedLocators() {
         ajaxClick(Locators.LINK_TOP);
         driver.get(Data.mainUrl);
-        WebElement element = driver.findElement(Locators.TOP_LOGO_IMAGE);
-        System.out.println(element);
-        if(element.isDisplayed()) {
+        WebElement topLogoImage = driver.findElement(Locators.TOP_LOGO_IMAGE);
+        System.out.println(topLogoImage);
+        if (topLogoImage.isDisplayed()) {
             System.out.println("Logo image is displayed");
         }
-        WebElement elementBar = driver.findElement(Locators.HR_DIVIDED_BAR);
-        if(elementBar.isDisplayed()) {
+        WebElement divideBar = driver.findElement(Locators.HR_DIVIDED_BAR);
+        if (divideBar.isDisplayed()) {
             System.out.println("Middle page divideBar is displayed");
         }
         WebElement middlePageText =
@@ -125,6 +126,53 @@ public class MainPage extends BaseActions {
         WebElement iFrame =
                 driver.findElement(Locators.IFRAME);
         System.out.println("Iframe width in px: " + iFrame.getAttribute("width"));
+
+        WebElement linkGetInTouch =
+                driver.findElement(Locators.LINK_GET_IN_TOUCH);
+        ajaxScroll(linkGetInTouch);
+        System.out.println(linkGetInTouch.getText());
+
+        WebElement linkSupport =
+                driver.findElement(Locators.LINK_SUPPORT);
+        ajaxScroll(linkSupport);
+        System.out.println(linkSupport.getText());
+
+
+        driver.get(Data.expectedUrlSearch);
+        javaImplicitWaitSec(2);
+        WebElement buttonLogin = driver.findElement(Locators.LINK_LOGIN);
+        buttonLogin.click();
+        javaImplicitWaitSec(2);
+        WebElement loginCrossButton = driver.findElement(Locators.BUTTON_LOGIN_FORM_CLOSE);
+        System.out.println(loginCrossButton);
+        loginCrossButton.click();
+
+        WebElement paginationTab2 = driver.findElement(Locators.LINK_PAGINATION_TAB2);
+        paginationTab2.click();
+        WebElement paginationTab1 = driver.findElement(Locators.LINK_PAGINATION_TAB1);
+        paginationTab1.click();
+
+
+        WebElement languageActiveForSelection1 = driver.findElement(By.xpath("//li//a[@class='active']"));
+        languageActiveForSelection1.click();
+        System.out.println(languageActiveForSelection1.getText());
+
+        List<WebElement> languages = driver.findElements(By.xpath("//ul[@class='footer-languages']//li"));
+        for (int i = 0; i < languages.size() ; i++) {
+            System.out.println("Available language: " + languages.get(i).getText());
+        }
+        System.out.println("Amount of available languages: " + languages.size());
+
+
+//        WebElement languageActiveForSelection2 = driver.findElement();
+//        languageActiveForSelection2.click();
+//        System.out.println(languageActiveForSelection2.getText());
+
+
+//        javaImplicitWaitSec(5);
+//        WebElement language2 = driver.findElement(By.xpath("//span//i[@class='fa fa-globe']"));
+//        language2.click();
+//        javaImplicitWaitSec(5);
 
 
 

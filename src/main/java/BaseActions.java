@@ -134,8 +134,8 @@ public class BaseActions {
     }
 
     public void ajaxScroll(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("argument[0].scrollIntoView(true);", element);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        ((JavascriptExecutor)
+                driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     public void ajaxScroll(By by) {
