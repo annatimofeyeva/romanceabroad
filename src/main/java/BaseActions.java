@@ -241,6 +241,12 @@ public class BaseActions {
         }
         return 0;
     }
+
+    public void scrollSmooth(){
+        for(int i=0;i<6000;i++) {
+            ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1)", "");
+        }
+    }
 }
 
 

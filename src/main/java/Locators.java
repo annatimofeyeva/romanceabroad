@@ -93,7 +93,7 @@ public class Locators {
     public static final By LINK_SUPPORT = By.cssSelector("span>a[href='mailto:support@romanceabroad.com']");
     public static final By LINK_LANGUAGE_ACTIVE_FOR_SELECTION = By.xpath("//li//a[@class='active']");
     public static final By LINKS_FOOTER_LANGUAGES = By.xpath("//ul[@class='footer-languages']//li");
-    public static final By ADVANCED_SEARCH4 = By.xpath("//div[@class='lh30']");
+    public static final By LINK_WEST_WEB_ART = By.xpath("//div[@class='wwa']//a[@rel='nofollow']");
     public static final By ADVANCED_SEARCH5 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH6 = By.xpath("//div[@class='lh30']");
     public static final By ADVANCED_SEARCH7 = By.xpath("//div[@class='lh30']");

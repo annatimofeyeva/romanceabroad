@@ -158,6 +158,14 @@ public class MainPage extends BaseActions {
             System.out.println("Available language: " + languages.get(i).getText());
         }
         System.out.println("Amount of available languages: " + languages.size());
+
+        WebElement westWebArt = driver.findElement(Locators.LINK_WEST_WEB_ART);
+        ajaxScroll(westWebArt);
+        westWebArt.click();
+        driver.get(Data.expectedUrlSearch);
+        System.out.println(driver.getCurrentUrl());
+
+
     }
 }
 
