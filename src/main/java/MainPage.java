@@ -161,9 +161,15 @@ public class MainPage extends BaseActions {
 
         WebElement westWebArt = driver.findElement(Locators.LINK_WEST_WEB_ART);
         ajaxScroll(westWebArt);
-        westWebArt.click();
+        System.out.println(westWebArt.getText());
+
+        WebElement presents = driver.findElement(Locators.LINK_PRESENTS);
+        ajaxClick(presents);
         driver.get(Data.expectedUrlSearch);
-        System.out.println(driver.getCurrentUrl());
+
+
+
+        //a/following-sibling::a
 
 
     }
