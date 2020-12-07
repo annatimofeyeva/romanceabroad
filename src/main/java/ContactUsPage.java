@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.xml.sax.Locator;
 
 public class ContactUsPage extends BaseActions{
     public ContactUsPage(WebDriver driver, WebDriverWait wait) {
@@ -11,28 +12,16 @@ public class ContactUsPage extends BaseActions{
     public void completeContactForm() {
         getNavigate(Locators.LINK_SEARCH);
         scrollSmoothToBottom();
-        clickSpecificListValue(Locators.LINKS_TITLES_FOOTER, "Contact us");
-        WebElement dropDownReasons = driver.findElement(By.xpath("//select[@name='id_reason']"));
+        clickSpecificListValue(Locators.LINKS_TITLES_FOOTER, Data.nameLinkContactUs);
+        WebElement dropDownReasons = driver.findElement(Locators.DROP_DOWN_REASONS);
         getDropDownListByValue(dropDownReasons, "2");
-        sendKeys(Locators.TEXT_FIELD_USER_NAME_CONTACT_US, "John Smith");
-        sendKeys(Locators.TEXT_FIELD_USER_EMAIL_CONTACT_US, "JohnSmith@JohnSmith.com");
-        //
-        // autocomplete
-        //
-        sendKeys(Locators.TEXT_AREA, "Test message from John Smith");
+        sendKeys(Locators.TEXT_FIELD_USER_NAME_CONTACT_US, Data.userNameContactUs);
+        sendKeys(Locators.TEXT_FIELD_USER_EMAIL_CONTACT_US, Data.userEmailContactUs);
+        sendKeys(Locators.TEXT_FIELD_SUBJECT, Data.subjectText);
+        sendKeys(Locators.TEXT_AREA, Data.messageText);
         // it's impossible to automate captcha. There exists some tools like: 2Captcha.com’s API and some more.
         // The best way  - may be ask developer to disable captcha for testing env
         //WebElement captcha = driver.findElement(By.xpath("//span//following-sibling::img"));
-
-
-
-
-
-
-
-
-
-
-
+        clickElement(Locators.BUTTON_SUBMIT);
     }
 }

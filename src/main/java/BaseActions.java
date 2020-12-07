@@ -279,6 +279,11 @@ public class BaseActions {
         WebElement element = driver.findElement(locator);
         element.sendKeys(text);
     }
+
+    public void clickElement(By locator) {
+        WebElement element = driver.findElement(locator);
+        element.click();
+    }
 }
 
 

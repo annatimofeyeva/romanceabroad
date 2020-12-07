@@ -69,4 +69,10 @@ public class Data {
     public static final String month = "Jan";
     public static final String year = "1993";
     public static final String city = "North Sydney, Новый Южный Уэльс, Австралия";
+    //Contact Us
+    public static final String subjectText = "Some message";
+    public static final String messageText = "Test message from John Smith";
+    public static final String nameLinkContactUs = "Contact us";
+    public static final String userNameContactUs = "John Smith";
+    public static final String userEmailContactUs = "JohnSmith@JohnSmith.com";
 }

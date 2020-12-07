@@ -83,6 +83,7 @@ public class Locators {
     public static final By TEXT_FIELD_USER_EMAIL_CONTACT_US = By.xpath("//input[@name='user_email']");
     public static final By TEXT_FIELD_SUBJECT = By.xpath("//input[@name='subject']");
     public static final By TEXT_AREA = By.xpath("//textarea[@name='message']");
+    public static final By BUTTON_SUBMIT = By.xpath("//input[@type='submit']");
     // 20 Advanced locators:
     // 10 locators with different attributes:
     public static final By LINK_TOP = By.xpath("//a[@href='https://romanceabroad.com/']");
