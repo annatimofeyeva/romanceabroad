@@ -147,7 +147,7 @@ public class BaseActions {
         ajaxScroll(driver.findElements(by).get(index));
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
-
+    // doesn't work
     public void scrollToBottomOfPage() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
     }
@@ -273,6 +273,11 @@ public class BaseActions {
                 elementOfList.click();
             }
         }
+    }
+
+    public void sendKeys(By locator, String text) {
+        WebElement element = driver.findElement(locator);
+        element.sendKeys(text);
     }
 }
 

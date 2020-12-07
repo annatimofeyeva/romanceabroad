@@ -78,8 +78,11 @@ public class Locators {
     //FOOTER
     public static final By LINKS_TITLES_FOOTER = By.xpath("//div[@class='footer-menu-list-group-item-text']");
     //Contact US
-    public static final By LINK_CONTACT_US = By.xpath("//select[@name='id_reason']");
     public static final By DROP_DOWN_REASONS = By.xpath("//select[@name='id_reason']");
+    public static final By TEXT_FIELD_USER_NAME_CONTACT_US = By.xpath("//input[@name='user_name']");
+    public static final By TEXT_FIELD_USER_EMAIL_CONTACT_US = By.xpath("//input[@name='user_email']");
+    public static final By TEXT_FIELD_SUBJECT = By.xpath("//input[@name='subject']");
+    public static final By TEXT_AREA = By.xpath("//textarea[@name='message']");
     // 20 Advanced locators:
     // 10 locators with different attributes:
     public static final By LINK_TOP = By.xpath("//a[@href='https://romanceabroad.com/']");
