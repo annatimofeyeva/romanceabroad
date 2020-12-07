@@ -61,9 +61,12 @@ public class Data {
     //Book_Now
     public static final String expectedUrlTours = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
     //Registration
-    public static final String registrationEmail = "newTest@test.com";
-    public static final String registrationPassword = "123456";
-    public static final String UserName = "John Watson";
-    public static final String UserPhone = "425-223-65-78";
-    public static final String UserLocation = "Seattle, WA";
+    public static final String email = "newTest@test.com";
+    public static final String password = "123456";
+    public static final String userName = "John Watson";
+    public static final String phone = "425-223-65-78";
+    public static final String day = "2";
+    public static final String month = "Jan";
+    public static final String year = "1993";
+    public static final String city = "North Sydney, Новый Южный Уэльс, Австралия";
 }

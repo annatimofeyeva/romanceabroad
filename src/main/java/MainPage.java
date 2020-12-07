@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
 import java.util.List;
 
 
@@ -33,29 +32,39 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LINK_HOW_WORK).click();
     }
 
-    public void completeFirstPartOfRegistration() {
-        // For Opera browser need to add implicit wait
+    public void completeFirstPartOfRegistration(String email, String password) {
+        // For Opera browser needs to add implicit wait
         javaImplicitWaitSec(3);
-        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.registrationEmail);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registrationPassword);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
-    public void completeSecondPartOfRegistration() {
-        driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(generateUniqueUserName(Data.UserName, 2));
+    public void completeSecondPartOfRegistration(String month, String day, String year, String userPhone, String location) {
+        driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(generateUniqueUserName(Data.userName, 2));
         driver.findElement(Locators.DROP_DOWN_DATE_FIELD).click();
-        driver.findElement(Locators.DROP_DOWN_DATE_SELECTED).click();
+        clickListValue(Locators.DROP_DOWN_DATE_SELECTED, day);
         driver.findElement(Locators.DROP_DOWN_MONTH_FIELD).click();
-        driver.findElement(Locators.DROP_DOWN_MONTH_SELECTED).click();
+        clickListValue(Locators.DROP_DOWN_MONTH_SELECTED, month);
         driver.findElement(Locators.DROP_DOWN_YEAR_FIELD).click();
-        driver.findElement(Locators.DROP_DOWN_YEAR_SELECTED).click();
-        driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(Data.UserPhone);
-        driver.findElement(Locators.TEXT_FIELD_USER_LOCATION).sendKeys(Data.UserLocation);
+        clickListValue(Locators.DROP_DOWN_YEAR_SELECTED, year);
+        driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(userPhone);
+        WebElement locationElement = driver.findElement(Locators.AUTOFILLING_FORM);
+        locationElement.clear();
+        locationElement.click();
+
+
+
+        clickListValue(Locators.LIST_VALUE_LOCATION, location);
+
+        javaImplicitWaitSec(10);
+
+
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
-        boolean selectedcheckbox = checkboxConformation.isSelected();
-        System.out.println("State of the checkbox: " + selectedcheckbox);
         checkboxConformation.click();
     }
+
+
 
     public void clickYouTubeVideoButton() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;

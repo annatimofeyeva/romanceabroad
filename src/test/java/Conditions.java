@@ -114,17 +114,6 @@ public class Conditions extends BaseUI {
 //        }
     }
 
-    @Test
-    public void test5() {
-        mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration();
-
-        WebElement checkbox = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
-        if (!checkbox.isSelected()) {
-            checkbox.click();
-            System.out.println("Checkbox is selected");
-        }
-    }
 
     @Test
     public void test6() {

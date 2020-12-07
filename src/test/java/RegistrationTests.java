@@ -6,8 +6,8 @@ public class RegistrationTests extends BaseUI {
     @Test
     public void testRegistration() {
         mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration();
-        mainPage.completeSecondPartOfRegistration();
+        mainPage.completeFirstPartOfRegistration(Data.email, Data.password);
+        mainPage.completeSecondPartOfRegistration(Data.month, Data.day, Data.year, Data.phone, Data.city);
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
 //        Assert.assertTrue(!driver.findElement(Locators.LINK_SEARCH).isDisplayed(), "Element is not displayed");
 //        checkboxConformation.click();
@@ -19,3 +19,4 @@ public class RegistrationTests extends BaseUI {
         mainPage.clickUnselectedCheckbox(checkboxConformation);
     }
 }
+

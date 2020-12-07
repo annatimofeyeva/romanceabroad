@@ -21,6 +21,7 @@ public class BaseUI {
     GiftsPage giftsPage;
     LoginPage loginPage;
     HowWeWorkPage howWeWorkPage;
+    ContactUsPage contactUsPage;
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
@@ -67,7 +68,9 @@ public class BaseUI {
         mediaPage = new MediaPage(driver, wait);
         giftsPage = new GiftsPage(driver, wait);
         loginPage = new LoginPage(driver, wait);
+        contactUsPage = new ContactUsPage(driver, wait);
         howWeWorkPage = new HowWeWorkPage(driver, wait);
+
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
     }

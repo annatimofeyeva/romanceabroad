@@ -200,6 +200,22 @@ public class BaseActions {
         return actualUrl;
     }
 
+    public void clickSpecificListValue(By locator, String text) {
+        String info = "";
+        String actualUrl = "";
+        List<WebElement> list =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+        for (int i = 0; i < list.size(); i++) {
+            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+            info = list.get(i).getText();
+            if (info.equals(text)) {
+                ajaxClick(list.get(i));
+                actualUrl = driver.getCurrentUrl();
+                System.out.println(actualUrl);
+            }
+        }
+    }
+
     public void checkLinksOnWebPage(String xpathValue, String attribute) {
         List<WebElement> links = driver.findElements(By.xpath(xpathValue));
         System.out.println("I start taking attribute values:");
@@ -242,9 +258,20 @@ public class BaseActions {
         return 0;
     }
 
-    public void scrollSmooth(){
+    public void scrollSmoothToBottom(){
         for(int i=0;i<6000;i++) {
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1)", "");
+        }
+    }
+
+    public void clickListValue(By locator, String text) {
+        List<WebElement> element = driver.findElements(locator);
+        for (int i = 0; i < element.size(); i++) {
+            WebElement elementOfList = element.get(i);
+            String elementOfListText = element.get(i).getText();
+            if(elementOfListText.contains(text)) {
+                elementOfList.click();
+            }
         }
     }
 }

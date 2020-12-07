@@ -62,19 +62,24 @@ public class Locators {
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
     public static final By TEXT_FIELD_USER_NAME = By.xpath("//input[@id='nickname']");
     public static final By DROP_DOWN_DATE_FIELD = By.cssSelector("#daySelect");
-    public static final By DROP_DOWN_DATE_SELECTED = By.xpath("//li[@data-handler='selectDay']//a[text()='3']");
+    public static final By DROP_DOWN_DATE_SELECTED = By.xpath("//li[@data-handler='selectDay']");
     public static final By DROP_DOWN_MONTH_FIELD = By.cssSelector("#monthSelect");
-    public static final By DROP_DOWN_MONTH_SELECTED = By.xpath("//li[@data-handler='selectMonth']//a[text()='Feb']");
+    public static final By DROP_DOWN_MONTH_SELECTED = By.xpath("//li[@data-handler='selectMonth']");
     public static final By DROP_DOWN_YEAR_FIELD = By.cssSelector("#yearSelect");
-    public static final By DROP_DOWN_YEAR_SELECTED = By.xpath("//div[@id='yearSelect']//a[text()='2002']");
+    public static final By DROP_DOWN_YEAR_SELECTED = By.xpath("//li[@data-handler='selectYear']");
     public static final By TEXT_FIELD_USER_PHONE = By.xpath("//input[@name='data[phone]']");
-    public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//input[@name='region_name']");
+    public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li[@class='active']");
+    public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
     public static final By CHECK_BOX_CONFIRMATION = By.xpath("//input[@name='data[confirmation]']");
+    public static final By AUTOFILLING_FORM = By.xpath("//input[@name='region_name']");
     //IFRAMES_LOCATORS
     public static final By IFRAME_YOUTUBE_VIDEO = By.xpath("//iframe[contains(@src, 'https://www.youtube.com/embed/RRECuJzm3IY?start=85')]");
     public static final By BUTTON_PLAY_YOUTUBE = By.xpath("//button[@aria-label='Play']");
     //FOOTER
     public static final By LINKS_TITLES_FOOTER = By.xpath("//div[@class='footer-menu-list-group-item-text']");
+    //Contact US
+    public static final By LINK_CONTACT_US = By.xpath("//select[@name='id_reason']");
+    public static final By DROP_DOWN_REASONS = By.xpath("//select[@name='id_reason']");
     // 20 Advanced locators:
     // 10 locators with different attributes:
     public static final By LINK_TOP = By.xpath("//a[@href='https://romanceabroad.com/']");
