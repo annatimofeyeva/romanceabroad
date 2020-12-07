@@ -75,4 +75,5 @@ public class Data {
     public static final String nameLinkContactUs = "Contact us";
     public static final String userNameContactUs = "John Smith";
     public static final String userEmailContactUs = "JohnSmith@JohnSmith.com";
+    public static final String dropDownValueText = "2";
 }

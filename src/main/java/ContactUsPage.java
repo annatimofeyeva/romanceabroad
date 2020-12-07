@@ -14,7 +14,7 @@ public class ContactUsPage extends BaseActions{
         scrollSmoothToBottom();
         clickSpecificListValue(Locators.LINKS_TITLES_FOOTER, Data.nameLinkContactUs);
         WebElement dropDownReasons = driver.findElement(Locators.DROP_DOWN_REASONS);
-        getDropDownListByValue(dropDownReasons, "2");
+        getDropDownListByValue(dropDownReasons, Data.dropDownValueText);
         sendKeys(Locators.TEXT_FIELD_USER_NAME_CONTACT_US, Data.userNameContactUs);
         sendKeys(Locators.TEXT_FIELD_USER_EMAIL_CONTACT_US, Data.userEmailContactUs);
         sendKeys(Locators.TEXT_FIELD_SUBJECT, Data.subjectText);
