@@ -212,6 +212,7 @@ public class BaseActions {
                 ajaxClick(list.get(i));
                 actualUrl = driver.getCurrentUrl();
                 System.out.println(actualUrl);
+
             }
         }
     }
@@ -265,11 +266,13 @@ public class BaseActions {
     }
 
     public void clickListValue(By locator, String text) {
-        List<WebElement> element = driver.findElements(locator);
-        for (int i = 0; i < element.size(); i++) {
-            WebElement elementOfList = element.get(i);
-            String elementOfListText = element.get(i).getText();
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i < elements.size(); i++) {
+            elements = driver.findElements(locator);
+            WebElement elementOfList = elements.get(i);
+            String elementOfListText = elements.get(i).getText();
             if(elementOfListText.contains(text)) {
+                System.out.println(elements.get(i).getText());
                 elementOfList.click();
             }
         }
