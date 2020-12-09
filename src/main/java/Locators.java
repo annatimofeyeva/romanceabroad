@@ -69,7 +69,7 @@ public class Locators {
     public static final By DROP_DOWN_YEAR_SELECTED = By.xpath("//li[@data-handler='selectYear']");
     public static final By TEXT_FIELD_USER_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_USER_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li[@class='active']");
-    public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
+    public static final By LIST_VALUE_LOCATION = By.xpath("//div[@id='locationAutocompleteBg']/following-sibling::div/ul/li");
     public static final By CHECK_BOX_CONFIRMATION = By.xpath("//input[@name='data[confirmation]']");
     public static final By AUTOFILE_FORM = By.xpath("//input[@name='region_name']");
     //IFRAMES_LOCATORS

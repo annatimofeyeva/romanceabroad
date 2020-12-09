@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -52,13 +51,11 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(userPhone);
         driver.findElement(Locators.AUTOFILE_FORM).clear();
         driver.findElement(Locators.AUTOFILE_FORM).sendKeys(city);
-        //wait.until(ExpectedConditions.elementToBeClickable(Locators.LIST_VALUE_LOCATION));
         List<WebElement> locations = driver.findElements(Locators.LIST_VALUE_LOCATION);
         System.out.println(locations.size());
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
         checkboxConformation.click();
-        javaImplicitWaitSec(4);
     }
 
     public void clickYouTubeVideoButton() {
