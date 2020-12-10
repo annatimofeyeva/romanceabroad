@@ -20,7 +20,7 @@ public class ContactUsPage extends BaseActions{
         sendKeys(Locators.TEXT_AREA_MESSAGE, Data.messageText);
         // it's impossible to automate captcha. There exists some tools like: 2Captcha.com’s API and some more - not sure it's good to use it.
         // The best way  - may be ask developer to disable captcha for testing env
-        //WebElement captcha = driver.findElement(By.xpath("//span//following-sibling::img"));
+        //WebElement captcha = driver.findElement(By.xpath("//span/following-sibling::img"));
         clickElement(Locators.BUTTON_SUBMIT);
     }
 }

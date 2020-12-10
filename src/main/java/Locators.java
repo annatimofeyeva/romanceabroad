@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 
 public class Locators {
+    // h1
+    public static final By H1_TITLE = By.xpath("//h1");
     //Main Page
     public static final By LINK_ALL_TOP_BAR_TABS = By.xpath("//div[@class='collapse navbar-collapse']//ul//li");
     //HOW_IT_WORK page
@@ -39,6 +41,8 @@ public class Locators {
     public static final By BLOG_TITLE = By.xpath("//h1");
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By LINK_ALL = By.xpath("//h1//following::ul//li");
+    public static final By LINK_OF_ARTICLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
+
     //SIGN_IN page
     public static final By LINK_SIGH_IN = By.cssSelector("#ajax_login_link");
     public static final By EMAIL_TEXT_FIELD = By.xpath(" //input[@name='email']");

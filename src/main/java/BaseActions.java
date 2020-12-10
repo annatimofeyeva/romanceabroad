@@ -287,6 +287,11 @@ public class BaseActions {
         WebElement element = driver.findElement(locator);
         element.click();
     }
+
+    public String getAnyTitle(By locator) {
+        String title = driver.findElement(locator).getText();
+        return title;
+    }
 }
 
 

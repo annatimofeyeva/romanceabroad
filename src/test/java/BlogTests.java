@@ -1,6 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class BlogTests extends BaseUI {
     @Test
     public void testVerifyBlogLinkUrl() {
@@ -8,6 +9,11 @@ public class BlogTests extends BaseUI {
         if (blogPage.verifyBlogLinkUrl().contains("#") || blogPage.verifyBlogLinkUrl().contains("???")) {
             Assert.fail("BlogPage URL contains wrong signs");
         }
+    }
+
+    @Test
+    public void testArticlesAndTitles() {
+        Assert.assertEquals(blogPage.checkAllContentPagesLinks(), Data.expectedallAllTopBarLinks);
     }
 }
 
