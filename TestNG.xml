@@ -1,19 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Test Suite" parallel="none" >
+<suite name="Test Suite" parallel="none">
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name = "RegistrationTests">
+            <class name="RegistrationTests"> </class>
+            <class name="GiftsTests">
+                <methods>
+                    <include name="testGiftSearch"></include>
+                </methods>
             </class>
         </classes>
     </test>
 
-
     <test name="FireFoxTestCases">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name = "RegistrationTests">
+            <class name="RegistrationTests"> </class>
+            <class name="GiftsTests">
+                <methods>
+                    <include name="testGiftSearch"></include>
+                </methods>
             </class>
         </classes>
     </test>
@@ -21,48 +28,52 @@
     <test name="OperaTestCases">
         <parameter name="browser" value="opera"/>
         <classes>
-            <class name = "RegistrationTests">
+            <class name="RegistrationTests"> </class>
+            <class name="GiftsTests">
+                <methods>
+                    <include name="testGiftSearch"></include>
+                </methods>
             </class>
         </classes>
     </test>
 
-<!--    <test name="ChromeTestCases">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="chrome"></include>-->
-<!--                <include name="admin"></include>-->
-<!--                <include name="user"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="SearchTests">-->
-<!--            <methods>-->
-<!--                <include name =".*Case11"></include>-->
-<!--                <include name =".*Case12"></include>-->
-<!--                <include name =".*TestCase11"></include>-->
-<!--                <exclude name =".*14()"></exclude>-->
+    <!--    <test name="ChromeTestCases">-->
+    <!--        <parameter name="browser" value="chrome"/>-->
+    <!--        <groups>-->
+    <!--            <run>-->
+    <!--                <include name="chrome"></include>-->
+    <!--                <include name="admin"></include>-->
+    <!--                <include name="user"></include>-->
+    <!--            </run>-->
+    <!--        </groups>-->
+    <!--        <classes>-->
+    <!--            <class name="SearchTests">-->
+    <!--            <methods>-->
+    <!--                <include name =".*Case11"></include>-->
+    <!--                <include name =".*Case12"></include>-->
+    <!--                <include name =".*TestCase11"></include>-->
+    <!--                <exclude name =".*14()"></exclude>-->
 
-<!--            </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="FireFoxTestCases">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--            <class name="RegistrationTests"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="OperaTestCases">-->
-<!--        <parameter name="browser" value="opera"/>-->
-<!--        <classes>-->
-<!--            <class name="RegistrationTests"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="IE Cases">-->
-<!--        <parameter name="browser" value="ie"/>-->
-<!--        <classes>-->
-<!--            <class name="RegistrationTests"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--            </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FireFoxTestCases">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <classes>-->
+    <!--            <class name="RegistrationTests"></class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="OperaTestCases">-->
+    <!--        <parameter name="browser" value="opera"/>-->
+    <!--        <classes>-->
+    <!--            <class name="RegistrationTests"></class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="IE Cases">-->
+    <!--        <parameter name="browser" value="ie"/>-->
+    <!--        <classes>-->
+    <!--            <class name="RegistrationTests"></class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 </suite>
