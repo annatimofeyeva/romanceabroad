@@ -48,6 +48,7 @@ public class Data {
     public static final String expectedbestsellerTitle = "Bestsellers";
     public static final String GiftName = "Flower busket";
     public static final String expectedPayPalButtonText = "Pay with PayPal";
+    public static final List<String> expectedTitles = Arrays.asList(new String[]{"Flower basket", "Spa", "Teddy bear", "TOURS TO UKRAIN"});
     //Tours_To_Ukraine
     public static final String expectedToursToUkraineTitle = "TOURS TO UKRAINE";
     //Blog

@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class RegistrationTests extends BaseUI {
 
-    @DataProvider(name="Registration")
+    @DataProvider(name = "Registration")
     public static Object[][] testRegisration() throws Exception {
         ArrayList<Object[]> out = new ArrayList<>();
-        Files.readAllLines(Paths.get("Registration.csv")).stream().forEach(s-> {
+        Files.readAllLines(Paths.get("Registration.csv")).stream().forEach(s -> {
             String[] data = s.split(",");
             out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]});
         });
@@ -24,4 +24,5 @@ public class RegistrationTests extends BaseUI {
         mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, 5), phone, month, day, year, city, location);
     }
 }
+
 

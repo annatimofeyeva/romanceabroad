@@ -1,22 +1,23 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GiftsPage extends BaseActions {
     public GiftsPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
-    public String giftSearch() {
+    public void giftSearch(String gift) {
+        List<String> giftsTitle = new ArrayList<>();
         getNavigate(Locators.LINK_GIFTS);
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
-        driver.findElement(Locators.TEXT_FIELD_GIFTS_SEARCH)
-                .sendKeys("Chocolate and fruits");
-        driver.findElement(Locators.BUTTON_GIFTS_SEARCH).click();
-        String selectedGiftTitle =
-                wait.until(ExpectedConditions.elementToBeClickable(Locators.SELECTED_GIFT)).getText();
-        return selectedGiftTitle;
+        WebElement searchFiled =  wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
+        searchFiled.sendKeys(gift);
+        ajaxClick(Locators.BUTTON_GIFTS_SEARCH);
     }
 
     public String bestsellerSelection() {
@@ -24,6 +25,7 @@ public class GiftsPage extends BaseActions {
         ajaxClick(Locators.LINK_TO_BESTSELLER_PURCHASE);
         String bestSellerTitle =
                 wait.until(ExpectedConditions.elementToBeClickable(Locators.BESTSELLER_TITLE)).getText();
+        System.out.println(bestSellerTitle);
         return bestSellerTitle;
     }
 
