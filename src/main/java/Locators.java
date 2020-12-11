@@ -33,6 +33,7 @@ public class Locators {
     public static final By LINK_TO_BESTSELLER_PURCHASE = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
     public static final By BESTSELLER_TITLE = By.tagName("h1");
     public static final By TITLES = By.xpath("//h1[@class='title']");
+    public static final By TITLE_OF_GIFT = By.xpath("//div[@class='title-block pt5']");
 
     //TOUR_TO_UKRAINE page
     public static final By LINK_TOUR = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine'][text()='TOUR TO UKRAINE']");
