@@ -10,6 +10,22 @@
     </test>
 
 
+    <test name="FireFoxTestCases">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name = "RegistrationTests">
+            </class>
+        </classes>
+    </test>
+
+    <test name="OperaTestCases">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name = "RegistrationTests">
+            </class>
+        </classes>
+    </test>
+
 <!--    <test name="ChromeTestCases">-->
 <!--        <parameter name="browser" value="chrome"/>-->
 <!--        <groups>-->
