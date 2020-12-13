@@ -64,7 +64,7 @@ public class Data {
     //Registration
     public static final String email = "newTest@test.com";
     public static final String password = "123456";
-    public static final String userName = "John Watson";
+    public static final String userName = "John";
     public static final String phone = "425-223-65-78";
     public static final String day = "2";
     public static final String month = "Jan";
