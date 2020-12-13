@@ -21,7 +21,7 @@ public class RegistrationTests extends BaseUI {
     public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
-        mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, 5), phone, month, day, year, city, location);
+        mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, 5), month,  day, phone, year, city, location);
     }
 }
 

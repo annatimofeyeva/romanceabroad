@@ -40,7 +40,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
-    public void completeSecondPartOfRegistration(String name, String month, String day, String year, String userPhone, String city, String location) {
+    public void completeSecondPartOfRegistration(String name, String month, String day, String userPhone, String year, String city, String location) {
         driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(name);
         driver.findElement(Locators.DROP_DOWN_DATE_FIELD).click();
         clickListValue(Locators.DROP_DOWN_DATE_SELECTED, day);
