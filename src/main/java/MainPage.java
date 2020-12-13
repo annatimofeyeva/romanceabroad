@@ -3,6 +3,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -181,6 +182,11 @@ public class MainPage extends BaseActions {
 
         WebElement miniLogo = driver.findElement(By.xpath("//a//img[@src='/application/views/flatty/logo/mini_logo.png']"));
         System.out.println(miniLogo);
+    }
+
+    public void  test2(){
+        getNavigate(By.xpath("//a[@class='nav-link'][@href='#']"));
+        System.out.println(driver.getCurrentUrl());
     }
 }
 

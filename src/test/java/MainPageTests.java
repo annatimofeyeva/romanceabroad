@@ -20,15 +20,17 @@ public class MainPageTests extends BaseUI {
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
         for (int i = 0; i < list.size(); i++) {
             info = list.get(i).getText();
+            WebElement element = list.get(i);
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
-            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
-            //list.get(i).click();
-            mainPage.ajaxClick(list.get(i));
+//            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
+//            element.click();
+            mainPage.ajaxClick(element);
 
             if (info.equals("HOME")) {
-                System.out.println(driver.getCurrentUrl());
-                Assert.assertEquals(Data.expectedUrlHome, driver.getCurrentUrl());
+                String actualURL = driver.getCurrentUrl();
+                System.out.println(actualURL);
+                Assert.assertEquals(Data.expectedHomeUrl, actualURL);
             }
             if (info.contains("WORK")) {
                 System.out.println(driver.getCurrentUrl());

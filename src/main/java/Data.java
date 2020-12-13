@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Data {
     //Home
-    public static final String expectedUrlHome = "https://romanceabroad.com/#";
+    public static final String expectedHomeUrl = "https://romanceabroad.com/#";
     //Main URL
     public static final String mainUrl = "https://romanceabroad.com/";
     //Main Page

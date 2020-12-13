@@ -74,12 +74,12 @@ public class BaseActions {
 
     // for Angular apps - advanced level of clicks (for Chrome)
     public void ajaxClick(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-
 //        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//        wait.until(ExpectedConditions.elementToBeClickable(element));
-//        element.click();
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
     }
 
     public void ajaxClick(By by) {
@@ -147,6 +147,7 @@ public class BaseActions {
         ajaxScroll(driver.findElements(by).get(index));
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
+
     // doesn't work
     public void scrollToBottomOfPage() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
@@ -259,8 +260,8 @@ public class BaseActions {
         return 0;
     }
 
-    public void scrollSmoothToBottom(){
-        for(int i=0;i<6000;i++) {
+    public void scrollSmoothToBottom() {
+        for (int i = 0; i < 6000; i++) {
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1)", "");
         }
     }
@@ -271,7 +272,7 @@ public class BaseActions {
             elements = driver.findElements(locator);
             WebElement elementOfList = elements.get(i);
             String elementOfListText = elements.get(i).getText();
-            if(elementOfListText.contains(text)) {
+            if (elementOfListText.contains(text)) {
                 System.out.println(elements.get(i).getText());
                 elementOfList.click();
             }
