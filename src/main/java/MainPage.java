@@ -53,6 +53,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.AUTOFILE_FORM).sendKeys(city);
 //        List<WebElement> locations = driver.findElements(Locators.LIST_VALUE_LOCATION);
 //        System.out.println(locations.size());
+        javaImplicitWaitSec(3);
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
         checkboxConformation.click();
