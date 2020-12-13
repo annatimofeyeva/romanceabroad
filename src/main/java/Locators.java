@@ -116,6 +116,11 @@ public class Locators {
     public static final By CURRENT_PAGE_NUMBER = By.xpath("//div//ins[@class='current']");
     public static final By ADVANCED_SEARCH9 = By.xpath("//div[@class='lh30']");
 
+    //Locators with 2 attributes for the same WebElement
+    public static final By LINK_GIFTS_NEW = By.xpath("//a[@class='nav-link'][@href='https://romanceabroad.com/store/category-sweets']");
+    public static final By BUTTON_JOIN_FOR_FREE_NEW = By.xpath("//button[@data-action][@id='show-registration-block']");
+    public static final By SEARCH_PAGE_HEADER = By.xpath("//div[@class='header-container-outer'][@id='slidemenu-outer']");
+
 }
 
 
