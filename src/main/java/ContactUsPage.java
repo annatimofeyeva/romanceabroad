@@ -10,7 +10,8 @@ public class ContactUsPage extends BaseActions{
 
     public void completeContactForm() {
         getNavigate(Locators.LINK_SEARCH);
-        scrollSmoothToBottom();
+        ajaxClick(Locators.LINKS_TITLES_FOOTER);
+        //scrollSmoothToBottom();
         clickSpecificListValue(Locators.LINKS_TITLES_FOOTER, Data.nameLinkContactUs);
         WebElement dropDownReasons = driver.findElement(Locators.DROP_DOWN_REASONS);
         getDropDownListByValue(dropDownReasons, Data.dropDownValueText);
