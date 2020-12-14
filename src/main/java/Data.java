@@ -62,16 +62,19 @@ public class Data {
     //Book_Now
     public static final String expectedUrlTours = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
     //Registration
-    public static final String email = "newTest@test.com";
+    public static final String email1 = "11@gmail.com";
+    public static final String email2 = "11gmail.com";
+    public static final String email3 = "11@yandex.com";
     public static final String password = "123456";
-    public static final String userName = "John";
+    public static final String userName1part = "John";
+    public static final String userName = MainPage.generateUniqueUserName(Data.userName1part, Data.lengthSecondPartOfUserName);
     public static final String phone = "425-223-65-78";
     public static final String day = "2";
     public static final String month = "Jan";
     public static final String year = "1993";
     public static final String city = "Sydney";
     public static final String location = "North Sydney, State of New South Wales, Australia";
-    public static final int lengthSecondPartOfNickName = 5;
+    public static final int lengthSecondPartOfUserName = 5;
     //Contact Us
     public static final String subjectText = "Some message";
     public static final String messageText = "Test message from John Smith";

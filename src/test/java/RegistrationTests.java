@@ -16,9 +16,9 @@ public class RegistrationTests extends BaseUI {
 //                {Data.email1, Data.userName, true},
 //                {Data.email2, Data.userName, true},
 //                {Data.email3, Data.userName, true}
-                {"11@gmail.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), true},
-                {"11yahoo.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), false},
-                {"11@yandex.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), true}
+                {Data.email1, Data.userName, true},
+                {Data.email2, Data.userName, false},
+                {Data.email3, Data.userName, true}
         };
     }
 
