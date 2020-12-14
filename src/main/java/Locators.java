@@ -28,7 +28,7 @@ public class Locators {
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
     public static final By LINK_BESTSELLERS = By.xpath("//div[@data-title='Bestsellers']");
     public static final By TEXT_FIELD_GIFTS_SEARCH = By.cssSelector("#search_product");
-    public static final By BUTTON_GIFTS_SEARCH = By.cssSelector("button#search_friend");
+    public static final By BUTTON_GIFTS_SEARCH = By.xpath("//button[@id='search_friend'][text()='Search']");
     public static final By SELECTED_GIFT = By.cssSelector("div.title-block.pt5");
     public static final By LINK_TO_BESTSELLER_PURCHASE = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/12-flower_basket']");
     public static final By BESTSELLER_TITLE = By.tagName("h1");

@@ -4,8 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class GiftsPage extends BaseActions {
     public GiftsPage(WebDriver driver, WebDriverWait wait) {
@@ -13,11 +11,11 @@ public class GiftsPage extends BaseActions {
     }
 
     public void giftSearch(String gift) {
-        List<String> giftsTitle = new ArrayList<>();
         getNavigate(Locators.LINK_GIFTS);
         WebElement searchFiled =  wait.until(ExpectedConditions.elementToBeClickable(Locators.TEXT_FIELD_GIFTS_SEARCH));
         searchFiled.sendKeys(gift);
-        ajaxClick(Locators.BUTTON_GIFTS_SEARCH);
+        WebElement element = driver.findElement(By.xpath("//button[@id='search_friend']"));
+        element.click();
     }
 
     public String bestsellerSelection() {
