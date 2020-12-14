@@ -79,6 +79,7 @@ public class Locators {
     public static final By LIST_VALUE_LOCATION = By.xpath("//div[@id='locationAutocompleteBg']/following-sibling::div/ul/li");
     public static final By CHECK_BOX_CONFIRMATION = By.xpath("//input[@name='data[confirmation]']");
     public static final By AUTOFILE_FORM = By.xpath("//input[@name='region_name']");
+    public static final By TOOLTIP_ERROR = By.xpath("//div[@class='tooltip']");
     //IFRAMES_LOCATORS
     public static final By IFRAME_YOUTUBE_VIDEO = By.xpath("//iframe[contains(@src, 'https://www.youtube.com/embed/RRECuJzm3IY?start=85')]");
     public static final By BUTTON_PLAY_YOUTUBE = By.xpath("//button[@aria-label='Play']");

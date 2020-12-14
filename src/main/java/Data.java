@@ -71,6 +71,7 @@ public class Data {
     public static final String year = "1993";
     public static final String city = "Sydney";
     public static final String location = "North Sydney, State of New South Wales, Australia";
+    public static final int lengthSecondPartOfNickName = 5;
     //Contact Us
     public static final String subjectText = "Some message";
     public static final String messageText = "Test message from John Smith";

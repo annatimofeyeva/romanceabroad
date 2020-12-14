@@ -1,6 +1,4 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,32 +9,29 @@ import java.util.ArrayList;
 
 public class RegistrationTests extends BaseUI {
 
+
     @DataProvider(name = "Registration2")
     public static Object[][] testRegistration2() {
         return new Object[][]{
 //                {Data.email1, Data.userName, true},
 //                {Data.email2, Data.userName, true},
 //                {Data.email3, Data.userName, true}
-                {"11@gmail.com", 2, true},
-                // if I'm expected error -  test will mark as passed
-                {"11yahoo.com", 3, false},
-                {"11@yandex.com", 4, true}
+                {"11@gmail.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), true},
+                {"11yahoo.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), false},
+                {"11@yandex.com", MainPage.generateUniqueUserName(Data.userName, Data.lengthSecondPartOfNickName), true}
         };
     }
 
     @Test(dataProvider = "Registration2")
-    public void testRegistration2(String email, int length, boolean isEmailCorrect) {
-        System.out.println(email);
-        System.out.println(length);
-        System.out.println(isEmailCorrect);
+    public void testRegistration2(String email, String nickName, boolean isEmailCorrect) {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.password);
         if (!isEmailCorrect) {
-            WebElement element = driver.findElement(By.xpath("//div[@class='tooltip']"));
+            WebElement element = driver.findElement(Locators.TOOLTIP_ERROR);
             Assert.assertTrue(element.isDisplayed());
             System.out.println("Email is not correct");
-        }else {
-            mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, length), Data.month, Data.day, Data.phone, Data.year,
+        } else {
+            mainPage.completeSecondPartOfRegistration(nickName, Data.month, Data.day, Data.phone, Data.year,
                     Data.city, Data.location);
         }
     }

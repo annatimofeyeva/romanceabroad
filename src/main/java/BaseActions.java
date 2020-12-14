@@ -38,7 +38,7 @@ public class BaseActions {
         }
     }
 
-    public String generateUniqueUserName(String name, int length) {
+    public static String generateUniqueUserName(String name, int length) {
         return name + RandomStringUtils.random(length, "172984757");
     }
 
