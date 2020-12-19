@@ -1,3 +1,6 @@
+import com.romanceabroad.ui.Algos.Data;
+import com.romanceabroad.ui.Algos.DataProviders;
+import com.romanceabroad.ui.Algos.Locators;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;

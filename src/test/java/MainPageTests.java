@@ -1,3 +1,5 @@
+import com.romanceabroad.ui.Algos.Data;
+import com.romanceabroad.ui.Algos.Locators;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -23,7 +25,7 @@ public class MainPageTests extends BaseUI {
             WebElement element = list.get(i);
            /* resolving  StaleElementReferenceException;
             OpenQA.Selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document*/
-//            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINK_ALL_TOP_BAR_TABS));
+//            list = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(com.romanceabroad.ui.Algos.Locators.LINK_ALL_TOP_BAR_TABS));
 //            element.click();
             mainPage.ajaxClick(element);
 
@@ -126,7 +128,7 @@ public class MainPageTests extends BaseUI {
     @Test
     public void testAjaxClickOnMainPageTopTabUsingIndex() {
         mainPage.ajaxClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
-        //mainPage.performedClick(Locators.LINK_ALL_TOP_BAR_TABS, 2);
+        //mainPage.performedClick(com.romanceabroad.ui.Algos.Locators.LINK_ALL_TOP_BAR_TABS, 2);
         //mainPage.scrollToBottomOfPage();
     }
 
@@ -137,6 +139,7 @@ public class MainPageTests extends BaseUI {
 
     @Test
     public void testCheckAllLinksAndImages() {
+
         mainPage.checkAllLinksAndImagesMainPage();
     }
 

@@ -1,4 +1,4 @@
-package Algos;
+package com.romanceabroad.ui.Algos;
 
 public class SumElementsInArray {
     // You are given an array of integers. Please return sum of all elements

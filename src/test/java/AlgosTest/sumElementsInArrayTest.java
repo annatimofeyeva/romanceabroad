@@ -1,6 +1,6 @@
 package AlgosTest;
 
-import Algos.SumElementsInArray;
+import com.romanceabroad.ui.Algos.SumElementsInArray;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

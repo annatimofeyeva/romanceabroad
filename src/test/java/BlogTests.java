@@ -1,3 +1,4 @@
+import com.romanceabroad.ui.Algos.Data;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,7 +8,7 @@ public class BlogTests extends BaseUI {
     public void testVerifyBlogLinkUrl() {
         Assert.assertEquals(blogPage.verifyBlogLinkUrl(), Data.expectedUrlBlog);
         if (blogPage.verifyBlogLinkUrl().contains("#") || blogPage.verifyBlogLinkUrl().contains("???")) {
-            Assert.fail("BlogPage URL contains wrong signs");
+            Assert.fail("com.romanceabroad.ui.Algos.BlogPage URL contains wrong signs");
         }
     }
 

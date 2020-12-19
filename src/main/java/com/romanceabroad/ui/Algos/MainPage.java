@@ -1,3 +1,5 @@
+package com.romanceabroad.ui.Algos;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -51,7 +53,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(userPhone);
         driver.findElement(Locators.AUTOFILE_FORM).clear();
         driver.findElement(Locators.AUTOFILE_FORM).sendKeys(city);
-//        List<WebElement> locations = driver.findElements(Locators.LIST_VALUE_LOCATION);
+//        List<WebElement> locations = driver.findElements(com.romanceabroad.ui.Algos.Locators.LIST_VALUE_LOCATION);
 //        System.out.println(locations.size());
         javaImplicitWaitSec(3);
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
