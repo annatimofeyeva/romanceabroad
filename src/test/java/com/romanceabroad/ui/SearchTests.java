@@ -55,9 +55,13 @@ public class SearchTests extends BaseUI {
         List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
         System.out.println("Size of list: " + infoAboutUser.size());
         for (int i = 0; i < infoAboutUser.size(); i++) {
-            String info = infoAboutUser.get(i).getText();
+            if(i % 2 == 0) {
+                String info = infoAboutUser.get(i).getText();
+                String[] splitedPhrase = info.split(", ");
+                String age = splitedPhrase[1];
+                System.out.println(age);
+            }
             infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
-            System.out.println(info);
         }
     }
 }
