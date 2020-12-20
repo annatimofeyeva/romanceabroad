@@ -36,4 +36,15 @@ public class DataProviders {
         });
         return out.toArray(new Object[out.size()][]);
     }
+
+    @DataProvider(name = "Search")
+    public static Object[][] testSearchFeatures() {
+        return new Object[][]{
+                {"18", "40", "Default"},
+                {"18", "19", "Name"},
+                {"30", "40", "Views"},
+                {"60", "80", "Registration date"},
+                {"18", "40", "Default"},
+        };
+    }
 }

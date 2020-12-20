@@ -1,6 +1,7 @@
 package com.romanceabroad.ui;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SearchTests extends BaseUI {
@@ -8,6 +9,7 @@ public class SearchTests extends BaseUI {
     public static final boolean testCase12 = true;
     public static final boolean testCase13 = true;
     public static final boolean testCase14 = true;
+    public static final boolean testCase15 = true;
 
     @Test(priority = 5, enabled = testCase11, groups = {"chrome"})
     public void testSearchWomenByNameTestCase11() {
@@ -36,6 +38,19 @@ public class SearchTests extends BaseUI {
         int actualSize = searchPage.getSizeDropDownList();
         System.out.println("Size of DropDown list: " + actualSize);
         Assert.assertEquals(actualSize, Data.expectedSizeOfDropDownList);
+    }
+
+    @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 6, enabled = testCase15, groups = {"user", "admin"})
+    public void testSearchDifferentResultsTestCase15(String minAge, String maxAge, String sortBy ) {
+        searchPage.getNavigate(Locators.LINK_SEARCH);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN), minAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX), maxAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
+        searchPage.clickElement(Locators.BUTTON_SEARCH);
+
+
+
+
     }
 }
 

@@ -73,7 +73,7 @@ public class BaseActions {
         Select select = new Select(wait.until(ExpectedConditions.elementToBeClickable(locator)));
         select.selectByVisibleText(text);
     }
-
+    // method signature - method name plus parameters list
     // for Angular apps - advanced level of clicks (for Chrome)
     public void ajaxClick(WebElement element) {
 //        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
