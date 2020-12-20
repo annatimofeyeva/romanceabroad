@@ -42,9 +42,9 @@ public class DataProviders {
         return new Object[][]{
                 {"18", "40", "Default"},
                 {"18", "19", "Name"},
-                {"30", "40", "Views"},
-                {"60", "80", "Registration date"},
-                {"18", "40", "Default"},
+//                {"30", "40", "Views"},
+//                {"60", "80", "Registration date"},
+//                {"18", "40", "Default"},
         };
     }
 }

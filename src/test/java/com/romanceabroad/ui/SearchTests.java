@@ -1,8 +1,13 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class SearchTests extends BaseUI {
     public static final boolean testCase11 = true;
@@ -42,15 +47,20 @@ public class SearchTests extends BaseUI {
 
     @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 6, enabled = testCase15, groups = {"user", "admin"})
     public void testSearchDifferentResultsTestCase15(String minAge, String maxAge, String sortBy ) {
+        int min = Integer.parseInt(minAge);
+        int max = Integer.parseInt(maxAge);
         searchPage.getNavigate(Locators.LINK_SEARCH);
         searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN), minAge);
         searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MAX), maxAge);
         searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
         searchPage.clickElement(Locators.BUTTON_SEARCH);
-
-
-
-
+        List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        System.out.println("Size of list: " + infoAboutUser.size());
+        for (int i = 0; i < infoAboutUser.size(); i++) {
+            String info = infoAboutUser.get(i).getText();
+            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+            System.out.println(info);
+        }
     }
 }
 
