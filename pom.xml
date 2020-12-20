@@ -6,7 +6,7 @@
     <groupId>com.romance</groupId>
     <artifactId>romance</artifactId>
     <version>1.0-SNAPSHOT</version>
-I m
+
     <properties>
         <mavem.compiler.source>1.8</mavem.compiler.source>
         <mavem.compiler.target>1.8</mavem.compiler.target>
@@ -67,5 +67,12 @@ I m
             <version>6.14.3</version>
             <scope>compile</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/de.redsix/pdfcompare -->
+        <dependency>
+            <groupId>de.redsix</groupId>
+            <artifactId>pdfcompare</artifactId>
+            <version>1.1.56</version>
+        </dependency>
+
     </dependencies>
 </project>
