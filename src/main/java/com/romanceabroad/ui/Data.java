@@ -43,6 +43,11 @@ public class Data {
     //Media
     public static final String expectedUrlPhotos = "https://romanceabroad.com/media/index";
     public static final String expectedSortingValueText = "Views count";
+    public static final String expectedTitleAllPhotos = "Ukrainian women photos";
+    public static final String expectedTitleGallery = "Gallery";
+    public static final String expectedTitlePhotoGallery = "Photo gallery";
+    public static final String expectedTitleVideoGallery = "Video gallery";
+    public static final String expectedTitleAlbumsGallery = "Gallery albums";
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedGiftTitle = "Chocolate and fruits";

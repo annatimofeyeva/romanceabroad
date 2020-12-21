@@ -44,7 +44,7 @@ public class SearchTests extends BaseUI {
     }
 
     @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 6, enabled = testCase15, groups = {"user", "admin"})
-    public void testSearchDifferentResultsTestCase15(String minAge, String maxAge, String sortBy ) {
+    public void testSearchDifferentResultsTestCase15(String minAge, String maxAge, String sortBy) {
         int min = Integer.parseInt(minAge);
         int max = Integer.parseInt(maxAge);
         searchPage.getNavigate(Locators.LINK_SEARCH);
@@ -56,14 +56,14 @@ public class SearchTests extends BaseUI {
         List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_USER_INFO);
         System.out.println("Size of list: " + infoAboutUser.size());
         for (int i = 0; i < infoAboutUser.size(); i++) {
-            if(i % 2 == 0) {
+            if (i % 2 == 0) {
                 String info = infoAboutUser.get(i).getText();
                 String[] splitedPhrase = info.split(", ");
                 String age = splitedPhrase[1];
                 int ageNum = Integer.parseInt(age);
-                if(ageNum >= min && ageNum <= max) {
+                if (ageNum >= min && ageNum <= max) {
                     System.out.println("This age: " + ageNum + " is correct");
-                }else {
+                } else {
                     Assert.fail("Wrong age: " + ageNum);
                 }
             }
