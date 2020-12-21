@@ -53,7 +53,7 @@ public class SearchTests extends BaseUI {
         searchPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
         searchPage.javaImplicitWaitSec(3);
         searchPage.clickElement(Locators.BUTTON_SEARCH);
-        List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_USER_INFO);
         System.out.println("Size of list: " + infoAboutUser.size());
         for (int i = 0; i < infoAboutUser.size(); i++) {
             if(i % 2 == 0) {
@@ -64,12 +64,11 @@ public class SearchTests extends BaseUI {
                 if(ageNum >= min && ageNum <= max) {
                     System.out.println("This age: " + ageNum + " is correct");
                 }else {
-                    softAssert.assertFalse(Boolean.parseBoolean("Wrong age: " + ageNum));
-                    //Assert.fail("Wrong age: " + ageNum);
+                    Assert.fail("Wrong age: " + ageNum);
                 }
             }
             searchPage.javaImplicitWaitSec(3);
-            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+            infoAboutUser = driver.findElements(Locators.TEXT_USER_INFO);
         }
     }
 }
