@@ -42,18 +42,18 @@ public class MediaTests extends BaseUI {
             } else if (i == 2) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
                 WebElement textElement = wait.until(ExpectedConditions.elementToBeClickable
-                                (By.xpath("//div[@class='main-inner-content']//div[@class='wrapper']//div[text()='No media']")));
+                        (Locators.TEXT_NO_MEDIA));
                 String textMedia = textElement.getText();
                 System.out.println(textMedia);
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleAlbumsGallery);
-                WebElement photoElement =  wait.until(ExpectedConditions.elementToBeClickable
-                        (By.xpath("//div[@id='gallery']//div[@title='Portrait']")));
-                boolean displayedPhotoElement = photoElement.isDisplayed();
-                String actualPhotoElementTitle = photoElement.getText();
-                System.out.println(actualPhotoElementTitle);
-                Assert.assertTrue(displayedPhotoElement);
-                Assert.assertEquals(actualPhotoElementTitle, "Portrait");
+                WebElement portraitElement = wait.until(ExpectedConditions.elementToBeClickable
+                        (Locators.PORTRET_ELEMENT));
+                boolean displayedPortraitElement = portraitElement.isDisplayed();
+                String actualPortraitElementTitle = portraitElement.getText();
+                System.out.println(actualPortraitElementTitle);
+                Assert.assertTrue(displayedPortraitElement);
+                Assert.assertEquals(actualPortraitElementTitle, Data.expectedPortraitElementTitle);
             }
             userTabs = driver.findElements(Locators.LINK_PHOTOS_ALL);
         }

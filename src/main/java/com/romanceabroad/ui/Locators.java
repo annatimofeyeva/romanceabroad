@@ -27,6 +27,8 @@ public class Locators {
     public static final By BUTTON_SORTING_PHOTOS = By.cssSelector(".hidden-xs.fa.fa-arrow-down.pointer.plr5");
     public static final By BUTTON_ADD_PHOTOS = By.cssSelector("//button[@data-media='add_photo']");
     public static final By LINK_DROP_DOWN = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");
+    public static final By TEXT_NO_MEDIA = By.xpath("//div[@class='main-inner-content']//div[@class='wrapper']//div[text()='No media']");
+    public static final By PORTRET_ELEMENT = By.xpath("//div[@id='gallery']//div[@title='Portrait']");
     //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");
     public static final By LINK_BESTSELLERS = By.xpath("//div[@data-title='Bestsellers']");
