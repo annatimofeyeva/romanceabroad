@@ -44,8 +44,14 @@ public class MediaTests extends BaseUI {
                 Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
                 WebElement textElement = wait.until(ExpectedConditions.elementToBeClickable
                         (Locators.TEXT_NO_MEDIA));
-                String textMedia = textElement.getText();
-                System.out.println(textMedia);
+                String actualtextMedia = textElement.getText();
+                System.out.println(actualtextMedia);
+                WebElement paragpraph1Element = driver.findElement(Locators.PARAGRAPH_1_ELEMENT);
+                String paragpraph1ElementText = paragpraph1Element.getText();
+                if (paragpraph1ElementText.contains("On our website you have")) {
+                    System.out.println("Video Gallery first paragraph text is valid");
+                }
+                Assert.assertEquals(actualtextMedia, Data.expectedTextMedia);
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleAlbumsGallery);
                 WebElement portraitElement = wait.until(ExpectedConditions.elementToBeClickable
@@ -58,7 +64,7 @@ public class MediaTests extends BaseUI {
                 boolean displayedParagraph1Text = paragraph1text.isDisplayed();
                 Assert.assertEquals(actualPortraitElementTitle, Data.expectedPortraitElementTitle);
                 Assert.assertTrue(displayedPortraitElement);
-                Assert.assertTrue(displayedParagraph1Text );
+                Assert.assertTrue(displayedParagraph1Text);
             }
             userTabs = driver.findElements(Locators.LINK_PHOTOS_ALL);
         }

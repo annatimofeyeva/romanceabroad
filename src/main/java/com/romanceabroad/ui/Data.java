@@ -49,6 +49,7 @@ public class Data {
     public static final String expectedTitleVideoGallery = "Video gallery";
     public static final String expectedTitleAlbumsGallery = "Gallery albums";
     public static final String expectedPortraitElementTitle = "Portrait";
+    public static final String expectedTextMedia = "No media";
     //Gifts
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedGiftTitle = "Chocolate and fruits";
