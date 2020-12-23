@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.xml.sax.Locator;
 
 import java.util.List;
 
@@ -49,11 +50,15 @@ public class MediaTests extends BaseUI {
                 Assert.assertEquals(actualTitle, Data.expectedTitleAlbumsGallery);
                 WebElement portraitElement = wait.until(ExpectedConditions.elementToBeClickable
                         (Locators.PORTRAIT_ELEMENT));
-                boolean displayedPortraitElement = portraitElement.isDisplayed();
                 String actualPortraitElementTitle = portraitElement.getText();
                 System.out.println(actualPortraitElementTitle);
-                Assert.assertTrue(displayedPortraitElement);
+                WebElement paragraph1text = driver.findElement(Locators.PARAGRAPH_1_ELEMENT);
+                System.out.println(paragraph1text.getText());
+                boolean displayedPortraitElement = portraitElement.isDisplayed();
+                boolean displayedParagraph1Text = paragraph1text.isDisplayed();
                 Assert.assertEquals(actualPortraitElementTitle, Data.expectedPortraitElementTitle);
+                Assert.assertTrue(displayedPortraitElement);
+                Assert.assertTrue(displayedParagraph1Text );
             }
             userTabs = driver.findElements(Locators.LINK_PHOTOS_ALL);
         }
