@@ -48,7 +48,7 @@ public class MediaTests extends BaseUI {
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleAlbumsGallery);
                 WebElement portraitElement = wait.until(ExpectedConditions.elementToBeClickable
-                        (Locators.PORTRET_ELEMENT));
+                        (Locators.PORTRAIT_ELEMENT));
                 boolean displayedPortraitElement = portraitElement.isDisplayed();
                 String actualPortraitElementTitle = portraitElement.getText();
                 System.out.println(actualPortraitElementTitle);
