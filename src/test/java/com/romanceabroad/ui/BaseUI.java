@@ -23,6 +23,7 @@ public class BaseUI {
     GiftsPage giftsPage;
     LoginPage loginPage;
     HowWeWorkPage howWeWorkPage;
+    UserProfilePage userProfilePage;
     ContactUsPage contactUsPage;
     SoftAssert softAssert = new SoftAssert();
 
@@ -72,6 +73,7 @@ public class BaseUI {
         loginPage = new LoginPage(driver, wait);
         contactUsPage = new ContactUsPage(driver, wait);
         howWeWorkPage = new HowWeWorkPage(driver, wait);
+        userProfilePage = new UserProfilePage(driver, wait);
 
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);

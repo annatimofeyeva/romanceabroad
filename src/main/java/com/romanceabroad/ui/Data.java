@@ -8,6 +8,9 @@ public class Data {
     public static final String expectedHomeUrl = "https://romanceabroad.com/#";
     //Main URL
     public static final String mainUrl = "https://romanceabroad.com/";
+    //User Profile
+    public static final String userProfileUrl = "https://romanceabroad.com/users/view/360/profile";
+    public static final String expectedUserName = "Tanua";
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
