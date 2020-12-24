@@ -17,7 +17,10 @@ public class Data {
             "164", "53", "Normal", "Blond", "Free", "спокойная , заботливая !", "На работе", "Cooking"});
     public static final String expectedPostDay = "17 March 2018";
     public static final int expectedPhotoNumber = 1;
-    public static final int expectedMaxViewsCountNumber = 47;
+    public static final String expectedURLAll = "https://romanceabroad.com/users/view/360/gallery/all";
+    public static final String expectedURLPHOTO = "https://romanceabroad.com/users/view/360/gallery/photo";
+    public static final String expectedRespond = "No media";
+    public static final String expectedAlbumsNumber = "No albums.";
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";

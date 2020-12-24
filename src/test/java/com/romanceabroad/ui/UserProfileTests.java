@@ -11,7 +11,7 @@ import java.util.List;
 
 public class UserProfileTests extends BaseUI {
     @Test
-    public void testPersonalInformation() {
+    public void testUserPersonalInformation() {
         userProfilePage.getToUserProfile();
         WebElement profilePhoto = wait.until(ExpectedConditions
                 .elementToBeClickable(Locators.USER_PROFILE_PHOTO));
@@ -50,9 +50,10 @@ public class UserProfileTests extends BaseUI {
     }
 
     @Test
-    public void testProfileMenuTabs() {
+    public void testUserProfileMenuTabs() {
         String actualPostDay;
         String actualPhotosNumber;
+        String actualText;
         userProfilePage.getToUserProfile();
         List<WebElement> menuTabs =
                 driver.findElements(By.xpath("//div[@class='profile-menu clearfix']//ul//li"));
@@ -79,24 +80,42 @@ public class UserProfileTests extends BaseUI {
                 WebElement galleryFilters = driver.findElement(By.xpath("//ul[@id='filters']"));
                 Assert.assertTrue(galleryFilters.isDisplayed());
                 mainPage.getDropDownListByValue(By.xpath("//select[@class='form-control']"), "views");
+
+/*
                 WebElement viewCount = driver.findElement(By.xpath("//span[@class='view_num'][text()='47']"));
                 int maxViewsCountNumber = Integer.parseInt(viewCount.getText());
                 System.out.println("Max number of views: " + maxViewsCountNumber);
-                Assert.assertEquals(maxViewsCountNumber, Data.expectedMaxViewsCountNumber);
+                Assert.assertEquals(maxViewsCountNumber, Data.expectedMaxViewsCountNumber);*/
+
+                List<WebElement> filters = driver.findElements(By.cssSelector("#filters>li"));
+                for (int j = 0; j < filters.size(); j++) {
+                    filters.get(j).click();
+                    actualText = filters.get(j).getText();
+                    System.out.println(actualText);
+                    if (actualText.contains("All")) {
+                        Assert.assertEquals(driver.getCurrentUrl(), Data.expectedURLAll);
+                    }
+                    if (actualText.contains("Photo")) {
+                        Assert.assertEquals(driver.getCurrentUrl(), Data.expectedURLPHOTO);
+                    }
 
 
 
 
 
-
-
-
-
-
-
+//
+//                    if (actualText.contains("Video")) {
+//                        String actualRespond = driver.findElement(By.xpath("//div[@class='row g-users-gallery']//div[@class='center']")).getText();
+//                        System.out.println(actualRespond);
+//                        Assert.assertEquals(actualRespond, Data.expectedRespond);
+//                    }
+/*                    if (actualText.contains("Albums")) {
+                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='gallery_content']//div[@class='center']")));
+                        String actualAlbums = driver.findElement(By.xpath("//div[@id='gallery_content']//div[@class='center']")).getText();
+                        Assert.assertEquals(actualAlbums, Data.expectedRespond);
+                    }*/
+                }
             }
-
-
         }
     }
 }
