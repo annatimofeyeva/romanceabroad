@@ -13,6 +13,7 @@ public class Locators {
     public static final By USER_NAME = By.xpath("//a[@href='https://romanceabroad.com/users/view/360/profile'][text()='Tanua']");
     public static final By USER_INFORMATION_TITLES = By.xpath("//div[@class='field-name col-xs-4 col-sm-4 col-md-4 col-lg-4']");
     public static final By USER_INFORMATION_VALUES = By.xpath("//div[@class='field-info col-xs-8 col-sm-8 col-md-8 col-lg-8']");
+    public static final By PROFILE_MENU_TABS = By.xpath("//div[@class='profile-menu clearfix']//ul//li");
     //How it work Page
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
     public static final By LINK_CONTENT_PAGE_TITLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");

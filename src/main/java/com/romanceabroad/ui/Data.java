@@ -15,6 +15,9 @@ public class Data {
             "Height:", "Weight:", "Body type:", "Hair:", "Style:", "About me:", "The best birthday ever:", "Interests:"});
     public static final List<String> expectedPersonalInformationValues = Arrays.asList(new String[]{"Woman", "Man, aged 35 - 48", "Tanua", "17 February 1982", "Korosten’, Ukraine",
             "164", "53", "Normal", "Blond", "Free", "спокойная , заботливая !", "На работе", "Cooking"});
+    public static final String expectedPostDay = "17 March 2018";
+    public static final int expectedPhotoNumber = 1;
+    public static final int expectedMaxViewsCountNumber = 47;
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
