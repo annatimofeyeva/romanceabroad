@@ -7,7 +7,13 @@ public class Locators {
     public static final By H1_TITLE = By.xpath("//h1");
     //Main Page
     public static final By LINK_ALL_TOP_BAR_TABS = By.xpath("//div[@class='collapse navbar-collapse']//ul//li");
-    //HOW_IT_WORK page
+    //User Profile Page
+    public static final By USER_DESCRIPTION = By.xpath("//div[@class='description']");
+    public static final By USER_PROFILE_PHOTO = By.xpath("//a[@id='user_photo']");
+    public static final By USER_NAME = By.xpath("//a[@href='https://romanceabroad.com/users/view/360/profile'][text()='Tanua']");
+    public static final By USER_INFORMATION_TITLES = By.xpath("//div[@class='field-name col-xs-4 col-sm-4 col-md-4 col-lg-4']");
+    public static final By USER_INFORMATION_VALUES = By.xpath("//div[@class='field-info col-xs-8 col-sm-8 col-md-8 col-lg-8']");
+    //How it work Page
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
     public static final By LINK_CONTENT_PAGE_TITLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
     public static final By LINK_CONTENT_PAGE_TITLES_AFTER_PAGE_RELOAD = By.xpath("//div[@class='inside account_menu']");

@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -294,6 +295,20 @@ public class BaseActions {
     public String getAnyTitle(By locator) {
         String title = driver.findElement(locator).getText();
         return title;
+    }
+
+    public List<String> getTextOfEachListElement(By locator) {
+        List<String> elementsText = new ArrayList<>();
+        List<WebElement> elements =
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+        for (WebElement element : elements) {
+            elementsText.add(element.getText());
+        }
+        System.out.println(elementsText);
+        for (int i = 0; i < elementsText.size(); i++) {
+            System.out.println("Title of elements: " + elementsText.get(i));
+        }
+        return elementsText;
     }
 }
 
