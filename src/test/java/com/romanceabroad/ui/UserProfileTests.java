@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserProfileTests extends BaseUI {
     @Test
-    public void testUserDescriptionBlock() {
+    public void testPersonalInformation() {
         userProfilePage.getToUserProfile();
         WebElement profilePhoto = wait.until(ExpectedConditions
                 .elementToBeClickable(Locators.USER_PROFILE_PHOTO));
@@ -27,31 +27,25 @@ public class UserProfileTests extends BaseUI {
         boolean displayedPersonalDescriptionBlock = userDescriptionBlock.isDisplayed();
         Assert.assertTrue(displayedPersonalDescriptionBlock);
 
-        List<String> titlesOfPersonalInformation = new ArrayList<>();
+        List<String> actualTitles = new ArrayList<>();
         List<WebElement> personalInformationTitles = driver.findElements(Locators.USER_INFORMATION_TITLES);
         for(WebElement element : personalInformationTitles) {
-            titlesOfPersonalInformation.add (element.getText());
+            actualTitles.add (element.getText());
         }
 
-        List<String> personalInformationValues = new ArrayList<>();
+        List<String> actualValues = new ArrayList<>();
         List<WebElement> personalInformation = driver.findElements(Locators.USER_INFORMATION_VALUES);
         for(WebElement element : personalInformation) {
-            personalInformationValues.add (element.getText());
+            actualValues.add (element.getText());
         }
         String newline = System.lineSeparator();
         System.out.println(newline + "User's personal information titles: ");
-        titlesOfPersonalInformation.forEach(x -> System.out.println(x));
+        actualTitles.forEach(x -> System.out.println(x));
         System.out.println(newline + "User's personal information values: ");
-        personalInformationValues.forEach(x -> System.out.println(x));
+        actualValues.forEach(x -> System.out.println(x));
 
-
-
-
-
-
-
-
-
+        Assert.assertEquals(actualTitles, Data.expectedPersonalInformationTitles);
+        Assert.assertEquals(actualValues, Data.expectedPersonalInformationValues);
     }
 
 

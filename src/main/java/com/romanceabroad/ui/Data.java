@@ -11,6 +11,10 @@ public class Data {
     //User Profile
     public static final String userProfileUrl = "https://romanceabroad.com/users/view/360/profile";
     public static final String expectedUserName = "Tanua";
+    public static final List<String> expectedPersonalInformationTitles = Arrays.asList(new String[]{"I'm:", "Looking for:", "Username:","Birth date:", "Location:",
+            "Height:", "Weight:", "Body type:", "Hair:", "Style:", "About me:", "The best birthday ever:", "Interests:"});
+    public static final List<String> expectedPersonalInformationValues = Arrays.asList(new String[]{"Woman", "Man, aged 35 - 48", "Tanua", "17 February 1982", "Korosten’, Ukraine",
+            "164", "53", "Normal", "Blond", "Free", "спокойная , заботливая !", "На работе", "Cooking"});
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
