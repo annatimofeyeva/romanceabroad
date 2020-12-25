@@ -14,6 +14,13 @@ public class Locators {
     public static final By USER_INFORMATION_TITLES = By.xpath("//div[@class='field-name col-xs-4 col-sm-4 col-md-4 col-lg-4']");
     public static final By USER_INFORMATION_VALUES = By.xpath("//div[@class='field-info col-xs-8 col-sm-8 col-md-8 col-lg-8']");
     public static final By PROFILE_MENU_TABS = By.xpath("//div[@class='profile-menu clearfix']//ul//li");
+    public static final By BUTTON_SEND = By.xpath("//button[@id='services-menu']");
+    public static final By COMBO_BOX_SEND = By.xpath("//div[@class='popover-content']//div[@id='user_menu_actions'][@class='dl-horizontal pg-dl-icons menu-actions']");
+    public static final By POST_DATE = By.xpath("//span[@class='wall-post-date']");
+    public static final By PHOTOS_NUMBER_ELEMENT = By.xpath("//div[contains(text(),'has uploaded new photos     (1)')]");
+    public static final By GALLERY_TABS = By.xpath("//ul[@id='filters']");
+    public static final By DROP_DOWN_SEND = By.xpath("//select[@class='form-control']");
+    public static final By GALLERY_FILTERS= By.cssSelector("#filters>li]");
     //How it work Page
     public static final By LINK_HOW_WORK = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
     public static final By LINK_CONTENT_PAGE_TITLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");

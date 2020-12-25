@@ -56,17 +56,17 @@ public class UserProfileTests extends BaseUI {
         String actualText;
         userProfilePage.getToUserProfile();
         List<WebElement> menuTabs =
-                driver.findElements(By.xpath("//div[@class='profile-menu clearfix']//ul//li"));
+                driver.findElements(Locators.PROFILE_MENU_TABS);
         for (int i = 0; i < menuTabs.size(); i++) {
             menuTabs.get(i).click();
             menuTabs =
-                    driver.findElements(By.xpath("//div[@class='profile-menu clearfix']//ul//li"));
+                    driver.findElements(Locators.PROFILE_MENU_TABS);
             String tabText = menuTabs.get(i).getText();
             if (tabText.contains("Wall")) {
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='wall-post-date']")));
-                actualPostDay = driver.findElement(By.xpath("//span[@class='wall-post-date']")).getText();
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'has uploaded new photos     (1)')]")));
-                actualPhotosNumber = driver.findElement(By.xpath("//div[contains(text(),'has uploaded new photos     (1)')]")).getText();
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.POST_DATE));
+                actualPostDay = driver.findElement(Locators.POST_DATE).getText();
+                wait.until(ExpectedConditions.elementToBeClickable(Locators.PHOTOS_NUMBER_ELEMENT));
+                actualPhotosNumber = driver.findElement(Locators.PHOTOS_NUMBER_ELEMENT).getText();
                 System.out.println("Date of upload: " + actualPostDay);
                 System.out.println("Number of photos: " + actualPhotosNumber);
                 String photoNumber = String.valueOf(actualPhotosNumber.charAt(actualPhotosNumber.length() - 2));
@@ -78,9 +78,11 @@ public class UserProfileTests extends BaseUI {
             }
             if (tabText.contains("Gallery")) {
                 String actualRespond;
-                WebElement galleryFilters = driver.findElement(By.xpath("//ul[@id='filters']"));
+                WebElement galleryFilters = driver.findElement(Locators.GALLERY_TABS);
                 Assert.assertTrue(galleryFilters.isDisplayed());
-                mainPage.getDropDownListByValue(By.xpath("//select[@class='form-control']"), "views");
+                mainPage.getDropDownListByValue(Locators.DROP_DOWN_SEND, Data.expectedSortValueText);
+
+                // not possible, because number of views - is dynamic value
 /*
                 WebElement viewCount = driver.findElement(By.xpath("//span[@class='view_num'][text()='47']"));
                 int maxViewsCountNumber = Integer.parseInt(viewCount.getText());
@@ -106,9 +108,8 @@ public class UserProfileTests extends BaseUI {
     @Test
     public void testSendComboBox() {
         userProfilePage.getToUserProfile();
-        userProfilePage.clickElement(By.xpath("//button[@id='services-menu']"));
-        List<WebElement> comboBox = driver.findElements
-                (By.xpath("//div[@class='popover-content']//div[@id='user_menu_actions'][@class='dl-horizontal pg-dl-icons menu-actions']"));
+        userProfilePage.clickElement(Locators.BUTTON_SEND);
+        List<WebElement> comboBox = driver.findElements(Locators.COMBO_BOX_SEND);
         for (int i = 0; i < comboBox.size(); i++) {
             System.out.println(comboBox.get(i).getText());
         }

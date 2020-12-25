@@ -21,6 +21,7 @@ public class Data {
     public static final String expectedURLPHOTO = "https://romanceabroad.com/users/view/360/gallery/photo";
     public static final String expectedRespond = "No media";
     public static final String expectedAlbumsNumber = "No albums.";
+    public static final String expectedSortValueText = "views";
     //Main Page
     public static final String expectedUrlFacebookIntegration = "https://m.facebook.com/RomanceAbroad/?ref=bookmarks";
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
