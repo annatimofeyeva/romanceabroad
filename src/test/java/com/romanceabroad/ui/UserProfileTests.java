@@ -11,7 +11,7 @@ import java.util.List;
 
 public class UserProfileTests extends BaseUI {
     @Test
-    public void testUserPersonalInformation() {
+    public void testProfileMenuTab() {
         userProfilePage.getToUserProfile();
         WebElement profilePhoto = wait.until(ExpectedConditions
                 .elementToBeClickable(Locators.USER_PROFILE_PHOTO));
@@ -50,7 +50,7 @@ public class UserProfileTests extends BaseUI {
     }
 
     @Test
-    public void testUserProfileMenuTabs() {
+    public void testUserWallAndGalleryMenuTabs() {
         String actualPostDay;
         String actualPhotosNumber;
         String actualText;
@@ -77,10 +77,10 @@ public class UserProfileTests extends BaseUI {
                 Assert.assertEquals(actualPhotoNumber, Data.expectedPhotoNumber);
             }
             if (tabText.contains("Gallery")) {
+                String actualRespond;
                 WebElement galleryFilters = driver.findElement(By.xpath("//ul[@id='filters']"));
                 Assert.assertTrue(galleryFilters.isDisplayed());
                 mainPage.getDropDownListByValue(By.xpath("//select[@class='form-control']"), "views");
-
 /*
                 WebElement viewCount = driver.findElement(By.xpath("//span[@class='view_num'][text()='47']"));
                 int maxViewsCountNumber = Integer.parseInt(viewCount.getText());
@@ -89,33 +89,28 @@ public class UserProfileTests extends BaseUI {
 
                 List<WebElement> filters = driver.findElements(By.cssSelector("#filters>li"));
                 for (int j = 0; j < filters.size(); j++) {
+                    filters = driver.findElements(By.cssSelector("#filters>li"));
                     filters.get(j).click();
                     actualText = filters.get(j).getText();
                     System.out.println(actualText);
-                    if (actualText.contains("All")) {
-                        Assert.assertEquals(driver.getCurrentUrl(), Data.expectedURLAll);
-                    }
                     if (actualText.contains("Photo")) {
-                        Assert.assertEquals(driver.getCurrentUrl(), Data.expectedURLPHOTO);
+                        String actualURL = driver.getCurrentUrl();
+                        Assert.assertEquals(actualURL, Data.expectedURLPHOTO);
+                        System.out.println(actualURL);
                     }
-
-
-
-
-
-//
-//                    if (actualText.contains("Video")) {
-//                        String actualRespond = driver.findElement(By.xpath("//div[@class='row g-users-gallery']//div[@class='center']")).getText();
-//                        System.out.println(actualRespond);
-//                        Assert.assertEquals(actualRespond, Data.expectedRespond);
-//                    }
-/*                    if (actualText.contains("Albums")) {
-                        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='gallery_content']//div[@class='center']")));
-                        String actualAlbums = driver.findElement(By.xpath("//div[@id='gallery_content']//div[@class='center']")).getText();
-                        Assert.assertEquals(actualAlbums, Data.expectedRespond);
-                    }*/
                 }
             }
+        }
+    }
+
+    @Test
+    public void testSendComboBox() {
+        userProfilePage.getToUserProfile();
+        userProfilePage.clickElement(By.xpath("//button[@id='services-menu']"));
+        List<WebElement> comboBox = driver.findElements
+                (By.xpath("//div[@class='popover-content']//div[@id='user_menu_actions'][@class='dl-horizontal pg-dl-icons menu-actions']"));
+        for (int i = 0; i < comboBox.size(); i++) {
+            System.out.println(comboBox.get(i).getText());
         }
     }
 }
