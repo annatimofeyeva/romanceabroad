@@ -73,6 +73,7 @@ public class Locators {
     public static final By BUTTON_SIGN_IN = By.xpath("//button[@name='logbtn']");
     public static final By ERROR_POP_UP = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     public static final By SIGH_IN_TITLE = By.xpath("//h1");
+    public static final By ERROR_MESSAGE = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     //BOOK_NOW page
     public static final By LINK_BOOK_NOW = By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
     //Main page

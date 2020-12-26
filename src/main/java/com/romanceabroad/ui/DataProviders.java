@@ -47,19 +47,6 @@ public class DataProviders {
                 {"donna@gmail.com", "!", true, false},
                 {"donna@gmail.com", "@@@@@@@@@", true, false},
                 {"donna@gmail.com", "@%%^BFGG&*FN", true, false},
-
-
-
-
-
-
-
-
-
-
-
-
-
         };
     }
 

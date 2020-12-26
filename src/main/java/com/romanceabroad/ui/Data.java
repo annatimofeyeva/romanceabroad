@@ -89,7 +89,8 @@ public class Data {
     public static final String signInPassword4 = "";
     public static final String signInPassword5 = "";
     public static final String signInUrl = "https://romanceabroad.com/users/login_form";
-    public static final String expectedErrorMessage = "Email is incorrect, please try again";
+    public static final String expectedEmailErrorMessage = "Email is incorrect, please try again";
+    public static final String expectedPasswordErrorMessage = "Login or password are incorrect, please try again";
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
