@@ -43,6 +43,13 @@ public class DataProviders {
                 {"DONNA.DONNA@GMAIL>COM", "123456789", false, true},
                 {"123456789", "123456789", false, true},
                 //password is not valid
+                {"donna@gmail.com", " ", true, false},
+                {"donna@gmail.com", "!", true, false},
+                {"donna@gmail.com", "@@@@@@@@@", true, false},
+                {"donna@gmail.com", "@%%^BFGG&*FN", true, false},
+
+
+
 
 
 

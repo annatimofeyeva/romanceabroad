@@ -79,8 +79,8 @@ public class Data {
     public static final String expectedBlogPageTitle = "Blog";
     //SignIn
     public static final String signInEmail1 = "";
-    public static final String signInEmail2 = "smith.smith.com";
-    public static final String signInEmail3 = "@#$&.com";
+    public static final String signInEmail2 = "";
+    public static final String signInEmail3 = "";
     public static final String signInEmail4 = "";
     public static final String signInEmail5 = "";
     public static final String signInPassword1 = "";
@@ -89,6 +89,7 @@ public class Data {
     public static final String signInPassword4 = "";
     public static final String signInPassword5 = "";
     public static final String signInUrl = "https://romanceabroad.com/users/login_form";
+    public static final String expectedErrorMessage = "Email is incorrect, please try again";
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
