@@ -167,7 +167,12 @@ public class BaseActions {
     }
 
     public void getNavigate(String url) {
-       driver.get(url);
+        driver.get(url);
+    }
+
+    public void typeValueInTextFiled(By locator, String text) {
+      WebElement element = driver.findElement(locator);
+      element.sendKeys(text);
     }
 
     //Method for random choice from DropDown list

@@ -88,6 +88,7 @@ public class Data {
     public static final String signInPassword3 = "";
     public static final String signInPassword4 = "";
     public static final String signInPassword5 = "";
+    public static final String signInUrl = "https://romanceabroad.com/users/login_form";
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
