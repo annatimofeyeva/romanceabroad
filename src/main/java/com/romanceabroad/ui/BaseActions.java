@@ -166,6 +166,10 @@ public class BaseActions {
         element.click();
     }
 
+    public void getNavigate(String url) {
+       driver.get(url);
+    }
+
     //Method for random choice from DropDown list
     public void selectItemDropDownRandomOption(By locator, String dropDownName) {
         try {

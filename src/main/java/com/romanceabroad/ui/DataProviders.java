@@ -27,6 +27,36 @@ public class DataProviders {
         };
     }
 
+    @DataProvider(name = "SignIn")
+    public static Object[][] testSignIn() {
+        return new Object[][]{
+                // email is not valid
+                {"Donna.gmail.com", "123456789", false, true},
+                {"Donna!gmail.com", "123456789", false, true},
+                {"Donna%%gmail.com", "123456789", false, true},
+                {"D", "123456789", false, true},
+                {"donna111111111111)gmail.com", "123456789", false, true},
+                {"*********", "123456789", false, true},
+                {"gmail.com", "123456789", false, true},
+                {"DONNA", "123456789", false, true},
+                {"DONNA.GMAIL@COM", "123456789", false, true},
+                {"DONNA.DONNA@GMAIL>COM", "123456789", false, true},
+                {"123456789", "123456789", false, true},
+                //password is not valid
+
+
+
+
+
+
+
+
+
+
+        };
+    }
+
+
     @DataProvider(name="Gifts Search")
     public static Object[][] testGifts() throws Exception {
         ArrayList<Object[]> out = new ArrayList<>();

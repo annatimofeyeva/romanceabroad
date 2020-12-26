@@ -77,6 +77,17 @@ public class Data {
     //Blog
     public static final String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
     public static final String expectedBlogPageTitle = "Blog";
+    //SignIn
+    public static final String signInEmail1 = "";
+    public static final String signInEmail2 = "smith.smith.com";
+    public static final String signInEmail3 = "@#$&.com";
+    public static final String signInEmail4 = "";
+    public static final String signInEmail5 = "";
+    public static final String signInPassword1 = "";
+    public static final String signInPassword2 = "";
+    public static final String signInPassword3 = "";
+    public static final String signInPassword4 = "";
+    public static final String signInPassword5 = "";
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
