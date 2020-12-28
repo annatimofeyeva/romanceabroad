@@ -32,17 +32,6 @@ public class HowWeWorkPage extends BaseActions {
         return url;
     }
 
-    public String getSelectedFooterLink() {
-        String urlSelectedFooterLink = "";
-        List<WebElement> list =
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(Locators.LINKS_TITLES_FOOTER));
-        WebElement link = list.get(Data.FOOTER_LINKS_INDEX);
-        ajaxClick(link);
-        urlSelectedFooterLink = driver.getCurrentUrl();
-        //System.out.println(urlSelectedFooterLink);
-        return urlSelectedFooterLink;
-    }
-
     public List<String> getContentPagesTitles() {
         List<String> titles = new ArrayList<>();
         List<WebElement> list =

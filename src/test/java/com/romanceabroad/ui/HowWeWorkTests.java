@@ -5,11 +5,6 @@ import org.testng.annotations.Test;
 
 
 public class HowWeWorkTests extends BaseUI {
-    @Test
-    public void testClickOnFooterLink() {
-        mainPage.clickHowWeWorkTab();
-        Assert.assertEquals(howWeWorkPage.getSelectedFooterLink(), Data.expectedSelectedFooterUrl);
-    }
 
     @Test
     public void testClickOnSelectedContentPageLink() {

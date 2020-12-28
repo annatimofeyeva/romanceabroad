@@ -25,6 +25,7 @@ public class BaseUI {
     HowWeWorkPage howWeWorkPage;
     UserProfilePage userProfilePage;
     ContactUsPage contactUsPage;
+    FooterPage footerPage;
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
@@ -74,6 +75,7 @@ public class BaseUI {
         contactUsPage = new ContactUsPage(driver, wait);
         howWeWorkPage = new HowWeWorkPage(driver, wait);
         userProfilePage = new UserProfilePage(driver, wait);
+        footerPage = new FooterPage(driver, wait);
 
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
