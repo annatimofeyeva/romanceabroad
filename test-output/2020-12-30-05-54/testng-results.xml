@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="6" total="45" passed="39">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="361361" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T06:00:22Z">
+    <groups>
+    </groups>
+    <test name="ChromeTestCases" duration-ms="246314" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T05:58:27Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="9311" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T05:54:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration" duration-ms="16313" started-at="2020-12-30T05:54:30Z" data-provider="Registration" finished-at="2020-12-30T05:54:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JohnSmith@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passwOrd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1995]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2223455666]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="156" started-at="2020-12-30T05:54:46Z" finished-at="2020-12-30T05:54:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="8547" started-at="2020-12-30T05:54:47Z" finished-at="2020-12-30T05:54:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration" duration-ms="15713" started-at="2020-12-30T05:54:55Z" data-provider="Registration" finished-at="2020-12-30T05:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dwall@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123%%%78]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1981]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5556678888]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="192" started-at="2020-12-30T05:55:11Z" finished-at="2020-12-30T05:55:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="8947" started-at="2020-12-30T05:55:11Z" finished-at="2020-12-30T05:55:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration" duration-ms="14134" started-at="2020-12-30T05:55:20Z" data-provider="Registration" finished-at="2020-12-30T05:55:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DennyG@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[3860445567]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="287" started-at="2020-12-30T05:55:34Z" finished-at="2020-12-30T05:55:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="8486" started-at="2020-12-30T05:55:34Z" finished-at="2020-12-30T05:55:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration2" duration-ms="14935" started-at="2020-12-30T05:55:43Z" data-provider="Registration2" finished-at="2020-12-30T05:55:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="293" started-at="2020-12-30T05:55:58Z" finished-at="2020-12-30T05:55:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="8689" started-at="2020-12-30T05:55:58Z" finished-at="2020-12-30T05:56:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration2" duration-ms="3567" started-at="2020-12-30T05:56:07Z" data-provider="Registration2" finished-at="2020-12-30T05:56:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="374" started-at="2020-12-30T05:56:10Z" finished-at="2020-12-30T05:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="setUp" is-config="true" duration-ms="8508" started-at="2020-12-30T05:56:11Z" finished-at="2020-12-30T05:56:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="testRegistration2" duration-ms="11966" started-at="2020-12-30T05:56:19Z" data-provider="Registration2" finished-at="2020-12-30T05:56:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@39fb3ab6]" name="tearDown" is-config="true" duration-ms="523" started-at="2020-12-30T05:56:31Z" finished-at="2020-12-30T05:56:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+      <class name="com.romanceabroad.ui.RegistrationTests2">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="setUp" is-config="true" duration-ms="8383" started-at="2020-12-30T05:56:32Z" finished-at="2020-12-30T05:56:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="testRegistration2" duration-ms="11297" started-at="2020-12-30T05:56:40Z" data-provider="Registration2" finished-at="2020-12-30T05:56:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="tearDown" is-config="true" duration-ms="81" started-at="2020-12-30T05:56:51Z" finished-at="2020-12-30T05:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="setUp" is-config="true" duration-ms="8249" started-at="2020-12-30T05:56:52Z" finished-at="2020-12-30T05:57:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="testRegistration2" duration-ms="3536" started-at="2020-12-30T05:57:00Z" data-provider="Registration2" finished-at="2020-12-30T05:57:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="tearDown" is-config="true" duration-ms="453" started-at="2020-12-30T05:57:03Z" finished-at="2020-12-30T05:57:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="setUp" is-config="true" duration-ms="8344" started-at="2020-12-30T05:57:04Z" finished-at="2020-12-30T05:57:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="testRegistration2" duration-ms="11290" started-at="2020-12-30T05:57:12Z" data-provider="Registration2" finished-at="2020-12-30T05:57:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6276ae34]" name="tearDown" is-config="true" duration-ms="179" started-at="2020-12-30T05:57:23Z" finished-at="2020-12-30T05:57:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests2 -->
+      <class name="com.romanceabroad.ui.GiftsTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="setUp" is-config="true" duration-ms="8816" started-at="2020-12-30T05:57:24Z" finished-at="2020-12-30T05:57:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="testGiftSearch" duration-ms="7792" started-at="2020-12-30T05:57:32Z" data-provider="Gifts Search" finished-at="2020-12-30T05:57:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Flower basket]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="tearDown" is-config="true" duration-ms="123" started-at="2020-12-30T05:57:40Z" finished-at="2020-12-30T05:57:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="setUp" is-config="true" duration-ms="9306" started-at="2020-12-30T05:57:40Z" finished-at="2020-12-30T05:57:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="testGiftSearch" duration-ms="7212" started-at="2020-12-30T05:57:50Z" data-provider="Gifts Search" finished-at="2020-12-30T05:57:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Spa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="tearDown" is-config="true" duration-ms="336" started-at="2020-12-30T05:57:57Z" finished-at="2020-12-30T05:57:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="setUp" is-config="true" duration-ms="8738" started-at="2020-12-30T05:57:57Z" finished-at="2020-12-30T05:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="testGiftSearch" duration-ms="6140" started-at="2020-12-30T05:58:06Z" data-provider="Gifts Search" finished-at="2020-12-30T05:58:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Teddy bear]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="tearDown" is-config="true" duration-ms="173" started-at="2020-12-30T05:58:12Z" finished-at="2020-12-30T05:58:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="setUp" is-config="true" duration-ms="8549" started-at="2020-12-30T05:58:12Z" finished-at="2020-12-30T05:58:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="testGiftSearch" duration-ms="6157" started-at="2020-12-30T05:58:21Z" data-provider="Gifts Search" finished-at="2020-12-30T05:58:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TOURS TO UKRAIN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@7946e1f4]" name="tearDown" is-config="true" duration-ms="87" started-at="2020-12-30T05:58:27Z" finished-at="2020-12-30T05:58:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.GiftsTests -->
+    </test> <!-- ChromeTestCases -->
+    <test name="OperaTestCases" duration-ms="249832" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T05:58:31Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="11870" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T05:54:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration" duration-ms="15901" started-at="2020-12-30T05:54:33Z" data-provider="Registration" finished-at="2020-12-30T05:54:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JohnSmith@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passwOrd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1995]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2223455666]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="221" started-at="2020-12-30T05:54:49Z" finished-at="2020-12-30T05:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="9068" started-at="2020-12-30T05:54:49Z" finished-at="2020-12-30T05:54:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration" duration-ms="15737" started-at="2020-12-30T05:54:58Z" data-provider="Registration" finished-at="2020-12-30T05:55:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dwall@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123%%%78]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1981]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5556678888]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="72" started-at="2020-12-30T05:55:14Z" finished-at="2020-12-30T05:55:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="6742" started-at="2020-12-30T05:55:14Z" finished-at="2020-12-30T05:55:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration" duration-ms="15382" started-at="2020-12-30T05:55:20Z" data-provider="Registration" finished-at="2020-12-30T05:55:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DennyG@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[3860445567]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="535" started-at="2020-12-30T05:55:36Z" finished-at="2020-12-30T05:55:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="8750" started-at="2020-12-30T05:55:36Z" finished-at="2020-12-30T05:55:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration2" duration-ms="14730" started-at="2020-12-30T05:55:45Z" data-provider="Registration2" finished-at="2020-12-30T05:56:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="282" started-at="2020-12-30T05:56:00Z" finished-at="2020-12-30T05:56:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="9318" started-at="2020-12-30T05:56:00Z" finished-at="2020-12-30T05:56:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration2" duration-ms="3482" started-at="2020-12-30T05:56:09Z" data-provider="Registration2" finished-at="2020-12-30T05:56:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="121" started-at="2020-12-30T05:56:13Z" finished-at="2020-12-30T05:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="setUp" is-config="true" duration-ms="7526" started-at="2020-12-30T05:56:13Z" finished-at="2020-12-30T05:56:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="testRegistration2" duration-ms="11753" started-at="2020-12-30T05:56:21Z" data-provider="Registration2" finished-at="2020-12-30T05:56:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@36d4b5c]" name="tearDown" is-config="true" duration-ms="388" started-at="2020-12-30T05:56:32Z" finished-at="2020-12-30T05:56:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+      <class name="com.romanceabroad.ui.RegistrationTests2">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="setUp" is-config="true" duration-ms="9416" started-at="2020-12-30T05:56:33Z" finished-at="2020-12-30T05:56:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="testRegistration2" duration-ms="11613" started-at="2020-12-30T05:56:42Z" data-provider="Registration2" finished-at="2020-12-30T05:56:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="tearDown" is-config="true" duration-ms="324" started-at="2020-12-30T05:56:54Z" finished-at="2020-12-30T05:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="setUp" is-config="true" duration-ms="7497" started-at="2020-12-30T05:56:54Z" finished-at="2020-12-30T05:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="testRegistration2" duration-ms="3688" started-at="2020-12-30T05:57:02Z" data-provider="Registration2" finished-at="2020-12-30T05:57:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="tearDown" is-config="true" duration-ms="527" started-at="2020-12-30T05:57:05Z" finished-at="2020-12-30T05:57:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="setUp" is-config="true" duration-ms="8701" started-at="2020-12-30T05:57:06Z" finished-at="2020-12-30T05:57:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="testRegistration2" duration-ms="11886" started-at="2020-12-30T05:57:14Z" data-provider="Registration2" finished-at="2020-12-30T05:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@6d00a15d]" name="tearDown" is-config="true" duration-ms="225" started-at="2020-12-30T05:57:26Z" finished-at="2020-12-30T05:57:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests2 -->
+      <class name="com.romanceabroad.ui.GiftsTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="setUp" is-config="true" duration-ms="8728" started-at="2020-12-30T05:57:27Z" finished-at="2020-12-30T05:57:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="testGiftSearch" duration-ms="6453" started-at="2020-12-30T05:57:35Z" data-provider="Gifts Search" finished-at="2020-12-30T05:57:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Flower basket]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="tearDown" is-config="true" duration-ms="175" started-at="2020-12-30T05:57:42Z" finished-at="2020-12-30T05:57:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="setUp" is-config="true" duration-ms="9239" started-at="2020-12-30T05:57:42Z" finished-at="2020-12-30T05:57:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="testGiftSearch" duration-ms="6469" started-at="2020-12-30T05:57:51Z" data-provider="Gifts Search" finished-at="2020-12-30T05:57:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Spa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="tearDown" is-config="true" duration-ms="237" started-at="2020-12-30T05:57:58Z" finished-at="2020-12-30T05:57:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="setUp" is-config="true" duration-ms="9786" started-at="2020-12-30T05:57:58Z" finished-at="2020-12-30T05:58:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="testGiftSearch" duration-ms="6181" started-at="2020-12-30T05:58:08Z" data-provider="Gifts Search" finished-at="2020-12-30T05:58:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Teddy bear]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="tearDown" is-config="true" duration-ms="277" started-at="2020-12-30T05:58:14Z" finished-at="2020-12-30T05:58:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="setUp" is-config="true" duration-ms="9990" started-at="2020-12-30T05:58:14Z" finished-at="2020-12-30T05:58:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="testGiftSearch" duration-ms="6241" started-at="2020-12-30T05:58:24Z" data-provider="Gifts Search" finished-at="2020-12-30T05:58:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TOURS TO UKRAIN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@51efea79]" name="tearDown" is-config="true" duration-ms="171" started-at="2020-12-30T05:58:30Z" finished-at="2020-12-30T05:58:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.GiftsTests -->
+    </test> <!-- OperaTestCases -->
+    <test name="FireFoxTestCases" duration-ms="361361" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T06:00:22Z">
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="18403" started-at="2020-12-30T05:54:21Z" finished-at="2020-12-30T05:54:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration" duration-ms="13553" started-at="2020-12-30T05:54:39Z" data-provider="Registration" finished-at="2020-12-30T05:54:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JohnSmith@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[passwOrd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1995]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2223455666]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="2131" started-at="2020-12-30T05:54:53Z" finished-at="2020-12-30T05:54:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="15644" started-at="2020-12-30T05:54:55Z" finished-at="2020-12-30T05:55:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration" duration-ms="11667" started-at="2020-12-30T05:55:11Z" data-provider="Registration" finished-at="2020-12-30T05:55:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dwall@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123%%%78]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1981]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5556678888]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="2000" started-at="2020-12-30T05:55:22Z" finished-at="2020-12-30T05:55:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="16632" started-at="2020-12-30T05:55:24Z" finished-at="2020-12-30T05:55:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration" duration-ms="13374" started-at="2020-12-30T05:55:41Z" data-provider="Registration" finished-at="2020-12-30T05:55:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DennyG@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Jan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2001]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[3860445567]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[North Sydney]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="2229" started-at="2020-12-30T05:55:54Z" finished-at="2020-12-30T05:55:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="15116" started-at="2020-12-30T05:55:56Z" finished-at="2020-12-30T05:56:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration2" duration-ms="11420" started-at="2020-12-30T05:56:12Z" data-provider="Registration2" finished-at="2020-12-30T05:56:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="2093" started-at="2020-12-30T05:56:23Z" finished-at="2020-12-30T05:56:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="12875" started-at="2020-12-30T05:56:25Z" finished-at="2020-12-30T05:56:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration2" duration-ms="4261" started-at="2020-12-30T05:56:38Z" data-provider="Registration2" finished-at="2020-12-30T05:56:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="1551" started-at="2020-12-30T05:56:42Z" finished-at="2020-12-30T05:56:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="setUp" is-config="true" duration-ms="12384" started-at="2020-12-30T05:56:44Z" finished-at="2020-12-30T05:56:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="testRegistration2" duration-ms="10525" started-at="2020-12-30T05:56:56Z" data-provider="Registration2" finished-at="2020-12-30T05:57:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests@23ceabc1]" name="tearDown" is-config="true" duration-ms="3762" started-at="2020-12-30T05:57:07Z" finished-at="2020-12-30T05:57:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+      <class name="com.romanceabroad.ui.RegistrationTests2">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="setUp" is-config="true" duration-ms="16215" started-at="2020-12-30T05:57:10Z" finished-at="2020-12-30T05:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="testRegistration2" duration-ms="11300" started-at="2020-12-30T05:57:27Z" data-provider="Registration2" finished-at="2020-12-30T05:57:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="tearDown" is-config="true" duration-ms="2575" started-at="2020-12-30T05:57:38Z" finished-at="2020-12-30T05:57:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="setUp" is-config="true" duration-ms="17175" started-at="2020-12-30T05:57:41Z" finished-at="2020-12-30T05:57:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="testRegistration2" duration-ms="4249" started-at="2020-12-30T05:57:58Z" data-provider="Registration2" finished-at="2020-12-30T05:58:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="tearDown" is-config="true" duration-ms="2789" started-at="2020-12-30T05:58:02Z" finished-at="2020-12-30T05:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="setUp" is-config="true" duration-ms="29531" started-at="2020-12-30T05:58:05Z" finished-at="2020-12-30T05:58:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.RegistrationTests2.testRegistration2(java.lang.String,java.lang.String,boolean)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testRegistration2(java.lang.String, java.lang.String, boolean)[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="testRegistration2" duration-ms="10189" started-at="2020-12-30T05:58:34Z" data-provider="Registration2" finished-at="2020-12-30T05:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11@yandex.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John77929]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.RegistrationTests2@5d5eef3d]" name="tearDown" is-config="true" duration-ms="1846" started-at="2020-12-30T05:58:44Z" finished-at="2020-12-30T05:58:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.RegistrationTests2 -->
+      <class name="com.romanceabroad.ui.GiftsTests">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="setUp" is-config="true" duration-ms="13060" started-at="2020-12-30T05:58:46Z" finished-at="2020-12-30T05:58:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="testGiftSearch" duration-ms="7701" started-at="2020-12-30T05:58:59Z" data-provider="Gifts Search" finished-at="2020-12-30T05:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Flower basket]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="tearDown" is-config="true" duration-ms="1651" started-at="2020-12-30T05:59:07Z" finished-at="2020-12-30T05:59:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="setUp" is-config="true" duration-ms="13022" started-at="2020-12-30T05:59:09Z" finished-at="2020-12-30T05:59:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="testGiftSearch" duration-ms="6719" started-at="2020-12-30T05:59:22Z" data-provider="Gifts Search" finished-at="2020-12-30T05:59:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Spa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="tearDown" is-config="true" duration-ms="2648" started-at="2020-12-30T05:59:28Z" finished-at="2020-12-30T05:59:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="setUp" is-config="true" duration-ms="13074" started-at="2020-12-30T05:59:31Z" finished-at="2020-12-30T05:59:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="testGiftSearch" duration-ms="7154" started-at="2020-12-30T05:59:44Z" data-provider="Gifts Search" finished-at="2020-12-30T05:59:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Teddy bear]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="tearDown" is-config="true" duration-ms="3255" started-at="2020-12-30T05:59:51Z" finished-at="2020-12-30T05:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="setUp" is-config="true" duration-ms="17919" started-at="2020-12-30T05:59:55Z" finished-at="2020-12-30T06:00:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTests.testGiftSearch(java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testGiftSearch(java.lang.String)[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="testGiftSearch" duration-ms="6503" started-at="2020-12-30T06:00:13Z" data-provider="Gifts Search" finished-at="2020-12-30T06:00:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TOURS TO UKRAIN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGiftSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.romanceabroad.ui.GiftsTests@56f4468b]" name="tearDown" is-config="true" duration-ms="3038" started-at="2020-12-30T06:00:19Z" finished-at="2020-12-30T06:00:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.romanceabroad.ui.GiftsTests -->
+    </test> <!-- FireFoxTestCases -->
+  </suite> <!-- Test Suite -->
+</testng-results>
