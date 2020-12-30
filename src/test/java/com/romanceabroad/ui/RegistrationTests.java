@@ -1,10 +1,16 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(VideoListener.class)
+
 public class RegistrationTests extends BaseUI {
+
 
     @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
     public void testRegistration(String email, String password, String day, String month, String year, String phone, String city, String location) {
@@ -13,6 +19,7 @@ public class RegistrationTests extends BaseUI {
         mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, 5), month, day, phone, year, city, location);
     }
 
+    @Video(name="Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickName, boolean isEmailCorrect) {
         mainPage.clickJoinButton();
