@@ -1,10 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Test Suite" parallel="tests" thread-count ="3">
+<suite name="Test Suite" parallel="tests" thread-count="3">
+
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"> </class>
+            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
@@ -16,7 +18,8 @@
     <test name="FireFoxTestCases">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"> </class>
+            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
@@ -28,7 +31,8 @@
     <test name="OperaTestCases">
         <parameter name="browser" value="opera"/>
         <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"> </class>
+            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
