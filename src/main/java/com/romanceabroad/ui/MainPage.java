@@ -27,6 +27,7 @@ public class MainPage extends BaseActions {
     }
 
     public void clickJoinButton() {
+        Reports.log("Click Join Button");
         driver.findElement(Locators.BUTTON_JOIN_FOR_FREE).click();
     }
 
@@ -37,27 +38,55 @@ public class MainPage extends BaseActions {
     public void completeFirstPartOfRegistration(String email, String password) {
         // For Opera browser needs to add implicit wait
         javaImplicitWaitSec(3);
+        Reports.log("Type email in text field: " + email);
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
+
+        Reports.log("Type password in text field: " + password);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
+
+        Reports.log("Click NEXT button");
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
 
     public void completeSecondPartOfRegistration(String name, String month, String day, String userPhone, String year, String city, String location) {
+        Reports.log("Type userName in text field: " + name);
         driver.findElement(Locators.TEXT_FIELD_USER_NAME).sendKeys(name);
+
+        Reports.log("Click Search button of DateDropDown list");
         driver.findElement(Locators.DROP_DOWN_DATE_FIELD).click();
+
+        Reports.log("Select day from DateDropDown list: " + day);
         clickListValue(Locators.DROP_DOWN_DATE_SELECTED, day);
+
+        Reports.log("Click Search button of MonthDropDown list");
         driver.findElement(Locators.DROP_DOWN_MONTH_FIELD).click();
+
+        Reports.log("Select month from MonthDropDown list: " + month);
         clickListValue(Locators.DROP_DOWN_MONTH_SELECTED, month);
+
+        Reports.log("Click Search button of YearDropDown list");
         driver.findElement(Locators.DROP_DOWN_YEAR_FIELD).click();
+
+        Reports.log("Select year from YearDropDown list: " + year);
         clickListValue(Locators.DROP_DOWN_YEAR_SELECTED, year);
+
+        Reports.log("Type userPhoneNumber in text field: " + userPhone);
         driver.findElement(Locators.TEXT_FIELD_USER_PHONE).sendKeys(userPhone);
+
+        Reports.log("Clear autofilling value in text field");
         driver.findElement(Locators.AUTOFILE_FORM).clear();
+
+        Reports.log("Type city name in  autofilling text field: " + city);
         driver.findElement(Locators.AUTOFILE_FORM).sendKeys(city);
 //        List<WebElement> locations = driver.findElements(com.romanceabroad.ui.Algos.Locators.LIST_VALUE_LOCATION);
 //        System.out.println(locations.size());
         javaImplicitWaitSec(3);
+
+        Reports.log("Select location from LocationsDropDown list: " + location);
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
         WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
+
+        Reports.log("Click conformational checkbox");
         checkboxConformation.click();
     }
 
@@ -185,6 +214,5 @@ public class MainPage extends BaseActions {
         System.out.println(miniLogo);
     }
 }
-
 
 

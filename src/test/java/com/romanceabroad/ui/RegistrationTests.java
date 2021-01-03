@@ -22,10 +22,10 @@ public class RegistrationTests extends BaseUI {
     @Video(name="Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickName, boolean isEmailCorrect) {
-        Reports.log("Click Join Button");
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.password);
         if (!isEmailCorrect) {
+            Reports.log("Error: email is not correct");
             WebElement element = driver.findElement(Locators.TOOLTIP_ERROR);
             Assert.assertTrue(element.isDisplayed());
             System.out.println("Email is not correct");
