@@ -36,7 +36,7 @@ public class BaseUI {
 
         // Check if parameter passed from TestNG is 'firefox'
         if (browser.equalsIgnoreCase("firefox")) {
-            // Set path to geckodriver
+            // Set path to geckodriveradd
             System.setProperty("webdriver.gecko.driver", "geckodriver");
             // Create firefox instance
             driver = new FirefoxDriver();

@@ -22,7 +22,7 @@ public class RegistrationTests extends BaseUI {
     @Video(name="Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickName, boolean isEmailCorrect) {
-
+        Reports.log("Click Join Button");
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.password);
         if (!isEmailCorrect) {
