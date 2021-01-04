@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(VideoListener.class)
+//@Listeners(VideoListener.class)
 
 public class RegistrationTests extends BaseUI {
 
@@ -19,7 +19,7 @@ public class RegistrationTests extends BaseUI {
         mainPage.completeSecondPartOfRegistration(mainPage.generateUniqueUserName(Data.userName, 5), month, day, phone, year, city, location);
     }
 
-    @Video(name="Registration test")
+    //@Video(name="Registration test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickName, boolean isEmailCorrect) {
         mainPage.clickJoinButton();
