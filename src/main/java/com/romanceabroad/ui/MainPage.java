@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -44,6 +45,7 @@ public class MainPage extends BaseActions {
         Reports.log("Type password in text field: " + password);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
 
+        //wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
         Reports.log("Click NEXT button");
         driver.findElement(Locators.BUTTON_NEXT).click();
     }
