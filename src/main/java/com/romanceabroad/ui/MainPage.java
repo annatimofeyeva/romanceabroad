@@ -86,10 +86,10 @@ public class MainPage extends BaseActions {
 
         Reports.log("Select location from LocationsDropDown list: " + location);
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
-        WebElement checkboxConformation = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
 
         Reports.log("Click conformational checkbox");
-        checkboxConformation.click();
+        UnselectedCheckboxClicked(Locators.REGISTRATION_CHECK_BOX_CONFIRMATION);
+
     }
 
     public void clickYouTubeVideoButton() {

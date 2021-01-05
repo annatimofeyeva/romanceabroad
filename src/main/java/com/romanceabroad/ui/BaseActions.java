@@ -319,6 +319,15 @@ public class BaseActions {
         }
         return elementsText;
     }
+
+    public void UnselectedCheckboxClicked(By locator) {
+        Reports.log("Create webelement for checkbox");
+        WebElement currentCheckbox = driver.findElement(locator);
+        Reports.log("Click checkbox confirmation");
+        if (!currentCheckbox.isSelected()) {
+            ajaxClick(currentCheckbox);
+        }
+    }
 }
 
 
