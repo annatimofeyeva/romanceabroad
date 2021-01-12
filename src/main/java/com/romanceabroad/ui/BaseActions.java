@@ -321,6 +321,7 @@ public class BaseActions {
     }
 
     public void UnselectedCheckboxClicked(By locator) {
+
         Reports.log("Create webElement for checkbox");
         WebElement currentCheckbox = driver.findElement(locator);
        javaImplicitWaitSec(3);
