@@ -118,13 +118,6 @@ public class BaseActions {
         actions.click().build().perform();
     }
 
-    public void clickUnselectedCheckbox(By checkbox) {
-        WebElement currentCheckbox = driver.findElement(checkbox);
-        if (!currentCheckbox.isSelected()) {
-            ajaxClick(currentCheckbox);
-        }
-    }
-
     public void ajaxSendKeys(WebElement element, String text) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute( 'value', ' " + text + " ')", element);
     }
@@ -320,11 +313,9 @@ public class BaseActions {
         return elementsText;
     }
 
-    public void UnselectedCheckboxClicked(By locator) {
-
-        Reports.log("Create webElement for checkbox");
+    public void clickUnselectedCheckbox(By locator) {
+        Reports.log("Create webelement for checkbox");
         WebElement currentCheckbox = driver.findElement(locator);
-       javaImplicitWaitSec(3);
         Reports.log("Click checkbox confirmation");
         if (!currentCheckbox.isSelected()) {
             ajaxClick(currentCheckbox);

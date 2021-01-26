@@ -1,25 +1,29 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Test Suite" parallel="tests" thread-count="3">
-
+<!--<suite name="Test Suite" parallel="tests" thread-count="3">-->
+<suite name="Test Suite" parallel="none">
     <test name="ChromeTestCases">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="68.0"/>
+        <parameter name="platform" value="Windows 10"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
+            <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
                 </methods>
-            </class>
+            </class>-->
         </classes>
     </test>
 
     <test name="FireFoxTestCases">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="85.0"/>
+        <parameter name="platform" value="macOS 10.15"/>
         <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
+<!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
@@ -28,18 +32,18 @@
         </classes>
     </test>
 
-    <test name="OperaTestCases">
-        <parameter name="browser" value="opera"/>
-        <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <class name="com.romanceabroad.ui.RegistrationTests2"></class>
-            <class name="com.romanceabroad.ui.GiftsTests">
-                <methods>
-                    <include name="testGiftSearch"></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="OperaTestCases">-->
+<!--        <parameter name="browser" value="opera"/>-->
+<!--        <classes>-->
+<!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>-->
+<!--            <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
+<!--            <class name="com.romanceabroad.ui.GiftsTests">-->
+<!--                <methods>-->
+<!--                    <include name="testGiftSearch"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <!--    <test name="ChromeTestCases">-->
     <!--        <parameter name="browser" value="chrome"/>-->

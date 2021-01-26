@@ -22,8 +22,8 @@ public class DataProviders {
     public static Object[][] testRegistration2() {
         return new Object[][]{
                 {Data.email1, Data.userName, true},
-                {Data.email2, Data.userName, false},
-                {Data.email3, Data.userName, true}
+//                {Data.email2, Data.userName, false},
+//                {Data.email3, Data.userName, true}
         };
     }
 
@@ -33,20 +33,20 @@ public class DataProviders {
                 // email is not valid
                 {"Donna.gmail.com", "123456789", false, true},
                 {"Donna!gmail.com", "123456789", false, true},
-                {"Donna%%gmail.com", "123456789", false, true},
-                {"D", "123456789", false, true},
-                {"donna111111111111)gmail.com", "123456789", false, true},
-                {"*********", "123456789", false, true},
-                {"gmail.com", "123456789", false, true},
-                {"DONNA", "123456789", false, true},
-                {"DONNA.GMAIL@COM", "123456789", false, true},
-                {"DONNA.DONNA@GMAIL>COM", "123456789", false, true},
-                {"123456789", "123456789", false, true},
-                //password is not valid
-                {"donna@gmail.com", " ", true, false},
-                {"donna@gmail.com", "!", true, false},
-                {"donna@gmail.com", "@@@@@@@@@", true, false},
-                {"donna@gmail.com", "@%%^BFGG&*FN", true, false},
+//                {"Donna%%gmail.com", "123456789", false, true},
+//                {"D", "123456789", false, true},
+//                {"donna111111111111)gmail.com", "123456789", false, true},
+//                {"*********", "123456789", false, true},
+//                {"gmail.com", "123456789", false, true},
+//                {"DONNA", "123456789", false, true},
+//                {"DONNA.GMAIL@COM", "123456789", false, true},
+//                {"DONNA.DONNA@GMAIL>COM", "123456789", false, true},
+//                {"123456789", "123456789", false, true},
+//                //password is not valid
+//                {"donna@gmail.com", " ", true, false},
+//                {"donna@gmail.com", "!", true, false},
+//                {"donna@gmail.com", "@@@@@@@@@", true, false},
+//                {"donna@gmail.com", "@%%^BFGG&*FN", true, false},
         };
     }
 

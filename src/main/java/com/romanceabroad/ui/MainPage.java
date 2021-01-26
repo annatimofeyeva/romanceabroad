@@ -88,7 +88,7 @@ public class MainPage extends BaseActions {
         clickListValue(Locators.LIST_VALUE_LOCATION, location);
 
         Reports.log("Click conformational checkbox");
-        UnselectedCheckboxClicked(Locators.REGISTRATION_CHECK_BOX_CONFIRMATION);
+        clickUnselectedCheckbox(Locators.REGISTRATION_CHECK_BOX_CONFIRMATION);
 
     }
 
