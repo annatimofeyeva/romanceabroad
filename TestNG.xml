@@ -19,8 +19,8 @@
     </test>
 
     <test name="FireFoxTestCases">
-        <parameter name="browser" value="Firefox"/>
-        <parameter name="version" value="85.0"/>
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="77.0"/>
         <parameter name="platform" value="Windows 10"/>
         <parameter name="testbox" value="sauce"/>
         <classes>
