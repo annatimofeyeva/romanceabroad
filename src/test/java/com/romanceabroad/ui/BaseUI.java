@@ -1,5 +1,6 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,13 +42,17 @@ public class BaseUI {
 
     @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
     @Parameters({"browser", "version", "platform", "testbox"})
-    public void setUp(@Optional("chrome") String browser, @Optional ("null") String version, @Optional ("null") String platform,
+    public void setup(@Optional("chrome") String browser, @Optional ("null") String version, @Optional ("null") String platform,
                       @Optional ("null") String box, Method method) {
         Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
 
-        if(box.equalsIgnoreCase("local")) {
-            testBox = TestBox.LOCAL;
-        }else if(box.equalsIgnoreCase("sauce")) {
+//        if(box.equalsIgnoreCase("local")) {
+//            testBox = TestBox.LOCAL;
+//        }else if(box.equalsIgnoreCase("sauce")) {
+//            testBox = TestBox.SAUCE;
+//        }
+        testBox = TestBox.LOCAL;
+        if (box != null && box.equalsIgnoreCase("sauce")) {
             testBox = TestBox.SAUCE;
         }
 
@@ -88,8 +93,8 @@ public class BaseUI {
             break;
             case SAUCE:
                 DesiredCapabilities capabilities = new DesiredCapabilities();
-                capabilities.setCapability("username", "annaTim");
-                capabilities.setCapability("accessKey", "1a487018-9eff-4ad6-a49e-a7349d84b7ad");
+                capabilities.setCapability("username", "AnjaT");
+                capabilities.setCapability("accessKey", "9aea376b483242119ddd19306d70f6ac");
                 capabilities.setCapability("browserName", browser);
                 capabilities.setCapability("version", version);
                 capabilities.setCapability("platform", platform);
@@ -126,6 +131,10 @@ public class BaseUI {
             Reports.fail(driver, testResult.getName());
         }
         Reports.stop();
+
+        //SauceLabs reports
+        ((JavascriptExecutor) driver).executeScript
+                ("sauce:job-result=" + (testResult.isSuccess() ? "passed" : "failed"));
         driver.quit();
     }
 }

@@ -6,6 +6,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
+        <parameter name="testbox" value="sauce"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
             <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
@@ -20,7 +21,8 @@
     <test name="FireFoxTestCases">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="85.0"/>
-        <parameter name="platform" value="macOS 10.15"/>
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="testbox" value="sauce"/>
         <classes>
 <!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>
             <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
