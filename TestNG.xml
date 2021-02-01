@@ -2,11 +2,12 @@
 
 <!--<suite name="Test Suite" parallel="tests" thread-count="3">-->
 <suite name="Test Suite" parallel="none">
-    <test name="ChromeTestCases">
-        <parameter name="browser" value="Chrome"/>
+
+    <test name="ChromeTestCases1">
+        <parameter name="browser" value="mobile"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
-        <parameter name="testbox" value="sauce"/>
+
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
             <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
@@ -17,6 +18,21 @@
             </class>-->
         </classes>
     </test>
+<!--    <test name="ChromeTestCases2">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="68.0"/>
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="testbox" value="sauce"/>
+        <classes>
+            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            &lt;!&ndash;<class name="com.romanceabroad.ui.RegistrationTests2"></class>
+            <class name="com.romanceabroad.ui.GiftsTests">
+                <methods>
+                    <include name="testGiftSearch"></include>
+                </methods>
+            </class>&ndash;&gt;
+        </classes>
+    </test>
 
     <test name="FireFoxTestCases">
         <parameter name="browser" value="firefox"/>
@@ -24,15 +40,15 @@
         <parameter name="platform" value="Windows 10"/>
         <parameter name="testbox" value="sauce"/>
         <classes>
-<!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
+&lt;!&ndash;            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+            <class name="com.romanceabroad.ui.RegistrationTests2"></class>&ndash;&gt;
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
                 </methods>
             </class>
         </classes>
-    </test>
+    </test>-->
 
 <!--    <test name="OperaTestCases">-->
 <!--        <parameter name="browser" value="opera"/>-->
