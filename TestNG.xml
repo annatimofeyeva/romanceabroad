@@ -18,88 +18,34 @@
             </class>-->
         </classes>
     </test>
-<!--    <test name="ChromeTestCases2">
+    <test name="ChromeTestCases2">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
-        <parameter name="testbox" value="sauce"/>
+        <parameter name="testBox" value="sauce"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            &lt;!&ndash;<class name="com.romanceabroad.ui.RegistrationTests2"></class>
+            <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
                 </methods>
-            </class>&ndash;&gt;
+            </class>-->
         </classes>
     </test>
-
     <test name="FireFoxTestCases">
         <parameter name="browser" value="firefox"/>
         <parameter name="version" value="77.0"/>
         <parameter name="platform" value="Windows 10"/>
-        <parameter name="testbox" value="sauce"/>
+        <parameter name="testBox" value="sauce"/>
         <classes>
-&lt;!&ndash;            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <class name="com.romanceabroad.ui.RegistrationTests2"></class>&ndash;&gt;
+            <!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>
+                        <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
             <class name="com.romanceabroad.ui.GiftsTests">
                 <methods>
                     <include name="testGiftSearch"></include>
                 </methods>
             </class>
         </classes>
-    </test>-->
-
-<!--    <test name="OperaTestCases">-->
-<!--        <parameter name="browser" value="opera"/>-->
-<!--        <classes>-->
-<!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>-->
-<!--            <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
-<!--            <class name="com.romanceabroad.ui.GiftsTests">-->
-<!--                <methods>-->
-<!--                    <include name="testGiftSearch"></include>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-    <!--    <test name="ChromeTestCases">-->
-    <!--        <parameter name="browser" value="chrome"/>-->
-    <!--        <groups>-->
-    <!--            <run>-->
-    <!--                <include name="chrome"></include>-->
-    <!--                <include name="admin"></include>-->
-    <!--                <include name="user"></include>-->
-    <!--            </run>-->
-    <!--        </groups>-->
-    <!--        <classes>-->
-    <!--            <class name="SearchTests">-->
-    <!--            <methods>-->
-    <!--                <include name =".*Case11"></include>-->
-    <!--                <include name =".*Case12"></include>-->
-    <!--                <include name =".*TestCase11"></include>-->
-    <!--                <exclude name =".*14()"></exclude>-->
-
-    <!--            </methods>-->
-    <!--            </class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
-    <!--    <test name="FireFoxTestCases">-->
-    <!--        <parameter name="browser" value="firefox"/>-->
-    <!--        <classes>-->
-    <!--            <class name="RegistrationTests"></class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
-    <!--    <test name="OperaTestCases">-->
-    <!--        <parameter name="browser" value="opera"/>-->
-    <!--        <classes>-->
-    <!--            <class name="RegistrationTests"></class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
-    <!--    <test name="IE Cases">-->
-    <!--        <parameter name="browser" value="ie"/>-->
-    <!--        <classes>-->
-    <!--            <class name="RegistrationTests"></class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+    </test>
 </suite>

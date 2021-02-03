@@ -37,68 +37,75 @@ public class BaseUI {
     FooterPage footerPage;
     SoftAssert softAssert = new SoftAssert();
     protected TestBox testBox;
+    protected TestBrowser testBrowser;
 
 
     protected enum TestBox {
-        LOCAL, SAUCE
+        WEB, MOBILE, SAUCE
     }
 
-    @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
-    @Parameters({"browser", "version", "platform", "testbox"})
-    public void setup(@Optional("chrome") String browser,
-                      @Optional("null") String version,
-                      @Optional("null") String platform,
-                      @Optional("null") String box, Method method) {
-        Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
+    protected enum TestBrowser {
+        CHROME, FIREFOX, OPERA
+    }
 
-//        if(box.equalsIgnoreCase("local")) {
-//            testBox = TestBox.LOCAL;
-//        }else if(box.equalsIgnoreCase("sauce")) {
-//            testBox = TestBox.SAUCE;
-//        }
-        testBox = TestBox.LOCAL;
+
+    @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
+    @Parameters({"browser", "version", "platform", "testBox", "deviceName"})
+    public void setup(@Optional("chrome") String browser,
+                      @Optional("null") String platform,
+                      @Optional("null") String version,
+                      @Optional("web") String box,
+                      @Optional("null") String device,
+                      Method method) throws MalformedURLException {
+        Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
+        testBox = TestBox.WEB;
         if (box != null && box.equalsIgnoreCase("sauce")) {
             testBox = TestBox.SAUCE;
+        } else if (box != null && box.equalsIgnoreCase("mobile"))
+            testBox = TestBox.MOBILE;
+
+/*        if (box.equalsIgnoreCase("web")) {
+            testBox = TestBox.WEB;
+        } else if (box.equalsIgnoreCase("sauce")) {
+            testBox = TestBox.SAUCE;
+        } else if (box.equalsIgnoreCase("mobile")) {
+            testBox = TestBox.MOBILE;
+        }*/
+
+        if (browser.equalsIgnoreCase("chrome")) {
+            testBrowser = TestBrowser.CHROME;
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            testBrowser = TestBrowser.FIREFOX;
+        } else if (browser.equalsIgnoreCase("opera")) {
+            testBrowser = TestBrowser.OPERA;
         }
 
+
+
         switch (testBox) {
-            case LOCAL:
-                // Check if parameter passed from TestNG is 'firefox'
-                if (browser.equalsIgnoreCase("firefox")) {
-                    // Set path to geckoDriver
-                    System.setProperty("webdriver.gecko.driver", "geckodriver");
-                    // Create firefox instance
-                    driver = new FirefoxDriver();
-                }
-                // Check if parameter passed as 'chrome'
-                else if (browser.equalsIgnoreCase("chrome")) {
-                    // Set path to geckodriver
-                    System.setProperty("webdriver.chrome.driver", "chromedriver");
-                    driver.get("chrome://settings/clearBrowserData");
-                }
-                // Check if parameter passed as 'opera'
-                else if (browser.equalsIgnoreCase("opera")) {
-                    // Set path to operaDriverOld
-                    System.setProperty("webdriver.opera.driver", "operadriver");
-                    driver = new OperaDriver();
-                    driver.manage().deleteAllCookies();
-                } else if (browser.equalsIgnoreCase("mobile")) {
-                    // Set mobile optimization
-                    Map<String, String> mobileEmulation = new HashMap<String, String>();
-                    System.out.println("Mobile Chrome");
-                    mobileEmulation.put("deviceName", "Nexus 4");
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
-                    System.setProperty("webdriver.chrome.driver", "chromedriver");
-                    driver = new ChromeDriver(chromeOptions);
-                    driver.get("chrome://settings/clearBrowserData");
-                    System.out.println(mobileEmulation.get("deviceName"));
-                } else {
-                    System.setProperty("webdriver.chrome.driver", "chromedriver");
-                    driver = new ChromeDriver();
-                    driver.get("chrome://settings/clearBrowserData");
+            case WEB:
+
+                switch (testBrowser) {
+                    case FIREFOX:
+                        System.setProperty("webdriver.gecko.driver", "geckodriver");
+                        // Create firefox instance
+                        driver = new FirefoxDriver();
+                        break;
+
+                    case OPERA:
+                        System.setProperty("webdriver.opera.driver", "operadriver");
+                        driver = new OperaDriver();
+                        driver.manage().deleteAllCookies();
+                        break;
+
+                    default:
+                        System.setProperty("webdriver.chrome.driver", "chromedriver");
+                        driver = new ChromeDriver();
+                        driver.get("chrome://settings/clearBrowserData");
+
                 }
                 break;
+
             case SAUCE:
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setCapability("username", "AnjaT");
@@ -115,8 +122,26 @@ public class BaseUI {
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
-        }// switch end
+                break;
 
+            case MOBILE:
+
+                switch (testBrowser) {
+                    case CHROME:
+                        // Set up for mobile optimization
+                        Map<String, String> mobileEmulation = new HashMap<String, String>();
+                        mobileEmulation.put("deviceName", "Nexus 4");
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+                        System.setProperty("webdriver.chrome.driver", "chromedriver");
+                        driver = new ChromeDriver(chromeOptions);
+                        driver.get("chrome://settings/clearBrowserData");
+                        System.out.println(mobileEmulation.get("deviceName"));
+                        break;
+                }
+                break;
+
+        }// switch end
         wait = (new WebDriverWait(driver, 20));
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);
@@ -141,9 +166,9 @@ public class BaseUI {
         }
         Reports.stop();
 
-        // SauceLabs reports
+/*        // SauceLabs reports
         ((JavascriptExecutor) driver).executeScript
-                ("sauce:job-result=" + (testResult.isSuccess() ? "passed" : "failed"));
+                ("sauce:job-result=" + (testResult.isSuccess() ? "passed" : "failed"));*/
         driver.quit();
     }
 }
