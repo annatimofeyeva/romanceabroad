@@ -50,13 +50,15 @@ public class BaseUI {
 
 
     @BeforeMethod(groups = {"user", "admin", "chrome"}, alwaysRun = true)
-    @Parameters({"browser", "version", "platform", "testBox", "deviceName"})
+    @Parameters({"browser", "version", "platform", "testBox", "deviceName", "testEnv"})
     public void setup(@Optional("chrome") String browser,
-                      @Optional("null") String platform,
                       @Optional("null") String version,
+                      @Optional("null") String platform,
                       @Optional("web") String box,
                       @Optional("null") String device,
+                      @Optional("qa") String env,
                       Method method) throws MalformedURLException {
+        System.out.println(env);
         Reports.start(method.getDeclaringClass().getName() + " : " + method.getName());
         testBox = TestBox.WEB;
         if (box != null && box.equalsIgnoreCase("sauce")) {
@@ -79,7 +81,6 @@ public class BaseUI {
         } else if (browser.equalsIgnoreCase("opera")) {
             testBrowser = TestBrowser.OPERA;
         }
-
 
 
         switch (testBox) {
@@ -155,7 +156,15 @@ public class BaseUI {
         footerPage = new FooterPage(driver, wait);
 
         driver.manage().window().maximize();
-        driver.get(Data.mainUrl);
+
+
+        if (env.contains("qa")) {
+            driver.get(Data.mainUrl);
+        } else if (env.contains("uat")) {
+            driver.get("https://www.google.com/");
+        } else if (env.contains("prod")) {
+            driver.get("https://www.yahoo.com/");
+        }
     }
 
     @AfterMethod
@@ -169,6 +178,6 @@ public class BaseUI {
 /*        // SauceLabs reports
         ((JavascriptExecutor) driver).executeScript
                 ("sauce:job-result=" + (testResult.isSuccess() ? "passed" : "failed"));*/
-        driver.quit();
+       driver.quit();
     }
 }

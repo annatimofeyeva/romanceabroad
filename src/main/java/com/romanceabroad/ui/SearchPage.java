@@ -10,6 +10,8 @@ public class SearchPage extends BaseActions {
     }
 
     public String searchWomenByName() {
+        //Click on menu hamburger (for mobile optimization):
+        //getNavigate(Locators.LINK_SEARCH_MOBILE);
         getNavigate(Locators.LINK_SEARCH);
         String selectedTextInDropDown = getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
         return selectedTextInDropDown;

@@ -3,21 +3,28 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class SearchTests extends BaseUI {
     public static final boolean testCase11 = true;
-    public static final boolean testCase12 = true;
-    public static final boolean testCase13 = true;
-    public static final boolean testCase14 = true;
-    public static final boolean testCase15 = true;
+    public static final boolean testCase12 = false;
+    public static final boolean testCase13 = false;
+    public static final boolean testCase14 = false;
+    public static final boolean testCase15 = false;
 
     @Test(priority = 5, enabled = testCase11, groups = {"chrome"})
-    public void testSearchWomenByNameTestCase11() {
-        String actualTextSelectedINDropDown = searchPage.searchWomenByName();
-        Assert.assertEquals(Data.expectedTextSelectedInDropDown, actualTextSelectedINDropDown);
+    public void testSearchWomenByNameTestCase11(ITestContext context) {
+        String testBox = context.getCurrentXmlTest().getParameter("testBox");
+        if (testBox.contains("mobile")) {
+            searchPage.getNavigate(Locators.LINK_SEARCH_MOBILE);
+            searchPage.getNavigate(Locators.LINK_SEARCH);
+            String selectedTextInDropDown = searchPage.getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
+            String actualTextSelectedINDropDown = searchPage.searchWomenByName();
+            Assert.assertEquals(Data.expectedTextSelectedInDropDown, actualTextSelectedINDropDown);
+        }
     }
 
     @Test(priority = 4, enabled = testCase12, groups = {"chrome"})
