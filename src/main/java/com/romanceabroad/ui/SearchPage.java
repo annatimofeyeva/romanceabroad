@@ -34,7 +34,8 @@ public class SearchPage extends BaseActions {
     }
 
     public void randomSearchFromDropDownSecond() {
-        getNavigate(Locators.LINK_SEARCH);       ;
+        getNavigate(Locators.LINK_SEARCH);
+        ;
         wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN));
         int dropDownListSize = getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY_AGE_MIN);
         System.out.println("DropDownList size: " + dropDownListSize);
@@ -51,6 +52,20 @@ public class SearchPage extends BaseActions {
 
     public void clickMobileMenu(String value) {
         if (value.contains("mobile")) {
+            getNavigate(Locators.LINK_SEARCH_MOBILE);
+        }
+    }
+
+    public void clickMobileMenu() {
+        try {
+            getNavigate(Locators.LINK_SEARCH_MOBILE);
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void clickMobileMenu2(String value) {
+        if(driver.findElement(Locators.LINK_SEARCH_MOBILE).isDisplayed()) {
             getNavigate(Locators.LINK_SEARCH_MOBILE);
         }
     }

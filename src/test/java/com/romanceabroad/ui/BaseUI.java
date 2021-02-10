@@ -106,6 +106,7 @@ public class BaseUI {
                         driver.get("chrome://settings/clearBrowserData");
 
                 }
+                driver.manage().window().maximize();
                 break;
 
             case SAUCE:
@@ -156,7 +157,7 @@ public class BaseUI {
         userProfilePage = new UserProfilePage(driver, wait);
         footerPage = new FooterPage(driver, wait);
 
-        driver.manage().window().maximize();
+
 
 
         if (env.contains("qa")) {
