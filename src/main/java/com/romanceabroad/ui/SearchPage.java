@@ -49,9 +49,9 @@ public class SearchPage extends BaseActions {
         return getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
     }
 
-    public void clickMobileMenu(String valueOfBox) {
-        if (valueOfBox.contains("mobile")) {
-           getNavigate(Locators.LINK_SEARCH_MOBILE);
+    public void clickMobileMenu(String value) {
+        if (value.contains("mobile")) {
+            getNavigate(Locators.LINK_SEARCH_MOBILE);
         }
     }
 }

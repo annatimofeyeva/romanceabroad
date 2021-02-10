@@ -19,14 +19,13 @@ public class SearchTests extends BaseUI {
     @Test(priority = 5, enabled = testCase11, groups = {"chrome"})
     public void testSearchWomenByNameTestCase11() {
         String value = valueOfBox;
-        if (value.contains("mobile")) {
-            searchPage.getNavigate(Locators.LINK_SEARCH_MOBILE);
-        }
-            searchPage.getNavigate(Locators.LINK_SEARCH);
-            String selectedTextInDropDown = searchPage.getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
-            String actualTextSelectedINDropDown = searchPage.searchWomenByName();
-            Assert.assertEquals(Data.expectedTextSelectedInDropDown, actualTextSelectedINDropDown);
+        searchPage.clickMobileMenu(value);
+        searchPage.getNavigate(Locators.LINK_SEARCH);
+        String selectedTextInDropDown = searchPage.getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
+        String actualTextSelectedINDropDown = searchPage.searchWomenByName();
+        Assert.assertEquals(Data.expectedTextSelectedInDropDown, actualTextSelectedINDropDown);
     }
+
     @Test(priority = 4, enabled = testCase12, groups = {"chrome"})
     public void testSearchWomenByAgesTestCase12() {
         String actualNumberOfWomen = searchPage.searchWomenByAges();
