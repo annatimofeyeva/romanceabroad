@@ -19,7 +19,7 @@ public class SearchTests extends BaseUI {
     @Test(priority = 5, enabled = testCase11, groups = {"chrome"})
     public void testSearchWomenByNameTestCase11() {
         String value = valueOfBox;
-        searchPage.clickMobileMenu2();
+        searchPage.clickMobileMenu3();
         //searchPage.clickMobileMenu();
         searchPage.getNavigate(Locators.LINK_SEARCH);
         String selectedTextInDropDown = searchPage.getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
@@ -29,6 +29,7 @@ public class SearchTests extends BaseUI {
 
     @Test(priority = 4, enabled = testCase12, groups = {"chrome"})
     public void testSearchWomenByAgesTestCase12() {
+        searchPage.clickMobileAgesMenu();
         String actualNumberOfWomen = searchPage.searchWomenByAges();
         Assert.assertEquals(Data.expectedSearchResultSize, actualNumberOfWomen);
     }

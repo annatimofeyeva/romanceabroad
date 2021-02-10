@@ -26,6 +26,7 @@ public class Locators {
     public static final By LINK_CONTENT_PAGE_TITLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
     public static final By LINK_CONTENT_PAGE_TITLES_AFTER_PAGE_RELOAD = By.xpath("//div[@class='inside account_menu']");
     //Search (Pretty Women) page
+    public static final By LINK_SEARCH_AGE_MOBILE = By.xpath("//div[@class='search-param-button mb10']//a");
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By LINK_SEARCH_MOBILE = By.xpath("//span[@class='navbar-toggler-icon']");
     public static final By LINK_SEARCH_FIRST_IMAGE_TITLE = By.xpath("//*[@title='Tanua']");
