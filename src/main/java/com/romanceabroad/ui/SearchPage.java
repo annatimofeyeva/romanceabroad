@@ -48,4 +48,10 @@ public class SearchPage extends BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(Locators.DROP_DOWN_LIST_SORT_BY));
         return getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
     }
+
+    public void clickMobileMenu(String valueOfBox) {
+        if (valueOfBox.contains("mobile")) {
+           getNavigate(Locators.LINK_SEARCH_MOBILE);
+        }
+    }
 }

@@ -38,6 +38,7 @@ public class BaseUI {
     SoftAssert softAssert = new SoftAssert();
     protected TestBox testBox;
     protected TestBrowser testBrowser;
+    protected String valueOfBox;
 
 
     protected enum TestBox {
@@ -165,6 +166,8 @@ public class BaseUI {
         } else if (env.contains("prod")) {
             driver.get("https://www.yahoo.com/");
         }
+
+        valueOfBox = box;
     }
 
     @AfterMethod
@@ -178,6 +181,6 @@ public class BaseUI {
 /*        // SauceLabs reports
         ((JavascriptExecutor) driver).executeScript
                 ("sauce:job-result=" + (testResult.isSuccess() ? "passed" : "failed"));*/
-       driver.quit();
+        driver.quit();
     }
 }

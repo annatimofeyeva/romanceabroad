@@ -46,6 +46,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>TestNGWeb.xml</suiteXmlFile>
+                        <suiteXmlFile>TestNGMobile.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <reportsDirectory>./test-output/${timestamp}</reportsDirectory>
                 </configuration>
