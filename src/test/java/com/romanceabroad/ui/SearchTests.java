@@ -19,7 +19,7 @@ public class SearchTests extends BaseUI {
     @Test(priority = 5, enabled = testCase11, groups = {"chrome"})
     public void testSearchWomenByNameTestCase11() {
         String value = valueOfBox;
-        searchPage.clickMobileMenu2(value);
+        searchPage.clickMobileMenu2();
         //searchPage.clickMobileMenu();
         searchPage.getNavigate(Locators.LINK_SEARCH);
         String selectedTextInDropDown = searchPage.getTextFromDropDownSelectedValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");

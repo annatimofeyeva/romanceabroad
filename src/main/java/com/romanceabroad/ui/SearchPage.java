@@ -64,7 +64,7 @@ public class SearchPage extends BaseActions {
         }
     }
 
-    public void clickMobileMenu2(String value) {
+    public void clickMobileMenu2() {
         if(driver.findElement(Locators.LINK_SEARCH_MOBILE).isDisplayed()) {
             getNavigate(Locators.LINK_SEARCH_MOBILE);
         }
