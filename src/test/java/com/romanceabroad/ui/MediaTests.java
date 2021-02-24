@@ -39,20 +39,25 @@ public class MediaTests extends BaseUI {
                 Assert.assertEquals(actualTitle, Data.expectedTitleGallery);
             } else if (i == 1) {
                 Assert.assertEquals(actualTitle, Data.expectedTitlePhotoGallery);
-            } else if (i == 2) {
-                Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
-                WebElement textElement = wait.until(ExpectedConditions.elementToBeClickable
-                        (Locators.TEXT_NO_MEDIA));
-                String actualtextMedia = textElement.getText();
-                System.out.println(actualtextMedia);
-                WebElement paragpraph1Element = driver.findElement(Locators.PARAGRAPH_1_ELEMENT);
-                String paragpraph1ElementText = paragpraph1Element.getText();
-                if (paragpraph1ElementText.contains("On our website you have")) {
-                    System.out.println("Video Gallery first paragraph text is valid");
-                }
-                Assert.assertEquals(actualtextMedia, Data.expectedTextMedia);
+//            } else if (i == 2) {
+//                Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
+//                WebElement textElement = wait.until(ExpectedConditions.elementToBeClickable
+//                        (Locators.TEXT_NO_MEDIA));
+//                String actualtextMedia = textElement.getText();
+//                System.out.println(actualtextMedia);
+//                WebElement paragpraph1Element = driver.findElement(Locators.PARAGRAPH_1_ELEMENT);
+//                String paragpraph1ElementText = paragpraph1Element.getText();
+//                if (paragpraph1ElementText.contains("On our website you have")) {
+//                    System.out.println("Video Gallery first paragraph text is valid");
+//                }
+//                Assert.assertEquals(actualtextMedia, Data.expectedTextMedia);
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleAlbumsGallery);
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 WebElement portraitElement = wait.until(ExpectedConditions.elementToBeClickable
                         (Locators.PORTRAIT_ELEMENT));
                 String actualPortraitElementTitle = portraitElement.getText();

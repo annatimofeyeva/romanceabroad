@@ -76,32 +76,33 @@ public class UserProfileTests extends BaseUI {
                 Assert.assertEquals(actualPostDay, Data.expectedPostDay);
                 Assert.assertEquals(actualPhotoNumber, Data.expectedPhotoNumber);
             }
-            if (tabText.contains("Gallery")) {
-                String actualRespond;
-                WebElement galleryFilters = driver.findElement(Locators.GALLERY_TABS);
-                Assert.assertTrue(galleryFilters.isDisplayed());
-                mainPage.getDropDownListByValue(Locators.DROP_DOWN_SEND, Data.expectedSortValueText);
-
-                // not possible, because number of views - is dynamic value
-/*
-                WebElement viewCount = driver.findElement(By.xpath("//span[@class='view_num'][text()='47']"));
-                int maxViewsCountNumber = Integer.parseInt(viewCount.getText());
-                System.out.println("Max number of views: " + maxViewsCountNumber);
-                Assert.assertEquals(maxViewsCountNumber, Data.expectedMaxViewsCountNumber);*/
-
-                List<WebElement> filters = driver.findElements(By.cssSelector("#filters>li"));
-                for (int j = 0; j < filters.size(); j++) {
-                    filters = driver.findElements(By.cssSelector("#filters>li"));
-                    filters.get(j).click();
-                    actualText = filters.get(j).getText();
-                    System.out.println(actualText);
-                    if (actualText.contains("Photo")) {
-                        String actualURL = driver.getCurrentUrl();
-                        Assert.assertEquals(actualURL, Data.expectedURLPHOTO);
-                        System.out.println(actualURL);
-                    }
-                }
-            }
+//            else if (tabText.contains("Gallery")) {
+//                String actualRespond;
+//
+//                WebElement galleryFilters = driver.findElement(Locators.GALLERY_TABS);
+//                Assert.assertTrue(galleryFilters.isDisplayed());
+//                mainPage.getDropDownListByValue(Locators.DROP_DOWN_SEND, Data.expectedSortValueText);
+//
+//                // not possible, because number of views - is dynamic value
+///*
+//                WebElement viewCount = driver.findElement(By.xpath("//span[@class='view_num'][text()='47']"));
+//                int maxViewsCountNumber = Integer.parseInt(viewCount.getText());
+//                System.out.println("Max number of views: " + maxViewsCountNumber);
+//                Assert.assertEquals(maxViewsCountNumber, Data.expectedMaxViewsCountNumber);*/
+//
+//                List<WebElement> filters = driver.findElements(By.cssSelector("#filters>li"));
+//                for (int j = 0; j < filters.size(); j++) {
+//                    filters = driver.findElements(By.cssSelector("#filters>li"));
+//                    filters.get(j).click();
+//                    actualText = filters.get(j).getText();
+//                    System.out.println(actualText);
+//                    if (actualText.contains("Photo")) {
+//                        String actualURL = driver.getCurrentUrl();
+//                        Assert.assertEquals(actualURL, Data.expectedURLPHOTO);
+//                        System.out.println(actualURL);
+//                    }
+//                }
+//            }
         }
     }
 

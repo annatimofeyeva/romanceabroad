@@ -1,51 +1,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<!--<suite name="Test Suite" parallel="tests" thread-count="3">-->
 <suite name="Test Suite" parallel="none">
-
-    <test name="ChromeTestCases1">
-        <parameter name="browser" value="mobile"/>
-        <parameter name="version" value="68.0"/>
-        <parameter name="platform" value="Windows 10"/>
-
-        <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
-            <class name="com.romanceabroad.ui.GiftsTests">
-                <methods>
-                    <include name="testGiftSearch"></include>
-                </methods>
-            </class>-->
-        </classes>
-    </test>
-    <test name="ChromeTestCases2">
+    <test name="ChromeTestCases">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
-        <parameter name="testBox" value="sauce"/>
+<!--        <parameter name="testBox" value="sauce"/>-->
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
-            <!--<class name="com.romanceabroad.ui.RegistrationTests2"></class>
-            <class name="com.romanceabroad.ui.GiftsTests">
-                <methods>
-                    <include name="testGiftSearch"></include>
-                </methods>
-            </class>-->
+            <class name="com.romanceabroad.ui.SignInTests"></class>
+            <class name="com.romanceabroad.ui.GiftsTests"></class>
+            <class name="com.romanceabroad.ui.HowWeWorkTests"></class>
+            <class name="com.romanceabroad.ui.BlogTests"></class>
+            <class name="com.romanceabroad.ui.UserProfileTests"></class>
+            <class name="com.romanceabroad.ui.LogInTests"></class>
+            <class name="com.romanceabroad.ui.MainPageTests"></class>
+            <class name="com.romanceabroad.ui.ContactUsPageTests"></class>
         </classes>
     </test>
-    <test name="FireFoxTestCases">
-        <parameter name="browser" value="firefox"/>
-        <parameter name="version" value="77.0"/>
-        <parameter name="platform" value="Windows 10"/>
-        <parameter name="testBox" value="sauce"/>
-        <classes>
-            <!--            <class name="com.romanceabroad.ui.RegistrationTests"></class>
-                        <class name="com.romanceabroad.ui.RegistrationTests2"></class>-->
-            <class name="com.romanceabroad.ui.GiftsTests">
-                <methods>
-                    <include name="testGiftSearch"></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="FireFoxTestCases">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="version" value="77.0"/>-->
+<!--        <parameter name="platform" value="Windows 10"/>-->
+<!--        <parameter name="testBox" value="sauce"/>-->
+<!--        <classes>-->
+<!--            &lt;!&ndash;            <class name="com.romanceabroad.ui.RegistrationTests"></class>-->
+<!--                        <class name="com.romanceabroad.ui.RegistrationTests2"></class>&ndash;&gt;-->
+<!--            <class name="com.romanceabroad.ui.GiftsTests">-->
+<!--                <methods>-->
+<!--                    <include name="testGiftSearch"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

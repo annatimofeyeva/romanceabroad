@@ -12,9 +12,9 @@ public class Data {
     public static final String userProfileUrl = "https://romanceabroad.com/users/view/360/profile";
     public static final String expectedUserName = "Tanua";
     public static final List<String> expectedPersonalInformationTitles = Arrays.asList(new String[]{"I'm:", "Looking for:", "Username:","Birth date:", "Location:",
-            "Height:", "Weight:", "Body type:", "Hair:", "Style:", "About me:", "The best birthday ever:", "Interests:"});
-    public static final List<String> expectedPersonalInformationValues = Arrays.asList(new String[]{"Woman", "Man, aged 35 - 48", "Tanua", "17 February 1982", "Korosten’, Ukraine",
-            "164", "53", "Normal", "Blond", "Free", "спокойная , заботливая !", "На работе", "Cooking"});
+            "Height:", "Weight:", "Body type:", "Hair:", "Style:", "The best birthday ever:", "Interests:"});
+    public static final List<String> expectedPersonalInformationValues = Arrays.asList(new String[]{"Woman", "Man,aged35 -48", "Tanua", "17 February 1982", "Korosten’, Ukraine",
+            "164", "53", "Normal", "Blond", "Free", "На работе", "Cooking"});
     public static final String expectedPostDay = "17 March 2018";
     public static final int expectedPhotoNumber = 1;
     public static final String expectedURLAll = "https://romanceabroad.com/users/view/360/gallery/all";
@@ -27,14 +27,14 @@ public class Data {
     public static final String expectedTitleHowItWoks = "Ukrainian women for marriage";
     public static final String expectedTitleSearch = "Single Ukrainian women online ";
     public static final List<String> expectedallAllTopBarLinks = Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
-            "Shipping terms", "Travel to Ukraine", "Blog", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
+            "Shipping terms", "Travel to Ukraine", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
             "Beautiful urkainian girls", "Real Ukrainian brides", "Eastern European women", "Marriage agency in Ukraine", "Kiev dating site", "Find Ukrainian girlfriend",
             "Slavic women for marriage", "How to marry Ukrainian lady", "Free Ukrainian dating site", "9 Factors to Keep in Mind When Dating a Ukrainian Woman",
             "Is There a Difference Between Dating or Courting a Ukrainian Woman?"});
     //How_We_Work
     public static final String expectedUrlHowWeWork = "https://romanceabroad.com/content/view/how-it-works";
     public static final String expectedContentLinkUrl = "https://romanceabroad.com/content/view/kharkov-dating-agency";
-    public static final int expectedNumberOfContentPages = 22;
+    public static final int expectedNumberOfContentPages = 21;
     public static final String contetnPageLinkText = "Kharkov dating agency";
     public static final List<String> expectedContentPageTitles = Arrays.asList(new String[]{"Advertising", "Terms of use", "Privacy Policy", "How it works",
             "Shipping terms", "Travel to Ukraine", "Blog", "Kharkov dating agency", "Kiev dating agency", "Odessa dating agency", "Mail order girls",
@@ -94,7 +94,7 @@ public class Data {
     //LogIn
     public static final String Email = "TestUser@test.com";
     public static final String Password = "112233";
-    public static final String expectedErrorMessageText = "Login or password are incorrect, please try again";
+    public static final String expectedErrorMessageText = "Email is incorrect, please try again";
     public static final String expectedBackgroundColor = "rgb(235, 204, 209)";
     //Book_Now
     public static final String expectedUrlTours = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";

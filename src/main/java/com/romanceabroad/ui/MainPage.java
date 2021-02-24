@@ -184,9 +184,6 @@ public class MainPage extends BaseActions {
         WebElement paginationTab1 = driver.findElement(Locators.LINK_PAGINATION_TAB1);
         paginationTab1.click();
 
-        WebElement languageActiveForSelection = driver.findElement(Locators.LINK_LANGUAGE_ACTIVE_FOR_SELECTION);
-        languageActiveForSelection.click();
-        System.out.println(languageActiveForSelection.getText());
 
         List<WebElement> languages = driver.findElements(Locators.LINKS_FOOTER_LANGUAGES);
         for (int i = 0; i < languages.size(); i++) {

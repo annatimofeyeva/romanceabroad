@@ -11,8 +11,10 @@
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
         </classes>
     </test>
-<!--
+
     <test name="ChromeTestCases">
+        <parameter name="testEnv" value="qa"/>
+        <parameter name="testBox" value="web"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
@@ -28,18 +30,21 @@
             </class>
         </classes>
     </test>
+
     <test name="FireFoxTestCases">
+    <parameter name="testEnv" value="qa"/>
+    <parameter name="testBox" value="web"/>
         <parameter name="browser" value="firefox"/>
         <parameter name="version" value="68.0"/>
         <parameter name="platform" value="Windows 10"/>
         <parameter name="testBox" value="web"/>
-        &lt;!&ndash;        <groups>
+                <groups>
                     <run>
                         <exclude name="ie"/>
                         <include name="admin"/>
                         <include name="user"/>
                     </run>
-                </groups>&ndash;&gt;
+                </groups>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"></class>
             <class name="com.romanceabroad.ui.RegistrationTests2"></class>
@@ -49,8 +54,8 @@
                 </methods>
             </class>
         </classes>
-    </test>-->
-    <!--        <test name="OperaTestCases">
+    </test>
+            <test name="OperaTestCases">
                 <parameter name="browser" value="opera"/>
                 <classes>
                     <class name="com.romanceabroad.ui.RegistrationTests"></class>
@@ -61,5 +66,5 @@
                         </methods>
                     </class>
                 </classes>
-            </test>-->
+            </test>
 </suite>

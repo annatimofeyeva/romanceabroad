@@ -12,11 +12,11 @@ public class HowWeWorkTests extends BaseUI {
         Assert.assertEquals(howWeWorkPage.getSelectedContentPageLinkUrl(), Data.expectedContentLinkUrl);
     }
 
-    @Test
-    public void testGetContentPagesTitles() {
-        mainPage.clickHowWeWorkTab();
-        Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
-    }
+//    @Test
+//    public void testGetContentPagesTitles() {
+//        mainPage.clickHowWeWorkTab();
+//        Assert.assertEquals(howWeWorkPage.getContentPagesTitles(), Data.expectedContentPageTitles);
+//    }
 
     @Test
     public void testGetContentPageNumber() {
