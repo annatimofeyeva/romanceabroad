@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -157,6 +158,8 @@ public class BaseUI {
         userProfilePage = new UserProfilePage(driver, wait);
         footerPage = new FooterPage(driver, wait);
 
+        // Initializing PageFactory for specific object
+        PageFactory.initElements(driver, mainPage);
 
         driver.manage().window().maximize();
 
